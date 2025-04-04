@@ -7,6 +7,7 @@ public class BirdController : MonoBehaviour
 
     private float velocity = 20f;
     private Rigidbody2D rigidBody;
+    private bool isFlying = false;
 
     // Start is called before the first frame update
     void Start()
@@ -14,10 +15,18 @@ public class BirdController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+
+        isFlying = Input.GetMouseButton(0) || Input.touchCount > 0;
+
+
+    }
+
     void FixedUpdate()
     {
-        
-        if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
+
+        if (isFlying)
         {
 
             rigidBody.AddForce(Vector2.up * velocity, ForceMode2D.Force);
