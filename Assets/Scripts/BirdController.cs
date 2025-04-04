@@ -41,7 +41,6 @@ public class BirdController : MonoBehaviour
 
             rigidBody.AddForce(Vector2.up * velocity, ForceMode2D.Force);
 
-            //rigidBody.velocity = Vector2.up * velocity;
 
         }
 
