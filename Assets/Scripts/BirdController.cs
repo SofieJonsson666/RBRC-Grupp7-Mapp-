@@ -9,6 +9,8 @@ public class BirdController : MonoBehaviour
     private Rigidbody2D rigidBody;
     private bool isFlying = false;
 
+    private 
+
     // Start is called before the first frame update
     void Start()
     {
