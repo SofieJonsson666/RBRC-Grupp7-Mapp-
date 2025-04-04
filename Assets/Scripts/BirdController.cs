@@ -14,13 +14,17 @@ public class BirdController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
         {
-            rigidBody.velocity = Vector2.up * velocity;
+
+            rigidBody.AddForce(Vector2.up * velocity, ForceMode2D.Force);
+
+            //rigidBody.velocity = Vector2.up * velocity;
+
         }
+
     }
 }
