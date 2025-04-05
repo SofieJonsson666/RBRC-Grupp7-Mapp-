@@ -4,20 +4,12 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    private float scrollSpeed = 2f;
-    [SerializeField] private Transform bird;
+    [SerializeField] private float scrollSpeed = 2f;
 
-    private float verticalFollowSpeed = 5f;
-    private float verticalOffset = 0f;
-
-    private void LateUpdate()
+    void FixedUpdate()
     {
-        
-        transform.position += Vector3.right * scrollSpeed * Time.deltaTime;
-
-        
-        Vector3 newPos = transform.position;
-        newPos.y = Mathf.Lerp(transform.position.y, bird.position.y + verticalOffset, verticalFollowSpeed * Time.deltaTime);
-        transform.position = newPos;
+        // Scroll right smoothly at a constant speed
+        transform.position += Vector3.right * scrollSpeed * Time.fixedDeltaTime;
     }
 }
+
