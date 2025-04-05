@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class BirdController : MonoBehaviour
 {
-
-    private float velocity = 20f;
+    private float velocity = 5f;
     private Rigidbody2D rigidBody;
     private bool isFlying = false;
 
     private float minHeight;
     private float maxHeight;
 
-    // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -22,40 +20,32 @@ public class BirdController : MonoBehaviour
 
         minHeight = camera.transform.position.y - camHeight;
         maxHeight = camera.transform.position.y + camHeight;
-
     }
 
-    private void Update()
+    void Update()
     {
-
         isFlying = Input.GetMouseButton(0) || Input.touchCount > 0;
-
-
     }
 
     void FixedUpdate()
     {
-
         if (isFlying)
         {
-
-            rigidBody.AddForce(Vector2.up * velocity, ForceMode2D.Force);
-
-
+            rigidBody.AddForce(Vector2.up * velocity, ForceMode2D.Impulse);
         }
 
+        // Soft clamp to avoid physics conflict
         if (transform.position.y < minHeight)
         {
             transform.position = new Vector3(transform.position.x, minHeight, transform.position.z);
-            rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0f); // stop downward velocity
+            rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0f);
         }
 
         if (transform.position.y > maxHeight)
         {
             transform.position = new Vector3(transform.position.x, maxHeight, transform.position.z);
-            rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0f); // stop upward velocity
+            rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0f);
         }
-
-
     }
 }
+
