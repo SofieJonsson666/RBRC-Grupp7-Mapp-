@@ -11,7 +11,7 @@ public class BirdController : MonoBehaviour
     private float minHeight;
     private float maxHeight;
 
-    private float fixedXOffset = 0f;
+    //private float fixedXOffset = 0f;
 
     void Start()
     {
@@ -26,7 +26,7 @@ public class BirdController : MonoBehaviour
         maxHeight = camera.transform.position.y + camHeight;
 
         float camWidth = camHeight * Camera.main.aspect;
-        fixedXOffset = Camera.main.transform.position.x - camWidth * 0.4f; // 40% from left
+        //fixedXOffset = Camera.main.transform.position.x - camWidth * 0.4f; // 40% from left
     }
 
 
@@ -55,7 +55,7 @@ public class BirdController : MonoBehaviour
         }
 
         float camWidth = Camera.main.orthographicSize * Camera.main.aspect;
-        float desiredX = Camera.main.transform.position.x - camWidth * 0.4f;
+        float desiredX = Camera.main.transform.position.x - camWidth * 0.7f;
 
         transform.position = new Vector3(desiredX, transform.position.y, transform.position.z);
 
