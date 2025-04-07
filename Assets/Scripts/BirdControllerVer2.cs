@@ -8,14 +8,11 @@ public class BirdControllerVer2 : MonoBehaviour
     private float flapForce = 5f;
     private float gravityScale = 3f;
 
-    //private float velocity = 20f;
     private Rigidbody2D rigidBody;
-    //private bool isFlying = false;
 
     private float minHeight;
     private float maxHeight;
 
-    //private float fixedXOffset = 0f;
 
     void Start()
     {
@@ -26,11 +23,12 @@ public class BirdControllerVer2 : MonoBehaviour
         Camera camera = Camera.main;
         float camHeight = camera.orthographicSize;
 
-        minHeight = camera.transform.position.y - camHeight;
-        maxHeight = camera.transform.position.y + camHeight;
+        float padding = 0.8f;
+
+        minHeight = camera.transform.position.y - camHeight + padding;
+        maxHeight = camera.transform.position.y + camHeight - padding;
 
         float camWidth = camHeight * Camera.main.aspect;
-        //fixedXOffset = Camera.main.transform.position.x - camWidth * 0.4f; // 40% from left
     }
 
 
