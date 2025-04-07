@@ -197,7 +197,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 39
+  controlID: 51
   draggingID: 0
 --- !u!114 &9
 MonoBehaviour:
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: AnimationWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -274,14 +274,14 @@ MonoBehaviour:
     y: 0
     width: 468
     height: 947
-  m_MinSize: {x: 101, y: 121}
+  m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
   - {fileID: 20}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -805,9 +805,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.083973, y: 2.4195426, z: -0.051188916}
+    m_Target: {x: 0.3193512, y: 1.9117332, z: -0.04432233}
     speed: 2
-    m_Value: {x: 1.083973, y: 2.4195426, z: -0.051188916}
+    m_Value: {x: 0.067198634, y: 1.7861592, z: -0.041700333}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -857,9 +857,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.77549
+    m_Target: 6.08883
     speed: 2
-    m_Value: 6.77549
+    m_Value: 5.8266315
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -930,7 +930,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Assets/Animations/PlayterCharacterBirdAnimations/DefaultBirdAnimations
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -938,16 +938,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Assets/Animations/PlayterCharacterBirdAnimations/DefaultBirdAnimations
+  - Assets/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Sofie\Documents\GitHub\RBRC-Grupp7-Mapp-
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 3}
-    m_SelectedIDs: 82640000
-    m_LastClickedID: 25730
-    m_ExpandedIDs: 0000000060640000626400006464000066640000686400006a6400006c64000000ca9a3b
+    scrollPos: {x: 0, y: 47}
+    m_SelectedIDs: 76640000
+    m_LastClickedID: 25718
+    m_ExpandedIDs: 000000004c6400004e6400005064000052640000546400005664000058640000706400008c64000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -975,7 +975,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000060640000626400006464000066640000686400006a6400006c640000
+    m_ExpandedIDs: 000000004c6400004e6400005064000052640000546400005664000058640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 82640000
+      m_SelectedIDs: aa640000
       m_LastClickedID: 0
       m_ExpandedIDs: 1afbffff
       m_RenameOverlay:
