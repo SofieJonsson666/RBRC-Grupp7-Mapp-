@@ -8,6 +8,11 @@ public class PauseMenuManager : MonoBehaviour
     [SerializeField] private int levelToLoad;
     private bool isPaused;
 
+    private void Start()
+    {
+        Resume();
+    }
+
     void Update()
     {
         if (isPaused)

@@ -17,9 +17,9 @@ MonoBehaviour:
     x: 0
     y: 43
     width: 1920
-    height: 1007
+    height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 10794
+  controlID: 3115
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 10692
+  controlID: 3116
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 1
+  m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
@@ -747,14 +747,14 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 0
+  m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 278.08115, y: 265.28488, z: 2.7201428}
+    m_Target: {x: -1.2819273, y: 3.127972, z: -2.1503413}
     speed: 2
-    m_Value: {x: 278.08115, y: 265.28488, z: 2.7201428}
+    m_Value: {x: -1.2819273, y: 3.127972, z: -2.1503413}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -800,17 +800,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.03295969, y: 0.045552205, z: -0.0015037335, w: -0.99841654}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: -0.032959685, y: 0.0455522, z: -0.0015037333, w: -0.9984165}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 396.57993
+    m_Target: 5.7549357
     speed: 2
-    m_Value: 396.57993
+    m_Value: 5.7549357
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -941,7 +941,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 43234
+  m_LastSelectedObjectID: 28044
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1017,7 +1017,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 4e18feffbe18feff681efeffac66feff1669feff2a7bfeffb2a0feff18aafeff12adfeff60affeffc8a80000e2a80000b0b30000
+      m_ExpandedIDs: e091ffffea91fffff892ffff0293ffff9c94ffffa694ffffde94fffff094ffff0c95ffff2895ffff3295ffff4e95ffff6a95ffff7c95ffffb495ffffbe95fffff695ffff0896ffff8296ffff9496ffffb096ffffcc96ffffd696fffff296ffff0e97ffff2097ffff2ca0ffff84a0ffff4ca2ffffecccffffdadaffff28eaffff1afbffff10680000326d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1087,7 +1087,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Assets/Art/PlayerCharacterBirds/SofieBird
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1095,16 +1095,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Assets/Art/PlayerCharacterBirds/SofieBird
+  - Assets/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\RBRC-Grupp7-Mapp-
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1c0c0000
-    m_LastClickedID: 3100
-    m_ExpandedIDs: 000000000c06000024070000f4070000240b000000ca9a3b
+    m_SelectedIDs: 98660000
+    m_LastClickedID: 26264
+    m_ExpandedIDs: 000000008066000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1132,7 +1132,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c06000000ca9a3b
+    m_ExpandedIDs: 000000008066000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1230,7 +1230,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 171
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

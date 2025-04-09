@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundDetector : MonoBehaviour
 {
-    private Vector3 location = new Vector3(30, 0, 0);
+    private Vector3 location = new Vector3(32.5f, 0, 0);
 
     private void OnTriggerEnter(Collider other)
     {
