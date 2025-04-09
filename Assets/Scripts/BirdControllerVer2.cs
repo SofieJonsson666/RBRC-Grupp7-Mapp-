@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BirdControllerVer2 : MonoBehaviour
 {
-
     private float flapForce = 5f;
     private float gravityScale = 3f;
 
@@ -19,8 +18,7 @@ public class BirdControllerVer2 : MonoBehaviour
 
     private float horizontalOffsetPercent = 0.1f;
 
-
-    void Start()
+    private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
 
@@ -40,8 +38,7 @@ public class BirdControllerVer2 : MonoBehaviour
         UpdateScreenBounds();
     }
 
-
-    void Update()
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
         {
@@ -50,9 +47,8 @@ public class BirdControllerVer2 : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-
         UpdateScreenBounds();
 
         float padding = 0.1f;
@@ -69,12 +65,14 @@ public class BirdControllerVer2 : MonoBehaviour
         if (transform.position.y <= floorY + 0.01f && rigidBody.velocity.y < 0f)
         {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0f);
+            rigidBody.gravityScale = 0;
         }
 
         // Stop bird from going above the screen
         if (transform.position.y >= maxHeight && rigidBody.velocity.y > 0f)
         {
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0f);
+            rigidBody.gravityScale = 1;
         }
 
         //float camWidth = Camera.main.orthographicSize * Camera.main.aspect;
@@ -82,9 +80,6 @@ public class BirdControllerVer2 : MonoBehaviour
         float desiredX = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width * horizontalOffsetPercent, 0f, GetCameraZDistance())).x;
 
         transform.position = new Vector3(desiredX, transform.position.y, transform.position.z);
-
-
-
     }
 
     private void UpdateScreenBounds()
@@ -102,7 +97,4 @@ public class BirdControllerVer2 : MonoBehaviour
     {
         return Mathf.Abs(Camera.main.transform.position.z - transform.position.z);
     }
-
-
-
 }
