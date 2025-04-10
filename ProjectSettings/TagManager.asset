@@ -6,6 +6,8 @@ TagManager:
   tags:
   - BackgroundController
   - Background
+  - Enemy
+  - Pickup
   layers:
   - Default
   - TransparentFX

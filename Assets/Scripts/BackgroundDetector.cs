@@ -10,7 +10,7 @@ public class BackgroundDetector : MonoBehaviour
     {
         if (other.CompareTag("Background"))
         {
-            Debug.Log("Entered");
+            //Debug.Log("Entered");
             other.transform.position = location;
         }
     }

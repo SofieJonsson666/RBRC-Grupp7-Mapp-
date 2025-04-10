@@ -13,7 +13,7 @@ public class PauseMenuManager : MonoBehaviour
         Resume();
     }
 
-    void Update()
+   /* void Update()
     {
         if (isPaused)
         {
@@ -23,7 +23,7 @@ public class PauseMenuManager : MonoBehaviour
         {
             Debug.Log("Not Paused");
         }
-    }
+    } */
     public void Resume()
     {
         Time.timeScale = 1.0f;

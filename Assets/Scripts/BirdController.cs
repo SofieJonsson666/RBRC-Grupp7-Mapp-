@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BirdController : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class BirdController : MonoBehaviour
 
     private float minHeight;
     private float maxHeight;
+
+    [SerializeField] private int health;
+    private int pickups;
 
     //private float fixedXOffset = 0f;
 
@@ -35,6 +39,25 @@ public class BirdController : MonoBehaviour
         isFlying = Input.GetMouseButton(0) || Input.touchCount > 0;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            print("Aj");
+            health--;
+            if (health <= 0)
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
+        if (collision.CompareTag("Pickup"))
+        {
+            print("Mmm");
+            Destroy(collision.gameObject);
+            pickups++;
+        }
+    }
+
     void FixedUpdate()
     {
         if (isFlying)
@@ -58,8 +81,5 @@ public class BirdController : MonoBehaviour
         float desiredX = Camera.main.transform.position.x - camWidth * 0.7f;
 
         transform.position = new Vector3(desiredX, transform.position.y, transform.position.z);
-
-
-
     }
 }
