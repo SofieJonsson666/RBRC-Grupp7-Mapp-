@@ -39,9 +39,9 @@ public class BirdController : MonoBehaviour
         isFlying = Input.GetMouseButton(0) || Input.touchCount > 0;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             print("Aj");
             health--;
@@ -50,7 +50,7 @@ public class BirdController : MonoBehaviour
                 SceneManager.LoadScene(0);
             }
         }
-        if (collision.CompareTag("Pickup"))
+        if (collision.gameObject.CompareTag("Pickup"))
         {
             print("Mmm");
             Destroy(collision.gameObject);
