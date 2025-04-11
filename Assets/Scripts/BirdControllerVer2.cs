@@ -5,7 +5,7 @@ using UnityEngine;
 public class BirdControllerVer2 : MonoBehaviour
 {
     private float flapForce = 5f;
-    private float gravityScale = 3f;
+    //private float gravityScale = 3f;
 
     [SerializeField] private float floorY = 1.1f;
 
@@ -51,7 +51,7 @@ public class BirdControllerVer2 : MonoBehaviour
     {
         UpdateScreenBounds();
 
-        float padding = 0.1f;
+        //float padding = 0.1f;
 
         /*
         // Stop bird from going below the screen

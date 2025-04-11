@@ -45,6 +45,8 @@ public class BirdController : MonoBehaviour
         {
             print("Aj");
             health--;
+            collision.collider.enabled = false;
+            Destroy(collision.gameObject);
             if (health <= 0)
             {
                 SceneManager.LoadScene(0);
