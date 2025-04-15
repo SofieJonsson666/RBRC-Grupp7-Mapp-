@@ -7,6 +7,7 @@ public class PauseMenuManager : MonoBehaviour
 {
     [SerializeField] private int levelToLoad;
     private bool isPaused;
+    [SerializeField] private GameObject player;
 
     private void Start()
     {

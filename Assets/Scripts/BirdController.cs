@@ -13,7 +13,7 @@ public class BirdController : MonoBehaviour
     private float maxHeight;
 
     [SerializeField] private int health;
-    private int pickups;
+    //private int seedAmount;
 
     //private float fixedXOffset = 0f;
 
@@ -56,7 +56,7 @@ public class BirdController : MonoBehaviour
         {
             print("Mmm");
             Destroy(collision.gameObject);
-            pickups++;
+            DataSaver.instance.UpdateSeedAmount(1);
         }
     }
 

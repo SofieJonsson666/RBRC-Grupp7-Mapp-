@@ -9,4 +9,9 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    private void Start()
+    {
+        print(DataSaver.instance.seedAmount);
+    }
 }
