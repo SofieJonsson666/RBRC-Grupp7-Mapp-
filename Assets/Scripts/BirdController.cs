@@ -46,7 +46,7 @@ public class BirdController : MonoBehaviour
             print("Aj");
             health--;
             collision.collider.enabled = false;
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
             if (health <= 0)
             {
                 SceneManager.LoadScene(0);
@@ -57,6 +57,16 @@ public class BirdController : MonoBehaviour
             print("Mmm");
             Destroy(collision.gameObject);
             DataSaver.instance.UpdateSeedAmount(1);
+        }
+        if (collision.gameObject.CompareTag("StruggleEnemy"))
+        {
+            print("Struggletime!");
+            health--;
+            collision.collider.enabled = false;
+            if (health <= 0)
+            {
+                SceneManager.LoadScene(0);
+            }
         }
     }
 

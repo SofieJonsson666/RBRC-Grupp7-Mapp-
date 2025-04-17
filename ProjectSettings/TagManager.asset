@@ -8,6 +8,7 @@ TagManager:
   - Background
   - Enemy
   - Pickup
+  - StruggleEnemy
   layers:
   - Default
   - TransparentFX
