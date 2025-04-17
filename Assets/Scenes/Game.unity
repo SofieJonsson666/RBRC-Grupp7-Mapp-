@@ -1448,12 +1448,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 3.5, y: 0, z: 0}
---- !u!1 &1308039350 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4254135222348768471, guid: f6be8d41e9de86843a96c8cdae2c94c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 5706882078256661728}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1330672624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,8 +1725,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43aee939c6c86ac47b968aad582247d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 1308039350}
-  StruggleEnemyPrefab: {fileID: 2020903950}
+  EnemyPrefab: {fileID: 4254135222348768471, guid: f6be8d41e9de86843a96c8cdae2c94c2,
+    type: 3}
+  StruggleEnemyPrefab: {fileID: 5048106230864206176, guid: 41231df065d5d3d4cb5c3993c31d7bd0,
+    type: 3}
   enemyInterval: 3.5
   struggleEnemyInterval: 3.5
 --- !u!4 &1580236216
@@ -2003,12 +1999,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896491261}
   m_CullTransparentMesh: 1
---- !u!1 &2020903950 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5048106230864206176, guid: 41231df065d5d3d4cb5c3993c31d7bd0,
-    type: 3}
-  m_PrefabInstance: {fileID: 3008449283105784607}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2087077689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2333,6 +2323,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4254135222348768471, guid: f6be8d41e9de86843a96c8cdae2c94c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6494750816921406933, guid: f6be8d41e9de86843a96c8cdae2c94c2,
         type: 3}
