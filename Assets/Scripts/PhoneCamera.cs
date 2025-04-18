@@ -9,8 +9,9 @@ public class PhoneCamera : MonoBehaviour
     private WebCamTexture backCam;
     private Texture defaultBackground;
 
-    public RawImage background;
-    public AspectRatioFitter fit;
+    //public RawImage background;
+    //public AspectRatioFitter fit;
+    public Renderer backgroundRenderer;
     [SerializeField] private GameObject cameraBackground;
 
     private void Start()
@@ -23,7 +24,7 @@ public class PhoneCamera : MonoBehaviour
 
         cameraBackground.SetActive(true);
 
-        defaultBackground = background.texture;
+        //defaultBackground = background.texture;
         WebCamDevice[] devices = WebCamTexture.devices;
 
         if (devices.Length == 0)
@@ -48,7 +49,8 @@ public class PhoneCamera : MonoBehaviour
         }
 
         backCam.Play();
-        background.texture = backCam;
+        //background.texture = backCam;
+        backgroundRenderer.material.mainTexture = backCam;
 
         camAvailable = true;
     }
@@ -60,13 +62,19 @@ public class PhoneCamera : MonoBehaviour
             return;
         }
 
-        float ratio = (float)backCam.width / (float)backCam.height;
-        fit.aspectRatio = ratio;
+        Vector3 scale = backgroundRenderer.transform.localScale;
+        scale.y = backCam.videoVerticallyMirrored ? -Mathf.Abs(scale.y) : Mathf.Abs(scale.y);
+        backgroundRenderer.transform.localScale = scale;
 
-        float scaleY = backCam.videoVerticallyMirrored ? -1 : 1f;
-        background.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
+        backgroundRenderer.transform.localEulerAngles = new Vector3(0, 0, -backCam.videoRotationAngle);
 
-        int orient = -backCam.videoRotationAngle;
-        background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
+        /* float ratio = (float)backCam.width / (float)backCam.height;
+         fit.aspectRatio = ratio;
+
+         float scaleY = backCam.videoVerticallyMirrored ? -1 : 1f;
+         background.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
+
+         int orient = -backCam.videoRotationAngle;
+         background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);*/
     }
 }
