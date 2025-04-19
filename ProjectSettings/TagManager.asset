@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Pickup
   - StruggleEnemy
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -45,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Camera
+    uniqueID: 3818785741
     locked: 0
