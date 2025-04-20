@@ -7,7 +7,7 @@ public class DataSaver : MonoBehaviour
     public static DataSaver instance;
 
     public int seedAmount;
-    public bool ar;
+    public bool ar = false;
 
     private void Awake()
     {
@@ -18,7 +18,6 @@ public class DataSaver : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
-        ar = false;
     }
 
     public void UpdateSeedAmount(int change)

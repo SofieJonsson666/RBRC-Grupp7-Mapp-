@@ -23,19 +23,15 @@ public class PhoneCamera : MonoBehaviour
         if (!DataSaver.instance.ar)
         {
             cameraBackground.SetActive(false);
+            camAvailable = false;
             return;
         }
 
-        cameraBackground.SetActive(true);
-        backgroundDetector.SetActive(false);
-        backgroundSpawner.SetActive(false);
-        backgroundController.SetActive(false);
-
-        defaultBackground = background.texture;
         WebCamDevice[] devices = WebCamTexture.devices;
 
         if (devices.Length == 0)
         {
+            cameraBackground.SetActive(false);
             print("Fel");
             camAvailable = false;
             return;
@@ -54,6 +50,12 @@ public class PhoneCamera : MonoBehaviour
             print("ingen bakamera");
             return;
         }
+
+        defaultBackground = background.texture;
+        cameraBackground.SetActive(true);
+        backgroundDetector.SetActive(false);
+        backgroundSpawner.SetActive(false);
+        backgroundController.SetActive(false);
 
         backCam.Play();
         background.texture = backCam;
