@@ -93,7 +93,7 @@ public class BirdControllerVer4 : MonoBehaviour
         {
             Debug.Log("Mmm");
             Destroy(collision.gameObject);
-            DataSaver.instance.UpdateSeedAmount(1);
+            DataSaver.instance.seedAmount++;
         }
 
         if (collision.gameObject.CompareTag("StruggleEnemy"))

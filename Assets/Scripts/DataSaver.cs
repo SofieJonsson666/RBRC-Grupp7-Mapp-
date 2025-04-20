@@ -8,6 +8,7 @@ public class DataSaver : MonoBehaviour
 
     public int seedAmount;
     public bool ar = false;
+    public bool gyro = false;
 
     private void Awake()
     {
@@ -18,10 +19,5 @@ public class DataSaver : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
-    }
-
-    public void UpdateSeedAmount(int change)
-    {
-        seedAmount = seedAmount + change;
     }
 }

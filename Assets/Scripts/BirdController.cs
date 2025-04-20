@@ -56,7 +56,7 @@ public class BirdController : MonoBehaviour
         {
             print("Mmm");
             Destroy(collision.gameObject);
-            DataSaver.instance.UpdateSeedAmount(1);
+            DataSaver.instance.seedAmount++;
         }
         if (collision.gameObject.CompareTag("StruggleEnemy"))
         {
