@@ -25,6 +25,7 @@ public class BirdControllerVer4 : MonoBehaviour
 
     private void Start()
     {
+        DataSaver.instance.seedAmount = 0;
         rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
         rigidBody.gravityScale = 1f;
@@ -120,6 +121,8 @@ public class BirdControllerVer4 : MonoBehaviour
             // Removed auto-destroy — teammate version prefers to keep enemy object alive
             if (health <= 0 && canDie)
             {
+                DataSaver.instance.totalSeedAmount += DataSaver.instance.seedAmount;
+
                 SceneManager.LoadScene(0);
             }
         }
@@ -139,6 +142,8 @@ public class BirdControllerVer4 : MonoBehaviour
 
             if (canDie)
             {
+                DataSaver.instance.totalSeedAmount += DataSaver.instance.seedAmount;
+
                 SceneManager.LoadScene(0);
             }
         }
