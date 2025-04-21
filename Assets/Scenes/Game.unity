@@ -864,6 +864,33 @@ MonoBehaviour:
   shootCooldown: 0.2
   projectileLifetime: 3
   minSwipeDistance: 30
+--- !u!95 &727311903 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3070972478775922990, guid: 441db6982ea02974e9c4c54441eefa70,
+    type: 3}
+  m_PrefabInstance: {fileID: 2087077689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &727311904 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1875361219963452483, guid: 441db6982ea02974e9c4c54441eefa70,
+    type: 3}
+  m_PrefabInstance: {fileID: 2087077689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &727311905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727311891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f8dbd8b251f2c47b8004dc0d08738b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterDB: {fileID: 11400000, guid: 08decb9ff77966f4c89bf51f00e9c3cd, type: 2}
+  spriteRenderer: {fileID: 727311904}
+  animator: {fileID: 727311903}
 --- !u!1 &813238498
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,6 +2433,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 727311900}
+    - targetCorrespondingSourceObject: {fileID: 6704993082979942387, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 727311905}
   m_SourcePrefab: {fileID: 100100000, guid: 441db6982ea02974e9c4c54441eefa70, type: 3}
 --- !u!1001 &266268159300734407
 PrefabInstance:
