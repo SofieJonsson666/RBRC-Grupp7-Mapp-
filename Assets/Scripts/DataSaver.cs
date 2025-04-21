@@ -7,8 +7,8 @@ public class DataSaver : MonoBehaviour
     public static DataSaver instance;
 
     public int seedAmount;
-    public bool ar = false;
-    public bool gyro = false;
+    public bool ar;
+    public bool gyro;
 
     private void Awake()
     {

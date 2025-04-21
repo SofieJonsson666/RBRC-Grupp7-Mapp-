@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class BirdControllerVer4 : MonoBehaviour
 {
@@ -17,7 +18,9 @@ public class BirdControllerVer4 : MonoBehaviour
     private bool isFlying = false;
 
     private Gyroscope gyro;
-    private float rotationY;
+    private float rotationZ;
+
+    [SerializeField] private TMP_Text seedCounter;
 
     private void Start()
     {
@@ -44,8 +47,8 @@ public class BirdControllerVer4 : MonoBehaviour
                 -deviceRotation.w);
 
             Vector3 eulerRotation = correctedRotation.eulerAngles;
-            print(eulerRotation.y);
-            rotationY = eulerRotation.y;
+            //print(eulerRotation.z);
+            rotationZ = eulerRotation.z;
             return;
         }
 
@@ -77,7 +80,8 @@ public class BirdControllerVer4 : MonoBehaviour
 
         if (DataSaver.instance.gyro)
         {
-            rigidBody.mass = Mathf.Clamp((rotationY / 45), -45f, 45f);
+            print(Mathf.Clamp(((rotationZ - 90) * 0.02f), -1.5f, 1.5f));
+            rigidBody.gravityScale = Mathf.Clamp(((rotationZ - 90) * 0.02f), -2f, 2f);
         }
 
         if (isFlying && transform.position.y < maxHeight)
@@ -122,6 +126,7 @@ public class BirdControllerVer4 : MonoBehaviour
             Debug.Log("Mmm");
             Destroy(collision.gameObject);
             DataSaver.instance.seedAmount++;
+            seedCounter.text = DataSaver.instance.seedAmount.ToString();
         }
 
         if (collision.gameObject.CompareTag("StruggleEnemy"))

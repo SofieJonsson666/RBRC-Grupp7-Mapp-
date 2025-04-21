@@ -13,11 +13,23 @@ public class MainMenuController : MonoBehaviour
 
     private void Start()
     {
-        if (DataSaver.instance.ar) arOnOff.text = "ON";
-        else arOnOff.text = "OFF";
+        if (DataSaver.instance.ar)
+        {
+            arOnOff.text = "ON";
+        }
+       else
+        {
+            arOnOff.text = "OFF";
+        }
 
-        if (DataSaver.instance.gyro) gyroOnOff.text = "ON";
-        else gyroOnOff.text = "OFF";
+        if (DataSaver.instance.gyro)
+        {
+            gyroOnOff.text = "ON";
+        }
+        else
+        {
+            gyroOnOff.text = "OFF";
+        }
     }
 
     public void SceneLoader()
