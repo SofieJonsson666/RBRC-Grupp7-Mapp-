@@ -21,6 +21,7 @@ public class BirdControllerVer4 : MonoBehaviour
     private float rotationZ;
 
     [SerializeField] private TMP_Text seedCounter;
+    [SerializeField] private TMP_Text healthUI;
 
     private void Start()
     {
@@ -36,6 +37,8 @@ public class BirdControllerVer4 : MonoBehaviour
 
     private void Update()
     {
+        healthUI.text = health.ToString();
+
         if (DataSaver.instance.gyro)
         {
             Quaternion deviceRotation = gyro.attitude;
@@ -132,10 +135,9 @@ public class BirdControllerVer4 : MonoBehaviour
         if (collision.gameObject.CompareTag("StruggleEnemy"))
         {
             Debug.Log("Struggletime!");
-            health--;
             collision.collider.enabled = false;
 
-            if (health <= 0)
+            if (canDie)
             {
                 SceneManager.LoadScene(0);
             }
