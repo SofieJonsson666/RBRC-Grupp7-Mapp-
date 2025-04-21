@@ -10,10 +10,14 @@ public class BirdControllerVer4 : MonoBehaviour
     [SerializeField] private int health = 3;
 
     private Rigidbody2D rigidBody;
+    public bool canDie;
     private float minHeight;
     private float maxHeight;
     private float verticalPadding = 0.8f;
     private bool isFlying = false;
+
+    private Gyroscope gyro;
+    private float rotationY;
 
     private void Start()
     {
@@ -21,11 +25,30 @@ public class BirdControllerVer4 : MonoBehaviour
         rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
         rigidBody.gravityScale = 1f;
 
+        gyro = Input.gyro;
+        gyro.enabled = true;
+
         UpdateScreenBounds();
     }
 
     private void Update()
     {
+        if (DataSaver.instance.gyro)
+        {
+            Quaternion deviceRotation = gyro.attitude;
+
+            Quaternion correctedRotation = new Quaternion(
+                deviceRotation.x,
+                deviceRotation.y,
+                -deviceRotation.z,
+                -deviceRotation.w);
+
+            Vector3 eulerRotation = correctedRotation.eulerAngles;
+            print(eulerRotation.y);
+            rotationY = eulerRotation.y;
+            return;
+        }
+
         isFlying = false;
 
         if (Input.touchCount > 0)
@@ -51,6 +74,11 @@ public class BirdControllerVer4 : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateScreenBounds();
+
+        if (DataSaver.instance.gyro)
+        {
+            rigidBody.mass = Mathf.Clamp((rotationY / 45), -45f, 45f);
+        }
 
         if (isFlying && transform.position.y < maxHeight)
         {
@@ -83,7 +111,7 @@ public class BirdControllerVer4 : MonoBehaviour
             health--;
             collision.collider.enabled = false;
             // Removed auto-destroy — teammate version prefers to keep enemy object alive
-            if (health <= 0)
+            if (health <= 0 && canDie)
             {
                 SceneManager.LoadScene(0);
             }
