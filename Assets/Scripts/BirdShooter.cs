@@ -15,6 +15,15 @@ public class BirdShooter : MonoBehaviour
 
     private Vector2 swipeStartPos;
     private bool swiping = false;
+    private Animator animator;
+    private Rigidbody2D rigidBody;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+        rigidBody = GetComponent<Rigidbody2D>();
+
+    }
 
     void Update()
     {
@@ -35,6 +44,20 @@ public class BirdShooter : MonoBehaviour
                 }
             }
         }
+    }
+
+    
+
+    public void OnAttack()
+    {
+        Debug.Log("attack triggered");
+        animator.SetTrigger("attack");
+
+        // Optional: reset velocity or add effects
+        rigidBody.velocity = Vector2.zero;
+        rigidBody.gravityScale = 1;
+
+        // Optional: play sound, etc.
     }
 
     private void Shoot(Vector2 start, Vector2 end)
@@ -66,6 +89,8 @@ public class BirdShooter : MonoBehaviour
 
         GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+        
+
         rb.gravityScale = 0.1f;
         rb.velocity = direction * shootForce;
 
@@ -78,6 +103,8 @@ public class BirdShooter : MonoBehaviour
         }
 
         Destroy(projectile, projectileLifetime);
+
+        OnAttack();
     }
 
 
