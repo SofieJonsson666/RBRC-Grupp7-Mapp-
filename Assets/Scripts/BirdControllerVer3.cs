@@ -11,6 +11,8 @@ public class BirdControllerVer4 : MonoBehaviour
     [SerializeField] private int health = 3;
 
     private Rigidbody2D rigidBody;
+    private Animator animator;
+
     public bool canDie;
     private float minHeight;
     private float maxHeight;
@@ -32,6 +34,8 @@ public class BirdControllerVer4 : MonoBehaviour
 
         gyro = Input.gyro;
         gyro.enabled = true;
+
+        animator = GetComponent<Animator>();
 
         UpdateScreenBounds();
     }
@@ -111,10 +115,28 @@ public class BirdControllerVer4 : MonoBehaviour
         transform.position = new Vector3(desiredX, transform.position.y, transform.position.z);
     }
 
+    private bool isHit = false;
+
+    public void OnHit()
+    {
+        if (!isHit)
+        {
+            isHit = true;
+            Debug.Log("Hit triggered");
+            animator.SetTrigger("isHit");
+
+            //add effects here later
+            rigidBody.velocity = Vector2.zero;
+            rigidBody.gravityScale = 1;
+            //musssiiiiccc
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            OnHit();
             Debug.Log("Aj");
             health--;
             collision.collider.enabled = false;

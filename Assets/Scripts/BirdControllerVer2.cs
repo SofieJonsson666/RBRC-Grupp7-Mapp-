@@ -10,6 +10,7 @@ public class BirdControllerVer2 : MonoBehaviour
     [SerializeField] private float floorY = 1.1f;
 
     private Rigidbody2D rigidBody;
+    private Animator animator;
 
     private float minHeight;
     private float maxHeight;
@@ -21,6 +22,7 @@ public class BirdControllerVer2 : MonoBehaviour
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
 
         rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
 
@@ -96,5 +98,21 @@ public class BirdControllerVer2 : MonoBehaviour
     private float GetCameraZDistance()
     {
         return Mathf.Abs(Camera.main.transform.position.z - transform.position.z);
+    }
+
+    private bool isHit = false;
+
+    public void OnHit()
+    {
+        if (!isHit)
+        {
+            isHit = true;
+            animator.SetTrigger("isHit");
+
+            //add effects here later
+            rigidBody.velocity = Vector2.zero;
+            rigidBody.gravityScale = 0;
+            //musssiiiiccc
+        }
     }
 }
