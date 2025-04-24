@@ -2580,10 +2580,20 @@ PrefabInstance:
       propertyPath: seedCounter
       value: 
       objectReference: {fileID: 1520342802}
+    - target: {fileID: 5422241006582345651, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6704993082979942387, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6704993082979942387, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6704993082979942387, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
@@ -2612,6 +2622,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1139692900455849961, guid: 69e5e9c88322b3641a5970b04431223a,
+        type: 3}
+      propertyPath: healthUI
+      value: 
+      objectReference: {fileID: 1252156628}
+    - target: {fileID: 1139692900455849961, guid: 69e5e9c88322b3641a5970b04431223a,
+        type: 3}
+      propertyPath: seedCounter
+      value: 
+      objectReference: {fileID: 1520342802}
     - target: {fileID: 6514655704576692936, guid: 69e5e9c88322b3641a5970b04431223a,
         type: 3}
       propertyPath: m_Name
@@ -2621,6 +2641,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705038307671805518, guid: 69e5e9c88322b3641a5970b04431223a,
+        type: 3}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705038307671805518, guid: 69e5e9c88322b3641a5970b04431223a,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7904483321379821047, guid: 69e5e9c88322b3641a5970b04431223a,
         type: 3}
@@ -2672,6 +2702,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8134913394666961763, guid: 69e5e9c88322b3641a5970b04431223a,
+        type: 3}
+      propertyPath: shootPoint
+      value: 
+      objectReference: {fileID: 852560938}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
