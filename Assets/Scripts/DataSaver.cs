@@ -6,6 +6,7 @@ public class DataSaver : MonoBehaviour
 {
     public static DataSaver instance;
 
+    public int highScore = 0;
     public int totalSeedAmount;
     public int seedAmount;
     public bool ar;

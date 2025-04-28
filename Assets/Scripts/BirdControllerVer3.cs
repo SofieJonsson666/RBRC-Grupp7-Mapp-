@@ -132,6 +132,12 @@ public class BirdControllerVer4 : MonoBehaviour
         }
     }
 
+    private void SaveSeeds()
+    {
+        DataSaver.instance.totalSeedAmount += DataSaver.instance.seedAmount;
+        if (DataSaver.instance.seedAmount > DataSaver.instance.highScore) DataSaver.instance.highScore = DataSaver.instance.seedAmount;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -143,7 +149,7 @@ public class BirdControllerVer4 : MonoBehaviour
             // Removed auto-destroy — teammate version prefers to keep enemy object alive
             if (health <= 0 && canDie)
             {
-                DataSaver.instance.totalSeedAmount += DataSaver.instance.seedAmount;
+                SaveSeeds();
 
                 SceneManager.LoadScene(0);
             }
@@ -165,7 +171,7 @@ public class BirdControllerVer4 : MonoBehaviour
 
             if (canDie)
             {
-                DataSaver.instance.totalSeedAmount += DataSaver.instance.seedAmount;
+                SaveSeeds();
 
                 SceneManager.LoadScene(0);
             }

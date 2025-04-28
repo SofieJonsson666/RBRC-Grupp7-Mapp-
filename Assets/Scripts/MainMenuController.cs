@@ -13,22 +13,27 @@ public class MainMenuController : MonoBehaviour
 
     private void Start()
     {
-        if (DataSaver.instance.ar)
+        if (arOnOff != null)
         {
-            arOnOff.text = "ON";
+            if (DataSaver.instance.ar)
+            {
+                arOnOff.text = "ON";
+            }
+            else
+            {
+                arOnOff.text = "OFF";
+            }
         }
-       else
+        if (gyroOnOff != null)
         {
-            arOnOff.text = "OFF";
-        }
-
-        if (DataSaver.instance.gyro)
-        {
-            gyroOnOff.text = "ON";
-        }
-        else
-        {
-            gyroOnOff.text = "OFF";
+            if (DataSaver.instance.gyro)
+            {
+                gyroOnOff.text = "ON";
+            }
+            else
+            {
+                gyroOnOff.text = "OFF";
+            }
         }
     }
 
@@ -48,6 +53,11 @@ public class MainMenuController : MonoBehaviour
 
         optionsMenu.SetActive(true);
         optionsOpen = true;
+    }
+
+    public void Stats()
+    {
+        SceneManager.LoadScene(3);
     }
 
     public void Ar()
