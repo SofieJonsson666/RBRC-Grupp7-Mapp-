@@ -147,6 +147,7 @@ public class BirdControllerVer4 : MonoBehaviour
 
                 SceneManager.LoadScene(0);
             }
+            Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.CompareTag("Pickup"))

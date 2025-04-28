@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7596016427766461414}
   - component: {fileID: 6056813611669289506}
   - component: {fileID: 601559516642261983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bread_Pickup
   m_TagString: Pickup
   m_Icon: {fileID: 0}

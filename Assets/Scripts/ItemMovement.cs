@@ -11,4 +11,5 @@ public class ItemMovement : MonoBehaviour
     {
         transform.Translate(new Vector2 (-speed, 0) * Time.deltaTime);
     }
+
 }
