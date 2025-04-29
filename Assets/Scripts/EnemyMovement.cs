@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class StruggleEnemyMovement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 2f;
     private Rigidbody2D rb;
