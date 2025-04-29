@@ -77,5 +77,4 @@ public class CharacterManager : MonoBehaviour
         Save();
         SceneManager.LoadScene(sceneID);
     }
-
 }
