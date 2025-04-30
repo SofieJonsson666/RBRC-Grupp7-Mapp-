@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class StruggleEnemyMovement : MonoBehaviour
@@ -53,7 +54,36 @@ public class StruggleEnemyMovement : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
     }
+
+    private bool isHit = false;
+
+    public void OnHit()
+    {
+        if (!isHit)
+        {
+            isHit = true;
+            Debug.Log("Hit enemy!");
+            animator.SetTrigger("isHit");
+
+            //add effects here later
+            rb.velocity = Vector2.zero;
+            
+            //musssiiiiccc
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            OnHit();
+            Debug.Log("You hit him!");
+            
+        }
+    }
 }
+
+
 
 internal class AnimationStrings
 {
