@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8134913394666961763}
   - component: {fileID: 6808815433886257220}
   - component: {fileID: 5524863215038611655}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SofieBird
   m_TagString: Player
   m_Icon: {fileID: 0}
