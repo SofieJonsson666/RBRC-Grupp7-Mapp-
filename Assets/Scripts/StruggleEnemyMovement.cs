@@ -21,6 +21,14 @@ public class StruggleEnemyMovement : MonoBehaviour
         } 
     }
 
+    public bool CanMove
+    {
+        get
+        {
+            return animator.GetBool(AnimationStrings.canMove);
+        }
+    }
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -35,10 +43,20 @@ public class StruggleEnemyMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(-speed, rb.velocity.y); // Maintain vertical velocity for gravity
+
+        if (CanMove)
+        {
+            rb.velocity = new Vector2(-speed, rb.velocity.x); // <- This moves the enemy left
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
     }
 }
 
 internal class AnimationStrings
 {
     internal static string hasTarget = "hasTarget";
+    internal static string canMove = "canMove";
 }
