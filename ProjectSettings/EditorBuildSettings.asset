@@ -18,8 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/StatisticsScreen.unity
     guid: 6dc16e33ca4276d44983a13f41ae6054
   - enabled: 1
-    path: Assets/Scenes/CustomBird.unity
+    path: Assets/Scenes/BirdSelfie.unity
     guid: d356753844c0e9742884a720958b4376
+  - enabled: 1
+    path: Assets/Scenes/CustomBird.unity
+    guid: 38eaf98baccf25a4e8993b5e95e019df
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: dc7badeda38975643aca769e5e6d4717,
       type: 2}
