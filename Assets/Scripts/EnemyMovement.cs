@@ -15,6 +15,16 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        if (GameManager.Instance != null)
+            Debug.Log("GameManager exists. isGameOver: " + GameManager.Instance.isGameOver);
+
+        if (GameManager.Instance != null && GameManager.Instance.isGameOver)
+        {
+            rb.velocity = Vector2.zero; // Stop movement when game is over
+            return;
+        }
+
         rb.velocity = new Vector2(-speed, rb.velocity.y); // Maintain vertical velocity for gravity
     }
 }

@@ -3,12 +3,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class BirdControllerVer4 : MonoBehaviour
+public class BirdControllerVer3 : MonoBehaviour
 {
     [SerializeField] private float flapForce = 5f;
     [SerializeField] private float floorY = 1.1f;
     [SerializeField] private float shootHorizontalOffset = 0.1f;
     [SerializeField] private int health = 3;
+    private bool isDead = false;
 
     private Rigidbody2D rigidBody;
     private Animator animator;
@@ -24,6 +25,7 @@ public class BirdControllerVer4 : MonoBehaviour
 
     [SerializeField] private TMP_Text seedCounter;
     [SerializeField] private TMP_Text healthUI;
+    [SerializeField] private GameObject gameOverScreen;
 
     private void Start()
     {
@@ -147,11 +149,13 @@ public class BirdControllerVer4 : MonoBehaviour
             health--;
             collision.collider.enabled = false;
             // Removed auto-destroy — teammate version prefers to keep enemy object alive
-            if (health <= 0 && canDie)
+            if (health <= 0 && canDie && !isDead)
             {
+                Die();
+
                 SaveSeeds();
 
-                SceneManager.LoadScene(0);
+                //SceneManager.LoadScene(0);
             }
             Destroy(collision.gameObject);
         }
@@ -175,6 +179,32 @@ public class BirdControllerVer4 : MonoBehaviour
 
                 SceneManager.LoadScene(0);
             }
+        }
+    }
+
+    private void Die()
+    {
+        isDead = true;
+        GameManager.Instance.isGameOver = true;
+        Debug.Log("Game Over set to TRUE");
+
+        rigidBody.velocity = Vector2.zero;
+        rigidBody.gravityScale = 1f;
+        rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        animator.SetTrigger("Die");
+
+        //Time.timeScale = 0f;
+
+        Invoke("ShowGameOverUI", 1f);
+
+    }
+
+    private void ShowGameOverUI()
+    {
+        if (gameOverScreen != null)
+        {
+            gameOverScreen.SetActive(true);
         }
     }
 

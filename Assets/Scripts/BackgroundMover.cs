@@ -15,4 +15,13 @@ public class BackgroundMover : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.velocity = new Vector3(-speed, 0, 0);
     }
+
+    private void FixedUpdate()
+    {
+        if (GameManager.Instance != null && GameManager.Instance.isGameOver)
+        {
+            rb.velocity = Vector3.zero; // stop movement
+        }
+    }
+
 }

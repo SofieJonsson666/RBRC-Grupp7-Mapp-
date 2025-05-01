@@ -9,6 +9,9 @@ public class ProjectileMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameManager.Instance != null && GameManager.Instance.isGameOver)
+            return;
+
         transform.Translate(new Vector2(-speed, 0) * Time.deltaTime);
     }
 }
