@@ -24,9 +24,12 @@ public class BirdCamera : MonoBehaviour
         RenderTexture.active = rt;
 
         camera.Render();
+        int centerW = width / 2;
+        int centerH = height / 2;
+        const int size = 300;
+        Texture2D image = new Texture2D(size, size);
 
-        Texture2D image = new Texture2D(width, height);
-        image.ReadPixels(new Rect(0, 0, width, height), 0, 0);
+        image.ReadPixels(new Rect(centerW - size/2, centerH - size/2, size, size), 0, 0);
         image.Apply();
 
         camera.targetTexture = null;
