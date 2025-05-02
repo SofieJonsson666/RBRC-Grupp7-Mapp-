@@ -35,6 +35,7 @@ public class StruggleEnemyMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        damageable = GetComponent<Damageable>();
     }
 
     void Update()
@@ -75,7 +76,7 @@ public class StruggleEnemyMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Projectile"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             OnHit();
             Debug.Log("You hit him!");
