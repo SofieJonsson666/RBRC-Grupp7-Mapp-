@@ -3005,6 +3005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   background: {fileID: 2016324106}
   fit: {fileID: 2016324105}
+  backSelected: 1
   cameraBackground: {fileID: 2016324103}
   backgroundDetector: {fileID: 39643090}
   backgroundSpawner: {fileID: 1330672624}
@@ -6008,7 +6009,7 @@ PrefabInstance:
     - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
       propertyPath: canDie
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}

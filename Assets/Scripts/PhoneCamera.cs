@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PhoneCamera : MonoBehaviour
 {
     private bool camAvailable;
-    private WebCamTexture backCam;
+    private WebCamTexture cam;
     private Texture defaultBackground;
 
     public RawImage background;
     public AspectRatioFitter fit;
+    public bool backSelected;
     //public Renderer backgroundRenderer;
     [SerializeField] private GameObject cameraBackground;
 
@@ -20,12 +22,15 @@ public class PhoneCamera : MonoBehaviour
 
     private void Start()
     {
-        if (!DataSaver.instance.ar)
+        if (backSelected)
         {
-            cameraBackground.SetActive(false);
-            camAvailable = false;
-            return;
-        }
+            if (!DataSaver.instance.ar)
+            {
+                cameraBackground.SetActive(false);
+                camAvailable = false;
+                return;
+            }
+        }  
 
         WebCamDevice[] devices = WebCamTexture.devices;
 
@@ -39,26 +44,39 @@ public class PhoneCamera : MonoBehaviour
 
         for(int i = 0; i < devices.Length; i++)
         {
-            if (!devices[i].isFrontFacing)
+            if (!devices[i].isFrontFacing && backSelected)
             {
-                backCam = new WebCamTexture(devices[i].name, Screen.width, Screen.height);
+                cam = new WebCamTexture(devices[i].name, Screen.width, Screen.height);
+            }
+            else if(devices[i].isFrontFacing && !backSelected)
+            {
+                cam = new WebCamTexture(devices[i].name, Screen.width, Screen.height);
             }
         }
 
-        if(backCam == null)
+        if(cam == null)
         {
-            print("ingen bakamera");
+            print("ingen kamera");
+
+            if (!backSelected)
+            {
+                SceneManager.LoadScene(5);
+            }
             return;
         }
 
         defaultBackground = background.texture;
-        cameraBackground.SetActive(true);
-        backgroundDetector.SetActive(false);
-        backgroundSpawner.SetActive(false);
-        backgroundController.SetActive(false);
 
-        backCam.Play();
-        background.texture = backCam;
+        if (backSelected)
+        {
+            cameraBackground.SetActive(true);
+            backgroundDetector.SetActive(false);
+            backgroundSpawner.SetActive(false);
+            backgroundController.SetActive(false);
+        }
+
+        cam.Play();
+        background.texture = cam;
         //backgroundRenderer.material.mainTexture = backCam;
 
         camAvailable = true;
@@ -77,13 +95,13 @@ public class PhoneCamera : MonoBehaviour
 
         backgroundRenderer.transform.localEulerAngles = new Vector3(0, 0, -backCam.videoRotationAngle);*/
 
-         float ratio = (float)backCam.width / (float)backCam.height;
+         float ratio = (float)cam.width / (float)cam.height;
          fit.aspectRatio = ratio;
 
-         float scaleY = backCam.videoVerticallyMirrored ? -1 : 1f;
+         float scaleY = cam.videoVerticallyMirrored ? -1 : 1f;
          background.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
 
-         int orient = -backCam.videoRotationAngle;
+         int orient = -cam.videoRotationAngle;
          background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
     }
 }
