@@ -154,9 +154,10 @@ MonoBehaviour:
   floorY: 1.3
   shootHorizontalOffset: 0.1
   health: 3
-  canDie: 1
+  canDie: 0
   seedCounter: {fileID: 0}
   healthUI: {fileID: 0}
+  gameOverScreen: {fileID: 0}
 --- !u!114 &8781691580735548584
 MonoBehaviour:
   m_ObjectHideFlags: 0

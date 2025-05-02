@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Damageable))]
 public class StruggleEnemyMovement : MonoBehaviour
 {
     public StruggleEnemyDetectionZone attackzone;
@@ -11,6 +11,7 @@ public class StruggleEnemyMovement : MonoBehaviour
     [SerializeField] private float speed = 2f;
     private Rigidbody2D rb;
     Animator animator;
+    Damageable damageable;
 
     public bool _hasTarget = false;
 
@@ -89,4 +90,7 @@ internal class AnimationStrings
 {
     internal static string hasTarget = "hasTarget";
     internal static string canMove = "canMove";
+    internal static string isAlive = "isAlive";
+    internal static string lockVelocity = "lockVelocity";
+    internal static string hitTrigger = "hitTrigger";
 }
