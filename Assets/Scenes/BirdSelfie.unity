@@ -643,6 +643,7 @@ GameObject:
   - component: {fileID: 1528632808}
   - component: {fileID: 1528632807}
   - component: {fileID: 1528632806}
+  - component: {fileID: 1528632809}
   m_Layer: 5
   m_Name: BackBtn
   m_TagString: Untagged
@@ -713,7 +714,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1528632807}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1528632809}
+        m_TargetAssemblyTypeName: CustomBirdMenu, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1528632807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,6 +765,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528632804}
   m_CullTransparentMesh: 1
+--- !u!114 &1528632809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528632804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf88ee7646c9e741a74772ed49edd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1774104087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,7 +1089,7 @@ RectTransform:
   m_GameObject: {fileID: 1916889880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 7}
-  m_LocalScale: {x: 0.05391688, y: 0.05391688, z: 0.05391688}
+  m_LocalScale: {x: 0.060586397, y: 0.060586397, z: 0.060586397}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1843675526}
@@ -1072,7 +1097,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 4.5}
+  m_AnchoredPosition: {x: 0, y: 4}
   m_SizeDelta: {x: 945, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2009042371

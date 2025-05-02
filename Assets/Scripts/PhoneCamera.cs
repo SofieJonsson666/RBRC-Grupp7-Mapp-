@@ -66,10 +66,10 @@ public class PhoneCamera : MonoBehaviour
         }
 
         defaultBackground = background.texture;
+        cameraBackground.SetActive(true);
 
         if (backSelected)
-        {
-            cameraBackground.SetActive(true);
+        {      
             backgroundDetector.SetActive(false);
             backgroundSpawner.SetActive(false);
             backgroundController.SetActive(false);
