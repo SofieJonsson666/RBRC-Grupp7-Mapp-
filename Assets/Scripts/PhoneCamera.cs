@@ -13,6 +13,7 @@ public class PhoneCamera : MonoBehaviour
     public RawImage background;
     public AspectRatioFitter fit;
     public bool backSelected;
+    public bool gameScene;
     //public Renderer backgroundRenderer;
     [SerializeField] private GameObject cameraBackground;
 
@@ -22,6 +23,17 @@ public class PhoneCamera : MonoBehaviour
 
     private void Start()
     {
+        Activate();
+    }
+
+    public void Activate()
+    {
+        if(cam != null && cam.isPlaying)
+        {
+            cam.Stop();
+            cam = null;
+        }
+
         if (backSelected)
         {
             if (!DataSaver.instance.ar)
@@ -68,7 +80,7 @@ public class PhoneCamera : MonoBehaviour
         defaultBackground = background.texture;
         cameraBackground.SetActive(true);
 
-        if (backSelected)
+        if (gameScene)
         {      
             backgroundDetector.SetActive(false);
             backgroundSpawner.SetActive(false);
@@ -77,7 +89,6 @@ public class PhoneCamera : MonoBehaviour
 
         cam.Play();
         background.texture = cam;
-        //backgroundRenderer.material.mainTexture = backCam;
 
         camAvailable = true;
     }

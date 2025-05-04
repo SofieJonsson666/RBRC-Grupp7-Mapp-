@@ -3186,6 +3186,7 @@ MonoBehaviour:
   background: {fileID: 2016324106}
   fit: {fileID: 2016324105}
   backSelected: 1
+  gameScene: 1
   cameraBackground: {fileID: 2016324103}
   backgroundDetector: {fileID: 39643090}
   backgroundSpawner: {fileID: 1330672624}
