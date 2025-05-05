@@ -142,6 +142,7 @@ public class BirdControllerVer3 : MonoBehaviour
         {
             isHit = true;
             Debug.Log("Hit triggered");
+            
             animator.SetTrigger("isHit");
 
             //add effects here later
