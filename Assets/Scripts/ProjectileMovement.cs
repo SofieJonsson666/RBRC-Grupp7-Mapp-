@@ -21,6 +21,7 @@ public class ProjectileMovement : MonoBehaviour
         {
             
             Debug.Log("projectile hit bird!");
+            
 
         }
     }

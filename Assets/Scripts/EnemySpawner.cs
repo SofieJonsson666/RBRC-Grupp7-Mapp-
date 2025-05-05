@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float struggleEnemyInterval = 3.5f;
 
     [SerializeField] private float groundY = 20f; // Set this to your ground level
+    [SerializeField] private float spawnZ = -1f;
 
     void Start()
     {
@@ -31,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
             if (GameManager.Instance != null && GameManager.Instance.isGameOver)
                 yield break;
 
-            Vector3 spawnPosition = new Vector3(17, groundY, 0);
+            Vector3 spawnPosition = new Vector3(17, groundY, spawnZ);
             Instantiate(enemy, spawnPosition, Quaternion.identity);
         }
 
