@@ -27,6 +27,12 @@ public class BirdShooter : MonoBehaviour
 
     void Update()
     {
+
+        if (GameManager.Instance != null && GameManager.Instance.isGameOver)
+        {
+            return;
+        }
+
         foreach (Touch touch in Input.touches)
         {
             if (touch.position.x > Screen.width / 2)
@@ -50,6 +56,12 @@ public class BirdShooter : MonoBehaviour
 
     public void OnAttack()
     {
+
+        if (GameManager.Instance != null && GameManager.Instance.isGameOver)
+        {
+            return;
+        }
+
         Debug.Log("attack triggered");
         animator.SetTrigger("attack");
 

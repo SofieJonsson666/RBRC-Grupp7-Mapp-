@@ -47,6 +47,13 @@ public class BirdControllerVer3 : MonoBehaviour
 
     private void Update()
     {
+
+        if (isDead)
+        {
+            return;
+        }
+
+
         healthUI.text = health.ToString();
 
         //Kollar om gyro är på
@@ -91,6 +98,11 @@ public class BirdControllerVer3 : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateScreenBounds();
+
+        if (isDead)
+        {
+            return;
+        }
 
         //Gör så fågeln flyger med gyro
         if (DataSaver.instance.gyro)
