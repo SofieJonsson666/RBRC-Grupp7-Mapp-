@@ -26,6 +26,9 @@ public class BirdControllerVer3 : MonoBehaviour
     [SerializeField] private TMP_Text seedCounter;
     [SerializeField] private TMP_Text healthUI;
     [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private ParticleSystem seedParticle;
+    [SerializeField] private ParticleSystem featherParticle;
+    [SerializeField] private Camera camera;
 
     private void Start()
     {
@@ -146,24 +149,29 @@ public class BirdControllerVer3 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            Instantiate(featherParticle, collision.gameObject.transform.position, Quaternion.identity);
+            //Destroy(featherParticle, featherParticle.GetComponent<ParticleSystem>().main.duration);
             OnHit();
             Debug.Log("Aj");
             health--;
             collision.collider.enabled = false;
-            // Removed auto-destroy — teammate version prefers to keep enemy object alive
+
+            CameraShake cameraShake = camera.GetComponent<CameraShake>();
+            StartCoroutine(cameraShake.Shake());
+
             if (health <= 0 && canDie && !isDead)
             {
                 Die();
-
                 SaveSeeds();
-
-                //SceneManager.LoadScene(0);
             }
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.CompareTag("Pickup"))
         {
+            Instantiate(seedParticle, collision.gameObject.transform.position, Quaternion.identity);
+            //Destroy(seedParticle, seedParticle.GetComponent<ParticleSystem>().main.duration);
+
             Debug.Log("Mmm");
             Destroy(collision.gameObject);
             DataSaver.instance.seedAmount++;
@@ -172,6 +180,9 @@ public class BirdControllerVer3 : MonoBehaviour
 
         if (collision.gameObject.CompareTag("StruggleEnemy"))
         {
+            Instantiate(featherParticle, collision.gameObject.transform.position, Quaternion.identity);
+            //DestroyImmediate(featherParticle, true);
+            //Destroy(seedParticle, seedParticle.GetComponent<ParticleSystem>().main.duration);
             Debug.Log("Struggletime!");
             collision.collider.enabled = false;
 

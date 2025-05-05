@@ -3090,6 +3090,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3191,6 +3192,44 @@ MonoBehaviour:
   backgroundDetector: {fileID: 39643090}
   backgroundSpawner: {fileID: 1330672624}
   backgroundController: {fileID: 241879920}
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c33a63ce72e2dc45a6cab108af7c62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 0.26
+  shakeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.05022049
+      value: 1.2197266
+      inSlope: -0.0011878682
+      outSlope: -0.0011878682
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.87786865
+      value: 1.2186241
+      inSlope: -0.0011878682
+      outSlope: -0.0011878682
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  strengthDivider: 4
 --- !u!1001 &979698122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5671,7 +5710,7 @@ Transform:
   m_GameObject: {fileID: 1861133039}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.89, y: 3.8992083, z: 0}
+  m_LocalPosition: {x: -21.23, y: 3.8992083, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6347,6 +6386,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
+      propertyPath: canDie
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
       propertyPath: healthUI
       value: 
       objectReference: {fileID: 1252156628}
@@ -6357,9 +6406,21 @@ PrefabInstance:
       objectReference: {fileID: 1520342802}
     - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
+      propertyPath: seedParticle
+      value: 
+      objectReference: {fileID: 720644624887820774, guid: bd8905745ff663a4e99637c649a42d6e,
+        type: 3}
+    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 832271402}
+    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
+      propertyPath: featherParticle
+      value: 
+      objectReference: {fileID: 720644624887820774, guid: 020460e148ca7fb49a5c7d72390742bb,
+        type: 3}
     - target: {fileID: 6704993082979942387, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
       propertyPath: m_Name
