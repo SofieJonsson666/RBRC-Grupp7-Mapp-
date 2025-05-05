@@ -150,7 +150,7 @@ public class BirdControllerVer3 : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Instantiate(featherParticle, collision.gameObject.transform.position, Quaternion.identity);
-            //Destroy(featherParticle, featherParticle.GetComponent<ParticleSystem>().main.duration);
+            //Invoke(DestroyObject(featherParticle), 1.5f);
             OnHit();
             Debug.Log("Aj");
             health--;
@@ -171,6 +171,7 @@ public class BirdControllerVer3 : MonoBehaviour
         {
             Instantiate(seedParticle, collision.gameObject.transform.position, Quaternion.identity);
             //Destroy(seedParticle, seedParticle.GetComponent<ParticleSystem>().main.duration);
+            //DestroyImmediate(seedParticle, true);
 
             Debug.Log("Mmm");
             Destroy(collision.gameObject);
