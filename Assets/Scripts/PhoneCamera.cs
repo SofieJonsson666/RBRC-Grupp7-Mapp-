@@ -20,6 +20,7 @@ public class PhoneCamera : MonoBehaviour
     [SerializeField] private GameObject backgroundDetector;
     [SerializeField] private GameObject backgroundSpawner;
     [SerializeField] private GameObject backgroundController;
+    [SerializeField] private GameObject house;
 
     private void Start()
     {
@@ -85,6 +86,7 @@ public class PhoneCamera : MonoBehaviour
             backgroundDetector.SetActive(false);
             backgroundSpawner.SetActive(false);
             backgroundController.SetActive(false);
+            house.SetActive(false);
         }
 
         cam.Play();
