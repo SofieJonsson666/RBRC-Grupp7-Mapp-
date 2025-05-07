@@ -6,7 +6,14 @@ public class ProjectileMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
     private Rigidbody2D rb;
+    private Animator animator;
 
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        animator.Play("EnemyProjectileAnimation_Fly");
+    }
     private void FixedUpdate()
     {
         if (GameManager.Instance != null && GameManager.Instance.isGameOver)
