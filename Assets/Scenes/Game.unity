@@ -5168,7 +5168,8 @@ MonoBehaviour:
   BreadPrefab: {fileID: 2789325862199344426, guid: 2e8b3b0134adb6b47a3ace08de2a6bfd,
     type: 3}
   seedInterval: 3
-  breadInterval: 5
+  breadInterval: 1.31
+  spawnZ: -1
 --- !u!1 &1663155261
 GameObject:
   m_ObjectHideFlags: 0
