@@ -140,7 +140,7 @@ public class BirdControllerVer3 : MonoBehaviour
     {
         if (!isHit)
         {
-            isHit = true;
+            isHit = false;
             Debug.Log("Hit triggered");
             
             animator.SetTrigger("isHit");
@@ -149,6 +149,8 @@ public class BirdControllerVer3 : MonoBehaviour
             rigidBody.velocity = Vector2.zero;
             rigidBody.gravityScale = 1;
             //musssiiiiccc
+
+            health--;
         }
     }
 
@@ -166,7 +168,7 @@ public class BirdControllerVer3 : MonoBehaviour
             //Invoke(DestroyObject(featherParticle), 1.5f);
             OnHit();
             Debug.Log("Aj");
-            health--;
+            //health--;
             collision.collider.enabled = false;
 
             CameraShake cameraShake = camera.GetComponent<CameraShake>();
