@@ -145,6 +145,8 @@ public class BirdControllerVer3 : MonoBehaviour
             
             animator.SetTrigger("isHit");
 
+            Handheld.Vibrate();
+
             //add effects here later
             rigidBody.velocity = Vector2.zero;
             rigidBody.gravityScale = 1;
