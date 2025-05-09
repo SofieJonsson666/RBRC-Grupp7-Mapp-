@@ -5175,7 +5175,7 @@ MonoBehaviour:
     type: 3}
   enemyInterval: 3.5
   struggleEnemyInterval: 5
-  groundY: 0
+  groundY: 2.1
   spawnZ: 0
 --- !u!4 &1580236216
 Transform:

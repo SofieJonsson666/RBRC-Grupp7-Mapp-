@@ -9,11 +9,10 @@ public class ItemMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         if (GameManager.Instance != null && GameManager.Instance.isGameOver)
             return;
 
-        transform.Translate(new Vector2 (-speed, 0) * Time.deltaTime);
+        float itemSpeed = speed * DataSaver.instance.mps;
+        transform.Translate(new Vector2(-itemSpeed, 0) * Time.deltaTime);
     }
-
 }

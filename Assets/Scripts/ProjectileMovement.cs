@@ -8,28 +8,27 @@ public class ProjectileMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
 
-
     private void Start()
     {
         animator = GetComponent<Animator>();
         animator.Play("EnemyProjectileAnimation_Fly");
     }
+
     private void FixedUpdate()
     {
         if (GameManager.Instance != null && GameManager.Instance.isGameOver)
             return;
 
-        transform.Translate(new Vector2(-speed, 0) * Time.deltaTime);
+        float projectileSpeed = speed * DataSaver.instance.mps;
+
+        transform.Translate(new Vector2(-projectileSpeed, 0) * Time.deltaTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            
             Debug.Log("projectile hit bird!");
-            
-
         }
     }
 }
