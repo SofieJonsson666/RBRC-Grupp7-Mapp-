@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2518737812131705286}
   - component: {fileID: 8849232847806067968}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ColliderStruggle
-  m_TagString: Untagged
+  m_TagString: StruggleEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,8 +87,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6965533075039501083}
   - component: {fileID: 5384448702557239018}
-  m_Layer: 3
-  m_Name: Square
+  m_Layer: 11
+  m_Name: StruggleBirdPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 6305185249954347657}
   - component: {fileID: 7593808767699692865}
   - component: {fileID: 4580489496513781553}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: DetectionZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}

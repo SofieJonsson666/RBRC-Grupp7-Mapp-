@@ -1531,26 +1531,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 704573770100977133, guid: 41231df065d5d3d4cb5c3993c31d7bd0,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2238192255838856130, guid: 41231df065d5d3d4cb5c3993c31d7bd0,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 6.0000005
-      objectReference: {fileID: 0}
-    - target: {fileID: 2584617105596237203, guid: 41231df065d5d3d4cb5c3993c31d7bd0,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 6.0000005
-      objectReference: {fileID: 0}
-    - target: {fileID: 4830455321649013896, guid: 41231df065d5d3d4cb5c3993c31d7bd0,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 5048106230864206176, guid: 41231df065d5d3d4cb5c3993c31d7bd0,
         type: 3}
       propertyPath: m_Name
@@ -1606,17 +1586,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8647058155021860203, guid: 41231df065d5d3d4cb5c3993c31d7bd0,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 8672457678250362877, guid: 41231df065d5d3d4cb5c3993c31d7bd0,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 115296100, guid: 56fc14d20eb0c6d419f723540bd991d1,
-        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4559,7 +4528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1434513608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6582,6 +6551,11 @@ PrefabInstance:
       propertyPath: seedCounter
       value: 
       objectReference: {fileID: 1520342802}
+    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
+      propertyPath: boxCollider2
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
       propertyPath: seedParticle

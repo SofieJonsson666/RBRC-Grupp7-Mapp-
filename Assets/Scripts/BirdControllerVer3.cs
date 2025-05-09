@@ -19,7 +19,8 @@ public class BirdControllerVer3 : MonoBehaviour
     private float maxHeight;
     private float verticalPadding = 0.8f;
     private bool isFlying = false;
-    private bool canMove = true;
+    public bool canMove = true;
+    private int tappCount;
 
     private Gyroscope gyro;
     private float rotationZ;
@@ -30,8 +31,10 @@ public class BirdControllerVer3 : MonoBehaviour
     [SerializeField] private ParticleSystem seedParticle;
     [SerializeField] private ParticleSystem featherParticle;
     [SerializeField] private Camera camera;
+    [SerializeField] private CapsuleCollider2D capsuleCollider2;
 
-    
+    private GameObject struggleEnemy;
+    private Animator struggleEnemyAnimator;
 
     private void Start()
     {
@@ -42,6 +45,10 @@ public class BirdControllerVer3 : MonoBehaviour
 
         gyro = Input.gyro;
         gyro.enabled = true;
+        
+        tappCount = 0;
+        struggleEnemy = null;
+        struggleEnemy = null;
 
         animator = GetComponent<Animator>();
 
@@ -78,7 +85,7 @@ public class BirdControllerVer3 : MonoBehaviour
 
         isFlying = false;
 
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && canMove)
         {
             foreach (Touch touch in Input.touches)
             {
@@ -89,6 +96,23 @@ public class BirdControllerVer3 : MonoBehaviour
                 }
             }
         }
+        if((Input.touchCount > 0 && tappCount <= 4) && !canMove)
+        {
+            foreach (Touch touch in Input.touches)
+            {
+                if (touch.phase == TouchPhase.Began && touch.position.x < Screen.width / 2)
+                {
+                    tappCount++;
+                    //Debug.Log(tappCount);
+                }
+            }
+        }
+
+        if(tappCount == 5)
+        {
+            StartCoroutine(StopStruggling());
+        }
+        //Debug.Log(struggleEnemy);
 
 #if UNITY_EDITOR
         if ((Input.GetMouseButton(0) && Input.mousePosition.x < Screen.width / 2) && canMove)
@@ -169,21 +193,27 @@ public class BirdControllerVer3 : MonoBehaviour
 
     public void OnStruggle()
     {
-        if (!isStruggling)
+        if (isStruggling)
         {
             animator.SetBool("struggle", true);
             canMove = false;
-            Time.timeScale = 1.0f;
+            Time.timeScale = 0.8f;
 
             Debug.Log("Struggletime!");
         }
         else
         {
-            Time.timeScale = 1.0f;
+            Debug.Log("Struggle END!");
         }
     }
 
-    
+    public void EndStruggle()
+    {
+        animator.SetBool("struggle", false);
+        Time.timeScale = 1.0f;
+        tappCount = 0;
+        canMove = true;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -224,7 +254,12 @@ public class BirdControllerVer3 : MonoBehaviour
             Instantiate(featherParticle, collision.gameObject.transform.position, Quaternion.identity);
             //DestroyImmediate(featherParticle, true);
             //Destroy(seedParticle, seedParticle.GetComponent<ParticleSystem>().main.duration);
+            isStruggling = true;
             OnStruggle();
+            //StartCoroutine(Collider(false));
+
+            struggleEnemy = collision.gameObject;
+            struggleEnemyAnimator = collision.gameObject.GetComponent<Animator>();
 
             //collision.collider.enabled = false;
 
@@ -277,5 +312,19 @@ public class BirdControllerVer3 : MonoBehaviour
     private float GetCameraZDistance()
     {
         return Mathf.Abs(Camera.main.transform.position.z - transform.position.z);
+    }
+
+    private IEnumerator Collider(bool set)
+    {
+        yield return new WaitForSeconds(0.5f);
+        capsuleCollider2.enabled = set;
+    }
+    private IEnumerator StopStruggling()
+    {
+        yield return new WaitForSeconds(0.5f);
+        isStruggling = false;
+        EndStruggle();
+        struggleEnemyAnimator.SetTrigger("destroyNet");
+        Destroy(struggleEnemy, 1f);
     }
 }

@@ -77,13 +77,13 @@ public class StruggleEnemyMovement : MonoBehaviour
     {
         if (!isHit)
         {
-            colliderNormal.enabled = false;
-            colliderStruggle.enabled = true;
             struggleBirdPosition.gameObject.SetActive(true);
             isHit = true;
             canMove = false;
             Debug.Log("Hit enemy!");
             animator.SetTrigger("birdStruggle");
+            colliderNormal.enabled = false;
+            colliderStruggle.enabled = true;
 
             //add effects here later
             rb.velocity = Vector2.zero;

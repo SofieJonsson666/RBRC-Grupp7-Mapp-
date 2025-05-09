@@ -158,6 +158,10 @@ MonoBehaviour:
   seedCounter: {fileID: 0}
   healthUI: {fileID: 0}
   gameOverScreen: {fileID: 0}
+  seedParticle: {fileID: 0}
+  featherParticle: {fileID: 0}
+  camera: {fileID: 0}
+  capsuleCollider2: {fileID: 5422241006582345651}
 --- !u!114 &8781691580735548584
 MonoBehaviour:
   m_ObjectHideFlags: 0

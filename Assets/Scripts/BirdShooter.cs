@@ -17,12 +17,13 @@ public class BirdShooter : MonoBehaviour
     private bool swiping = false;
     private Animator animator;
     private Rigidbody2D rigidBody;
+    private BirdControllerVer3 controller;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         rigidBody = GetComponent<Rigidbody2D>();
-
+        controller = GetComponent<BirdControllerVer3>();
     }
 
     void Update()
@@ -35,7 +36,7 @@ public class BirdShooter : MonoBehaviour
 
         foreach (Touch touch in Input.touches)
         {
-            if (touch.position.x > Screen.width / 2)
+            if (touch.position.x > Screen.width / 2 && controller.canMove)
             {
                 if (touch.phase == TouchPhase.Began)
                 {

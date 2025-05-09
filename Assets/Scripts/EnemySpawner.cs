@@ -29,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
     private void Update()
     {
         counter = GameObject.FindGameObjectsWithTag("StruggleEnemy").Length;
-        if(counter == 1)
+        if(counter == 2)
         {
             SpawnStruggleEnemy(StruggleEnemyPrefab);
         }
