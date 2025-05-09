@@ -13,10 +13,26 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float groundY = 20f; // Set this to your ground level
     [SerializeField] private float spawnZ = -1f;
 
+    private int counter;
+
+    private void Awake()
+    {
+        counter = 0;
+    }
+
     void Start()
     {
         StartCoroutine(spawnEnemy(enemyInterval, EnemyPrefab));
-        StartCoroutine(spawnEnemy(struggleEnemyInterval, StruggleEnemyPrefab));
+        //StartCoroutine(spawnEnemy(struggleEnemyInterval, StruggleEnemyPrefab));
+    }
+
+    private void Update()
+    {
+        counter = GameObject.FindGameObjectsWithTag("StruggleEnemy").Length;
+        if(counter == 1)
+        {
+            SpawnStruggleEnemy(StruggleEnemyPrefab);
+        }
     }
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
@@ -43,5 +59,12 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(spawnEnemy(interval, enemy));
         */
     }
+
+    private void SpawnStruggleEnemy(GameObject struggleEnemy)
+    {
+        Vector3 spawnPosition = new Vector3(17, groundY, spawnZ);
+        Instantiate(struggleEnemy, spawnPosition, Quaternion.identity);
+    }
+
 }
 

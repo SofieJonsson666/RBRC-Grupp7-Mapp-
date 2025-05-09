@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2518737812131705286}
   - component: {fileID: 8849232847806067968}
   m_Layer: 0
-  m_Name: c
+  m_Name: ColliderStruggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.3070142, y: -0.072627544}
+  m_Offset: {x: 1.8561945, y: 0.17275083}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9251704, y: 4.639946}
+  m_Size: {x: 4.023531, y: 4.149189}
   m_EdgeRadius: 0
 --- !u!1 &4830455321649013896
 GameObject:
