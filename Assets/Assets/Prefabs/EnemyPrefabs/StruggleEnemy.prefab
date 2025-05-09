@@ -15,8 +15,6 @@ GameObject:
   - component: {fileID: 1889163782035876399}
   - component: {fileID: 5380991692872455552}
   - component: {fileID: 2584617105596237203}
-  - component: {fileID: 9024783445042346555}
-  - component: {fileID: 7127184452510761433}
   m_Layer: 3
   m_Name: StruggleEnemy
   m_TagString: StruggleEnemy
@@ -212,58 +210,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.179817, y: 4.2247543}
   m_EdgeRadius: 0
---- !u!114 &9024783445042346555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5048106230864206176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93b9db9b73e04d40ae4189f68107c9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageableHit:
-    m_PersistentCalls:
-      m_Calls: []
-  damageableDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  _maxHealth: 3
-  healthChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  _health: 3
-  _isAlive: 1
-  isInvincible: 0
-  invincibilityTime: 0.25
---- !u!114 &7127184452510761433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5048106230864206176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f93b9db9b73e04d40ae4189f68107c9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageableHit:
-    m_PersistentCalls:
-      m_Calls: []
-  damageableDeath:
-    m_PersistentCalls:
-      m_Calls: []
-  _maxHealth: 3
-  healthChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  _health: 3
-  _isAlive: 1
-  isInvincible: 0
-  invincibilityTime: 0.25
 --- !u!1 &8647058155021860203
 GameObject:
   m_ObjectHideFlags: 0

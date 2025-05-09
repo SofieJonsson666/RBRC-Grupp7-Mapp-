@@ -30,6 +30,8 @@ public class BirdControllerVer3 : MonoBehaviour
     [SerializeField] private ParticleSystem featherParticle;
     [SerializeField] private Camera camera;
 
+    
+
     private void Start()
     {
         DataSaver.instance.seedAmount = 0;
@@ -162,6 +164,25 @@ public class BirdControllerVer3 : MonoBehaviour
         if (DataSaver.instance.seedAmount > DataSaver.instance.highScore) DataSaver.instance.highScore = DataSaver.instance.seedAmount;
     }
 
+    private bool isStruggling = false;
+
+    public void OnStruggle()
+    {
+        if (!isStruggling)
+        {
+            animator.SetBool("struggle", true);
+            Time.timeScale = 0.5f;
+
+            Debug.Log("Struggletime!");
+        }
+        else
+        {
+            Time.timeScale = 1.0f;
+        }
+    }
+
+    
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -201,15 +222,18 @@ public class BirdControllerVer3 : MonoBehaviour
             Instantiate(featherParticle, collision.gameObject.transform.position, Quaternion.identity);
             //DestroyImmediate(featherParticle, true);
             //Destroy(seedParticle, seedParticle.GetComponent<ParticleSystem>().main.duration);
-            Debug.Log("Struggletime!");
+            OnStruggle();
+            
             collision.collider.enabled = false;
 
-            if (canDie)
+            
+
+            /*if (canDie)
             {
                 SaveSeeds();
 
                 SceneManager.LoadScene(0);
-            }
+            }*/
         }
     }
 

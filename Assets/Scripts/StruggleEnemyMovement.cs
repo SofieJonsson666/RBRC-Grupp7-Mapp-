@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(Damageable))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class StruggleEnemyMovement : MonoBehaviour
 {
     public StruggleEnemyDetectionZone attackzone;
@@ -11,7 +11,7 @@ public class StruggleEnemyMovement : MonoBehaviour
     [SerializeField] private float speed = 2f;
     private Rigidbody2D rb;
     Animator animator;
-    Damageable damageable;
+    
 
     public bool _hasTarget = false;
 
@@ -35,7 +35,7 @@ public class StruggleEnemyMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        damageable = GetComponent<Damageable>();
+        
     }
 
     void Update()
@@ -66,13 +66,13 @@ public class StruggleEnemyMovement : MonoBehaviour
 
     private bool isHit = false;
 
-    public void OnHit()
+    public void OnAttack()
     {
         if (!isHit)
         {
             isHit = true;
             Debug.Log("Hit enemy!");
-            animator.SetTrigger("isHit");
+            animator.SetTrigger("destroyNet");
 
             //add effects here later
             rb.velocity = Vector2.zero;
@@ -85,8 +85,8 @@ public class StruggleEnemyMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            OnHit();
-            Debug.Log("You hit him!");
+            OnAttack();
+            Debug.Log("Enemy hit player!");
             
         }
     }
@@ -101,4 +101,5 @@ internal class AnimationStrings
     internal static string isAlive = "isAlive";
     internal static string lockVelocity = "lockVelocity";
     internal static string hitTrigger = "hitTrigger";
+    internal static string birdStruggle = "birdStruggle";
 }
