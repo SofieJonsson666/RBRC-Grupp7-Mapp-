@@ -9,12 +9,15 @@ public class StruggleEnemyMovement : MonoBehaviour
     public StruggleEnemyDetectionZone attackzone;
 
     [SerializeField] private GameObject struggleBirdPosition;
+    [SerializeField] private BoxCollider2D colliderNormal;
+    [SerializeField] private BoxCollider2D colliderStruggle;
     [SerializeField] private float speed = 2f;
     private Rigidbody2D rb;
     Animator animator;
     
 
     public bool _hasTarget = false;
+    private bool canMove = true;
 
 
     public bool HasTarget { get { return _hasTarget; } private set {
@@ -37,7 +40,8 @@ public class StruggleEnemyMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         struggleBirdPosition.gameObject.SetActive(false);
-
+        colliderNormal.enabled = true;
+        colliderStruggle.enabled = false;
 
     }
 
@@ -57,7 +61,7 @@ public class StruggleEnemyMovement : MonoBehaviour
 
         rb.velocity = new Vector2(-speed, rb.velocity.y); // Maintain vertical velocity for gravity
 
-        if (CanMove)
+        if (CanMove && canMove)
         {
             rb.velocity = new Vector2(-speed, rb.velocity.x); // <- This moves the enemy left
         }
@@ -73,8 +77,11 @@ public class StruggleEnemyMovement : MonoBehaviour
     {
         if (!isHit)
         {
+            colliderNormal.enabled = false;
+            colliderStruggle.enabled = true;
             struggleBirdPosition.gameObject.SetActive(true);
             isHit = true;
+            canMove = false;
             Debug.Log("Hit enemy!");
             animator.SetTrigger("birdStruggle");
 
@@ -92,7 +99,11 @@ public class StruggleEnemyMovement : MonoBehaviour
             OnAttack();
             collision.gameObject.transform.position = struggleBirdPosition.transform.position;
             Debug.Log("Enemy hit player!");
-            
+
+        }
+        if (collision.gameObject.CompareTag("StruggleEnemy"))
+        {
+            canMove = false;
         }
     }
 }

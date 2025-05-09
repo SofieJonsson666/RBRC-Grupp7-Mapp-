@@ -173,7 +173,7 @@ public class BirdControllerVer3 : MonoBehaviour
         {
             animator.SetBool("struggle", true);
             canMove = false;
-            Time.timeScale = 1f;
+            Time.timeScale = 1.0f;
 
             Debug.Log("Struggletime!");
         }
