@@ -8,6 +8,7 @@ public class StruggleEnemyMovement : MonoBehaviour
 {
     public StruggleEnemyDetectionZone attackzone;
 
+    [SerializeField] private GameObject struggleBirdPosition;
     [SerializeField] private float speed = 2f;
     private Rigidbody2D rb;
     Animator animator;
@@ -35,7 +36,9 @@ public class StruggleEnemyMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        
+        struggleBirdPosition.gameObject.SetActive(false);
+
+
     }
 
     void Update()
@@ -70,9 +73,10 @@ public class StruggleEnemyMovement : MonoBehaviour
     {
         if (!isHit)
         {
+            struggleBirdPosition.gameObject.SetActive(true);
             isHit = true;
             Debug.Log("Hit enemy!");
-            animator.SetTrigger("destroyNet");
+            animator.SetTrigger("birdStruggle");
 
             //add effects here later
             rb.velocity = Vector2.zero;
@@ -86,6 +90,7 @@ public class StruggleEnemyMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             OnAttack();
+            collision.gameObject.transform.position = struggleBirdPosition.transform.position;
             Debug.Log("Enemy hit player!");
             
         }

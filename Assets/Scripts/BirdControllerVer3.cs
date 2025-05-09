@@ -19,6 +19,7 @@ public class BirdControllerVer3 : MonoBehaviour
     private float maxHeight;
     private float verticalPadding = 0.8f;
     private bool isFlying = false;
+    private bool canMove = true;
 
     private Gyroscope gyro;
     private float rotationZ;
@@ -90,7 +91,7 @@ public class BirdControllerVer3 : MonoBehaviour
         }
 
 #if UNITY_EDITOR
-        if (Input.GetMouseButton(0) && Input.mousePosition.x < Screen.width / 2)
+        if ((Input.GetMouseButton(0) && Input.mousePosition.x < Screen.width / 2) && canMove)
         {
             isFlying = true;
         }
@@ -171,7 +172,8 @@ public class BirdControllerVer3 : MonoBehaviour
         if (!isStruggling)
         {
             animator.SetBool("struggle", true);
-            Time.timeScale = 0.5f;
+            canMove = false;
+            Time.timeScale = 1f;
 
             Debug.Log("Struggletime!");
         }
@@ -223,10 +225,10 @@ public class BirdControllerVer3 : MonoBehaviour
             //DestroyImmediate(featherParticle, true);
             //Destroy(seedParticle, seedParticle.GetComponent<ParticleSystem>().main.duration);
             OnStruggle();
-            
-            collision.collider.enabled = false;
 
-            
+            //collision.collider.enabled = false;
+
+
 
             /*if (canDie)
             {
