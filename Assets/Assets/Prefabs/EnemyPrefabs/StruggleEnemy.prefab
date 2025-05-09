@@ -297,7 +297,7 @@ MonoBehaviour:
   struggleBirdPosition: {fileID: 4830455321649013896}
   colliderNormal: {fileID: 2584617105596237203}
   colliderStruggle: {fileID: 8849232847806067968}
-  speed: 5
+  speed: 1
   _hasTarget: 0
 --- !u!114 &1889163782035876399
 MonoBehaviour:

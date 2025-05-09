@@ -6,6 +6,8 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private float speed = 2f;
+    [SerializeField] private float actualSpeed;
+
     private Rigidbody2D rb;
 
     private void Awake()
@@ -15,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        actualSpeed = speed + DataSaver.instance.mps;
 
         /*if (GameManager.Instance != null)
             Debug.Log("GameManager exists. isGameOver: " + GameManager.Instance.isGameOver);*/
@@ -25,6 +28,6 @@ public class EnemyMovement : MonoBehaviour
             return;
         }
 
-        rb.velocity = new Vector2(-speed, rb.velocity.y); // Maintain vertical velocity for gravity
+        rb.velocity = new Vector2(-actualSpeed, rb.velocity.y); // Maintain vertical velocity for gravity
     }
 }

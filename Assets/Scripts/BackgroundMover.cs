@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BackgroundMover : MonoBehaviour
 {
-    private float speed;
+    [SerializeField]
+    private float speed = DataSaver.instance.mps;
 
     private Rigidbody rb;
 
@@ -22,6 +23,10 @@ public class BackgroundMover : MonoBehaviour
         {
             rb.velocity = Vector3.zero; // stop movement
         }
+        else
+        {
+            speed = DataSaver.instance.mps;
+            rb.velocity = new Vector3(-speed, 0, 0);
+        }
     }
-
 }

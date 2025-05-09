@@ -1536,6 +1536,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StruggleEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5048106230864206176, guid: 41231df065d5d3d4cb5c3993c31d7bd0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5577284445572924077, guid: 41231df065d5d3d4cb5c3993c31d7bd0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5171,7 +5176,7 @@ MonoBehaviour:
   enemyInterval: 3.5
   struggleEnemyInterval: 5
   groundY: 0
-  spawnZ: -3
+  spawnZ: 0
 --- !u!4 &1580236216
 Transform:
   m_ObjectHideFlags: 0
@@ -6539,7 +6544,7 @@ PrefabInstance:
     - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
       propertyPath: canDie
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
@@ -6562,6 +6567,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 720644624887820774, guid: bd8905745ff663a4e99637c649a42d6e,
         type: 3}
+    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
+      propertyPath: startingSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
       propertyPath: gameOverScreen

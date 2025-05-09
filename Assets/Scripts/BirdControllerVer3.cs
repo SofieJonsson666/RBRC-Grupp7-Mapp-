@@ -8,6 +8,9 @@ public class BirdControllerVer3 : MonoBehaviour
     [SerializeField] private float flapForce = 5f;
     [SerializeField] private float floorY = 1.1f;
     [SerializeField] private float shootHorizontalOffset = 0.1f;
+    [SerializeField] private float startingSpeed = 1f;
+    [SerializeField] private float accelerationAmplitude = 1f;
+    [SerializeField] private float meters = 0;
     [SerializeField] private int health = 3;
     private bool isDead = false;
 
@@ -38,6 +41,7 @@ public class BirdControllerVer3 : MonoBehaviour
 
     private void Start()
     {
+        DataSaver.instance.metersTraveled = 0;
         DataSaver.instance.seedAmount = 0;
         rigidBody = GetComponent<Rigidbody2D>();
         rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -45,7 +49,7 @@ public class BirdControllerVer3 : MonoBehaviour
 
         gyro = Input.gyro;
         gyro.enabled = true;
-        
+
         tappCount = 0;
         struggleEnemy = null;
         struggleEnemy = null;
@@ -57,12 +61,10 @@ public class BirdControllerVer3 : MonoBehaviour
 
     private void Update()
     {
-
         if (isDead)
         {
             return;
         }
-
 
         healthUI.text = health.ToString();
 
@@ -96,7 +98,7 @@ public class BirdControllerVer3 : MonoBehaviour
                 }
             }
         }
-        if((Input.touchCount > 0 && tappCount <= 4) && !canMove)
+        if ((Input.touchCount > 0 && tappCount <= 4) && !canMove)
         {
             foreach (Touch touch in Input.touches)
             {
@@ -108,7 +110,7 @@ public class BirdControllerVer3 : MonoBehaviour
             }
         }
 
-        if(tappCount == 5)
+        if (tappCount == 5)
         {
             StartCoroutine(StopStruggling());
         }
@@ -159,6 +161,13 @@ public class BirdControllerVer3 : MonoBehaviour
         // Lock to screen left offset
         float desiredX = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width * shootHorizontalOffset, 0f, GetCameraZDistance())).x;
         transform.position = new Vector3(desiredX, transform.position.y, transform.position.z);
+
+        // Set speed
+        DataSaver.instance.metersTraveled += DataSaver.instance.mps * Time.deltaTime;
+
+        DataSaver.instance.mps = startingSpeed + accelerationAmplitude * DataSaver.instance.metersTraveled / 100;
+
+        meters = DataSaver.instance.metersTraveled;
     }
 
     private bool isHit = false;
@@ -169,7 +178,7 @@ public class BirdControllerVer3 : MonoBehaviour
         {
             isHit = false;
             Debug.Log("Hit triggered");
-            
+
             animator.SetTrigger("isHit");
 
             Handheld.Vibrate();
@@ -187,6 +196,7 @@ public class BirdControllerVer3 : MonoBehaviour
     {
         DataSaver.instance.totalSeedAmount += DataSaver.instance.seedAmount;
         if (DataSaver.instance.seedAmount > DataSaver.instance.highScore) DataSaver.instance.highScore = DataSaver.instance.seedAmount;
+        DataSaver.instance.totalMetersTraveled += DataSaver.instance.metersTraveled;
     }
 
     private bool isStruggling = false;
@@ -263,8 +273,6 @@ public class BirdControllerVer3 : MonoBehaviour
 
             //collision.collider.enabled = false;
 
-
-
             /*if (canDie)
             {
                 SaveSeeds();
@@ -289,7 +297,6 @@ public class BirdControllerVer3 : MonoBehaviour
         //Time.timeScale = 0f;
 
         Invoke("ShowGameOverUI", 1f);
-
     }
 
     private void ShowGameOverUI()
@@ -319,6 +326,7 @@ public class BirdControllerVer3 : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         capsuleCollider2.enabled = set;
     }
+
     private IEnumerator StopStruggling()
     {
         yield return new WaitForSeconds(0.5f);

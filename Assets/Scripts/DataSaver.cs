@@ -12,6 +12,10 @@ public class DataSaver : MonoBehaviour
     public bool ar;
     public bool gyro;
 
+    public float mps;
+    public float metersTraveled;
+    public float totalMetersTraveled;
+
     private void Awake()
     {
         if (instance != null && instance != this)
