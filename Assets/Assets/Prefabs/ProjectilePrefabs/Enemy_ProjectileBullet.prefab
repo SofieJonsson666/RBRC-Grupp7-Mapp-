@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6903996259704822937}
   - component: {fileID: 6104501203256153520}
   - component: {fileID: 2049673185266793086}
+  - component: {fileID: -5024473009704348478}
   m_Layer: 3
   m_Name: Enemy_ProjectileBullet
   m_TagString: Enemy
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c7519f43a2adba4e8ed0c4b58a97db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1.8
 --- !u!50 &6104501203256153520
 Rigidbody2D:
   serializedVersion: 4
@@ -184,3 +185,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-5024473009704348478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3099724303936380515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f285b0739221ce14996390e8c411d4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

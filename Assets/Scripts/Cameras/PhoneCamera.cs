@@ -22,6 +22,9 @@ public class PhoneCamera : MonoBehaviour
     [SerializeField] private GameObject backgroundController;
     [SerializeField] private GameObject house;
 
+    [SerializeField] private int size;
+    public Renderer targetRenderer;
+
     private void Start()
     {
         Activate();
@@ -116,5 +119,22 @@ public class PhoneCamera : MonoBehaviour
 
          int orient = -cam.videoRotationAngle;
          background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
+    }
+
+    public Texture2D CapturePhoto()
+    {
+        Texture2D photo = new Texture2D(size, size);
+        photo.SetPixels(cam.GetPixels());
+        photo.Apply();
+        return photo;
+    }
+
+    public void TakePictureAndApply()
+    {
+        Texture2D capturedImage = CapturePhoto();
+        if(capturedImage != null)
+        {
+            targetRenderer.material.mainTexture = capturedImage;
+        }
     }
 }

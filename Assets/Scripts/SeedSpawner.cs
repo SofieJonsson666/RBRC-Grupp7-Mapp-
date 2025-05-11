@@ -4,27 +4,25 @@ using UnityEngine;
 
 public class SeedSpawner : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject SeedPrefab;
-    [SerializeField]
-    private GameObject BreadPrefab;
+    [SerializeField] private GameObject SeedPrefab;
+    //[SerializeField] private GameObject BreadPrefab;
 
-    [SerializeField]
-    private float seedInterval = 1.5f;
-    [SerializeField]
-    private float breadInterval = 3.5f;
+    [SerializeField] private float seedInterval = 1.5f;
+    //[SerializeField] private float breadInterval = 3.5f;
 
     [SerializeField] private float spawnZ = -1f;
+    [SerializeField] private float randBtm;
+    [SerializeField] private float randTop;
 
     void Start()
     {
         StartCoroutine(spawnItems(seedInterval, SeedPrefab));
-        StartCoroutine(spawnItems(breadInterval, BreadPrefab));
+        //StartCoroutine(spawnItems(breadInterval, BreadPrefab));
     }
 
     private IEnumerator spawnItems(float interval, GameObject items)
     {
-        yield return new WaitForSeconds(interval);
+        yield return new WaitForSeconds(interval * Random.Range(randBtm, randTop));
 
         if (GameManager.Instance != null && GameManager.Instance.isGameOver)
             yield break; // Stop spawning if game over
