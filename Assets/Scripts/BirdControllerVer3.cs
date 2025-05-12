@@ -244,6 +244,26 @@ public class BirdControllerVer3 : MonoBehaviour
                 Die();
                 SaveSeeds();
             }
+            //Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("EnemyProjectile"))
+        {
+            Instantiate(featherParticle, collision.gameObject.transform.position, Quaternion.identity);
+            //Invoke(DestroyObject(featherParticle), 1.5f);
+            OnHit();
+            Debug.Log("Aj");
+            //health--;
+            collision.collider.enabled = false;
+
+            CameraShake cameraShake = camera.GetComponent<CameraShake>();
+            StartCoroutine(cameraShake.Shake());
+
+            if (health <= 0 && canDie && !isDead)
+            {
+                Die();
+                SaveSeeds();
+            }
             Destroy(collision.gameObject);
         }
 
