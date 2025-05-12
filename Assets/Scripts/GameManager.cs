@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     //Det gamla scripted finns här nedan, jag ville testa en sak med projectiles spawner -sofie
 
-    /*private void Awake()
+    private void Awake()
     {
         if (Instance == null)
             Instance = this;
@@ -46,6 +46,6 @@ public class GameManager : MonoBehaviour
     {
         if (Instance.isGameOver)
             pauseCanvas.SetActive(false);
-    }*/
+    }
 }
 

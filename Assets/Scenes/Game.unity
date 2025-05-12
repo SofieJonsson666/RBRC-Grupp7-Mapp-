@@ -6473,11 +6473,6 @@ PrefabInstance:
       objectReference: {fileID: 963194227}
     - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
-      propertyPath: canDie
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
-        type: 3}
       propertyPath: healthUI
       value: 
       objectReference: {fileID: 1252156628}
@@ -6493,26 +6488,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
-      propertyPath: seedParticle
-      value: 
-      objectReference: {fileID: 720644624887820774, guid: bd8905745ff663a4e99637c649a42d6e,
-        type: 3}
-    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
-        type: 3}
-      propertyPath: startingSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
-        type: 3}
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 832271402}
-    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
-        type: 3}
-      propertyPath: featherParticle
-      value: 
-      objectReference: {fileID: 720644624887820774, guid: 020460e148ca7fb49a5c7d72390742bb,
-        type: 3}
     - target: {fileID: 6704993082979942387, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
       propertyPath: m_Name

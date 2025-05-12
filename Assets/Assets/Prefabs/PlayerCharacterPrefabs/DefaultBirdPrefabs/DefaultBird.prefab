@@ -153,13 +153,19 @@ MonoBehaviour:
   flapForce: 5
   floorY: 1.3
   shootHorizontalOffset: 0.1
+  startingSpeed: 10
+  accelerationAmplitude: 1
+  meters: 0
   health: 3
-  canDie: 0
+  canDie: 1
+  canMove: 1
   seedCounter: {fileID: 0}
   healthUI: {fileID: 0}
   gameOverScreen: {fileID: 0}
-  seedParticle: {fileID: 0}
-  featherParticle: {fileID: 0}
+  seedParticle: {fileID: 720644624887820774, guid: bd8905745ff663a4e99637c649a42d6e,
+    type: 3}
+  featherParticle: {fileID: 720644624887820774, guid: 020460e148ca7fb49a5c7d72390742bb,
+    type: 3}
   camera: {fileID: 0}
   capsuleCollider2: {fileID: 5422241006582345651}
 --- !u!114 &8781691580735548584
