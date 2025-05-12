@@ -10,7 +10,31 @@ public class GameManager : MonoBehaviour
 
     public GameObject pauseCanvas;
 
-    private void Awake()
+    public void RestartGame()
+    {
+        isGameOver = false;
+
+
+        pauseCanvas.SetActive(true);
+
+
+        ProjectileSpawner spawner = FindObjectOfType<ProjectileSpawner>();
+        if (spawner != null)
+        {
+            spawner.StartSpawning();
+        }
+
+
+    }
+
+    public void OnRestartButtonPressed()
+    {
+        GameManager.Instance.RestartGame();
+    }
+
+    //Det gamla scripted finns här nedan, jag ville testa en sak med projectiles spawner -sofie
+
+    /*private void Awake()
     {
         if (Instance == null)
             Instance = this;
@@ -22,6 +46,6 @@ public class GameManager : MonoBehaviour
     {
         if (Instance.isGameOver)
             pauseCanvas.SetActive(false);
-    }
+    }*/
 }
 

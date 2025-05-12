@@ -5,13 +5,23 @@ using UnityEngine;
 public class ProjectileMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private AudioClip audioClip;
     private Rigidbody2D rb;
     private Animator animator;
+    private AudioSource audioSource;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         animator.Play("EnemyProjectileAnimation_Fly");
+        audioSource = GetComponent<AudioSource>();
+
+
+        if (audioSource != null && audioClip != null)
+        {
+            audioSource.clip = audioClip;
+            audioSource.Play();
+        }
     }
 
     private void FixedUpdate()

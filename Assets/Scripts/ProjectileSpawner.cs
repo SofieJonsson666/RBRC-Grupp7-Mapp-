@@ -4,28 +4,43 @@ using UnityEngine;
 
 public class ProjectileSpawner : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject BulletPrefab;
-    
+    [SerializeField] private GameObject BulletPrefab;
 
-    [SerializeField]
-    private float projectileInterval = 3.5f;
-    
+    [SerializeField] private float initialInterval = 5f;
+    [SerializeField] private float minimumInterval = 1f;
+    [SerializeField] private float decreaseMultiplier = 0.95f;
+
+    private float currentInterval;
+    private Coroutine spawnCoroutine;
 
     void Start()
     {
-        StartCoroutine(spawnProjectiles(projectileInterval, BulletPrefab));
-        
+        StartSpawning();
     }
 
-    private IEnumerator spawnProjectiles(float interval, GameObject projectiles)
+    public void StartSpawning()
     {
-        yield return new WaitForSeconds(interval);
+        currentInterval = initialInterval;
 
-        if (GameManager.Instance != null && GameManager.Instance.isGameOver)
-            yield break; // stop projectile spawns if game is over
+        if (spawnCoroutine != null)
+            StopCoroutine(spawnCoroutine);
 
-        GameObject newProjectiles = Instantiate(projectiles, new Vector3(17, Random.Range(0f, 13f), 0), Quaternion.identity);
-        StartCoroutine(spawnProjectiles(interval, projectiles));
+        spawnCoroutine = StartCoroutine(SpawnProjectiles());
+    }
+
+    private IEnumerator SpawnProjectiles()
+    {
+        while (true)
+        {
+            if (GameManager.Instance != null && GameManager.Instance.isGameOver)
+                yield break;
+
+            Instantiate(BulletPrefab, new Vector3(17, Random.Range(0f, 13f), 0), Quaternion.identity);
+
+            yield return new WaitForSeconds(currentInterval);
+
+            currentInterval = Mathf.Max(minimumInterval, currentInterval * decreaseMultiplier);
+        }
     }
 }
+
