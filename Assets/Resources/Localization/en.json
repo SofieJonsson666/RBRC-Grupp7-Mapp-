@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "key": "play",
+      "value": "Start"
+    },
+    {
+      "key": "pause",
+      "value": "Pause"
+    },
+    {
+      "key": "back",
+      "value": "Back"
+    },
+    {
+      "key": "resume",
+      "value": "Resume"
+    },
+    {
+      "key": "options",
+      "value": "Options"
+    },
+    {
+      "key": "quit",
+      "value": "Quit"
+    },
+    {
+      "key": "gameover",
+      "value": "GAME OVER"
+    },
+    {
+      "key": "score",
+      "value": "Score"
+    },
+    {
+      "key": "changelanguage",
+      "value": "Language"
+    },
+    {
+      "key": "statistics",
+      "value": "Statistics"
+    },
+    {
+      "key": "home",
+      "value": "Home"
+    },
+    {
+      "key": "restart",
+      "value": "Restart"
+    },
+    {
+      "key": "language",
+      "value": "English"
+    },
+    {
+      "key": "custombird",
+      "value": "Create Custom Bird"
+    }
+  ]
+}

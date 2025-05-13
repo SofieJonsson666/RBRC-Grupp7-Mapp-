@@ -1093,6 +1093,7 @@ GameObject:
   - component: {fileID: 1371096662}
   - component: {fileID: 1371096664}
   - component: {fileID: 1371096663}
+  - component: {fileID: 1371096665}
   m_Layer: 5
   m_Name: CustomBirdTxt
   m_TagString: Untagged
@@ -1216,6 +1217,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371096661}
   m_CullTransparentMesh: 1
+--- !u!114 &1371096665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371096661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: custombird
+  fontEnglish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 8cf2987f648c6db4ea026b3f97da2fb0, type: 2}
 --- !u!1 &1568964279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1244,7 @@ GameObject:
   - component: {fileID: 1568964280}
   - component: {fileID: 1568964282}
   - component: {fileID: 1568964281}
+  - component: {fileID: 1568964283}
   m_Layer: 5
   m_Name: CustomBirdTxt
   m_TagString: Untagged
@@ -1350,6 +1368,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568964279}
   m_CullTransparentMesh: 1
+--- !u!114 &1568964283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568964279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: back
+  fontEnglish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 8cf2987f648c6db4ea026b3f97da2fb0, type: 2}
 --- !u!1001 &1620422854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1636,6 +1670,7 @@ GameObject:
   - component: {fileID: 1931552345}
   - component: {fileID: 1931552347}
   - component: {fileID: 1931552346}
+  - component: {fileID: 1931552348}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1759,6 +1794,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1931552344}
   m_CullTransparentMesh: 1
+--- !u!114 &1931552348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931552344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: play
+  fontEnglish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 8cf2987f648c6db4ea026b3f97da2fb0, type: 2}
 --- !u!1 &2023526195
 GameObject:
   m_ObjectHideFlags: 0

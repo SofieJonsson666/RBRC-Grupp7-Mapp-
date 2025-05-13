@@ -16,6 +16,8 @@ public class DataSaver : MonoBehaviour
     public float metersTraveled;
     public float totalMetersTraveled;
 
+    public string selectedLanguage = "en";
+
     private void Awake()
     {
         if (instance != null && instance != this)

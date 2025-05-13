@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "key": "play",
+      "value": "Start"
+    },
+    {
+      "key": "pause",
+      "value": "Paus"
+    },
+    {
+      "key": "back",
+      "value": "Tillbaka"
+    },
+    {
+      "key": "resume",
+      "value": "Fortsätt"
+    },
+    {
+      "key": "options",
+      "value": "Inställningar"
+    },
+    {
+      "key": "quit",
+      "value": "Avsluta"
+    },
+    {
+      "key": "gameover",
+      "value": "GAME OVER"
+    },
+    {
+      "key": "score",
+      "value": "Poäng"
+    },
+    {
+      "key": "changelanguage",
+      "value": "Språk"
+    },
+    {
+      "key": "statistics",
+      "value": "Statistik"
+    },
+    {
+      "key": "home",
+      "value": "Hem"
+    },
+    {
+      "key": "restart",
+      "value": "Restart"
+    },
+    {
+      "key": "language",
+      "value": "Svenska"
+    },
+    {
+      "key": "custombird",
+      "value": "Gör en egen fågel"
+    }
+  ]
+}

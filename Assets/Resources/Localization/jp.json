@@ -1,0 +1,60 @@
+﻿{
+  "items": [
+    {
+      "key": "play",
+      "value": "プレイ"
+    },
+    {
+      "key": "pause",
+      "value": "一時停止"
+    },
+    {
+      "key": "back",
+      "value": "戻る"
+    },
+    {
+      "key": "resume",
+      "value": "再開"
+    },
+    {
+      "key": "options",
+      "value": "設定"
+    },
+    {
+      "key": "quit",
+      "value": "やめる"
+    },
+    {
+      "key": "gameover",
+      "value": "ゲームオーバー"
+    },
+    {
+      "key": "score",
+      "value": "スコア"
+    },
+    {
+      "key": "changelanguage",
+      "value": "言語"
+    },
+    {
+      "key": "statistics",
+      "value": "Statistik"
+    },
+    {
+      "key": "home",
+      "value": "戻る"
+    },
+    {
+      "key": "restart",
+      "value": "再挑戦"
+    },
+    {
+      "key": "language",
+      "value": "日本語"
+    },
+    {
+      "key": "custombird",
+      "value": "鳥を自作する"
+    }
+  ]
+}
