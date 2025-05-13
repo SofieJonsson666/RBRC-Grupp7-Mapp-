@@ -1,4 +1,4 @@
-{
+Ôªø{
   "items": [
     {
       "key": "play",
@@ -14,11 +14,11 @@
     },
     {
       "key": "resume",
-      "value": "Forts‰tt"
+      "value": "Forts√§tt"
     },
     {
       "key": "options",
-      "value": "Inst‰llningar"
+      "value": "Inst√§llningar"
     },
     {
       "key": "quit",
@@ -30,11 +30,11 @@
     },
     {
       "key": "score",
-      "value": "Po‰ng"
+      "value": "Po√§ng"
     },
     {
       "key": "changelanguage",
-      "value": "SprÂk"
+      "value": "Spr√•k"
     },
     {
       "key": "statistics",
@@ -54,7 +54,7 @@
     },
     {
       "key": "custombird",
-      "value": "Gˆr en egen fÂgel"
+      "value": "G√∂r en egen f√•gel"
     }
   ]
 }
