@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 368566648}
   - component: {fileID: 368566650}
   - component: {fileID: 368566649}
+  - component: {fileID: 368566651}
   m_Layer: 5
   m_Name: BackTxt
   m_TagString: Untagged
@@ -360,6 +361,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368566647}
   m_CullTransparentMesh: 1
+--- !u!114 &368566651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368566647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: back
+  fontEnglish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 8cf2987f648c6db4ea026b3f97da2fb0, type: 2}
 --- !u!1 &598329060
 GameObject:
   m_ObjectHideFlags: 0
