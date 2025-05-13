@@ -24,6 +24,9 @@ public class PhoneCamera : MonoBehaviour
 
     [SerializeField] private int size;
     public Renderer targetRenderer;
+    [SerializeField] private GameObject pictureBtns;
+    [SerializeField] private GameObject cameraBtn;
+    [SerializeField] private GameObject picturePreview;
 
     private void Start()
     {
@@ -32,13 +35,13 @@ public class PhoneCamera : MonoBehaviour
 
     public void Activate()
     {
-        if(cam != null && cam.isPlaying)
+        if (cam != null && cam.isPlaying)
         {
             cam.Stop();
             cam = null;
         }
 
-        if (backSelected)
+        if (backSelected && gameScene)
         {
             if (!DataSaver.instance.ar)
             {
@@ -46,7 +49,7 @@ public class PhoneCamera : MonoBehaviour
                 camAvailable = false;
                 return;
             }
-        }  
+        }
 
         WebCamDevice[] devices = WebCamTexture.devices;
 
@@ -58,19 +61,19 @@ public class PhoneCamera : MonoBehaviour
             return;
         }
 
-        for(int i = 0; i < devices.Length; i++)
+        for (int i = 0; i < devices.Length; i++)
         {
             if (!devices[i].isFrontFacing && backSelected)
             {
                 cam = new WebCamTexture(devices[i].name, Screen.width, Screen.height);
             }
-            else if(devices[i].isFrontFacing && !backSelected)
+            else if (devices[i].isFrontFacing && !backSelected)
             {
                 cam = new WebCamTexture(devices[i].name, Screen.width, Screen.height);
             }
         }
 
-        if(cam == null)
+        if (cam == null)
         {
             print("ingen kamera");
 
@@ -85,7 +88,7 @@ public class PhoneCamera : MonoBehaviour
         cameraBackground.SetActive(true);
 
         if (gameScene)
-        {      
+        {
             backgroundDetector.SetActive(false);
             backgroundSpawner.SetActive(false);
             backgroundController.SetActive(false);
@@ -111,14 +114,14 @@ public class PhoneCamera : MonoBehaviour
 
         backgroundRenderer.transform.localEulerAngles = new Vector3(0, 0, -backCam.videoRotationAngle);*/
 
-         float ratio = (float)cam.width / (float)cam.height;
-         fit.aspectRatio = ratio;
+        float ratio = (float)cam.width / (float)cam.height;
+        fit.aspectRatio = ratio;
 
-         float scaleY = cam.videoVerticallyMirrored ? -1 : 1f;
-         background.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
+        float scaleY = cam.videoVerticallyMirrored ? -1 : 1f;
+        background.rectTransform.localScale = new Vector3(1f, scaleY, 1f);
 
-         int orient = -cam.videoRotationAngle;
-         background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
+        int orient = -cam.videoRotationAngle;
+        background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
     }
 
     public Texture2D CapturePhoto()
@@ -132,9 +135,29 @@ public class PhoneCamera : MonoBehaviour
     public void TakePictureAndApply()
     {
         Texture2D capturedImage = CapturePhoto();
-        if(capturedImage != null)
-        {
+        InvertActives();
+        if (capturedImage != null)
+        {      
             targetRenderer.material.mainTexture = capturedImage;
         }
+    }
+
+    public void InvertActives()
+    {
+        if (picturePreview.activeSelf)
+        {
+            picturePreview.SetActive(false);
+            cameraBtn.SetActive(false);
+            pictureBtns.SetActive(true);
+            return;
+        }
+        picturePreview.SetActive(true);
+        cameraBtn.SetActive(true);
+        pictureBtns.SetActive(false);
+    }
+
+    public void Continue()
+    {
+
     }
 }

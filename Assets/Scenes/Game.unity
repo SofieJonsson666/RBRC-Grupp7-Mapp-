@@ -6473,6 +6473,11 @@ PrefabInstance:
       objectReference: {fileID: 963194227}
     - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
+      propertyPath: canDie
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
       propertyPath: healthUI
       value: 
       objectReference: {fileID: 1252156628}
