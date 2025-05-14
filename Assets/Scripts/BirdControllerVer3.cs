@@ -208,6 +208,9 @@ public class BirdControllerVer3 : MonoBehaviour
             animator.SetBool("struggle", true);
             canMove = false;
             Time.timeScale = 0.8f;
+            rigidBody.velocity = Vector2.zero;
+            rigidBody.gravityScale = 0f;
+            rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
 
             Debug.Log("Struggletime!");
         }
