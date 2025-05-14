@@ -81,7 +81,7 @@ public class StruggleEnemyMovement : MonoBehaviour
             struggleBirdPosition.gameObject.SetActive(true);
             isHit = true;
             canMove = false;
-            Debug.Log("Hit enemy!");
+            Debug.Log("Hit enemy! Enemy is holding bird");
             animator.SetTrigger("birdStruggle");
             colliderNormal.enabled = false;
             colliderStruggle.enabled = true;

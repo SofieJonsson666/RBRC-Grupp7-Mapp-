@@ -286,7 +286,7 @@ public class BirdControllerVer3 : MonoBehaviour
             //Destroy(seedParticle, seedParticle.GetComponent<ParticleSystem>().main.duration);
             isStruggling = true;
             OnStruggle();
-            //StartCoroutine(Collider(false));
+            StartCoroutine(Collider(false));
 
             struggleEnemy = collision.gameObject;
             struggleEnemyAnimator = collision.gameObject.GetComponent<Animator>();

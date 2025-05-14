@@ -8,9 +8,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject StruggleEnemyPrefab;
 
     [SerializeField] private float enemyInterval = 3.5f;
-    [SerializeField] private float struggleEnemyInterval = 3.5f;
+    [SerializeField] private float struggleEnemyInterval = 4f;
 
-    [SerializeField] private float groundY = 2.75f; // Set this to your ground level
+    [SerializeField] private float groundY = 20f; // Set this to your ground level
     [SerializeField] private float spawnZ = 0f;
 
     private int counter;
@@ -29,7 +29,7 @@ public class EnemySpawner : MonoBehaviour
     private void Update()
     {
         counter = GameObject.FindGameObjectsWithTag("StruggleEnemy").Length;
-        if (counter == 2)
+        if (counter == 0)
         {
             SpawnStruggleEnemy(StruggleEnemyPrefab);
         }
