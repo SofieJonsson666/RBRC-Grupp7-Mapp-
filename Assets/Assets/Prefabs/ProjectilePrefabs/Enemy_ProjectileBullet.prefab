@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.8
+  audioClip: {fileID: 0}
 --- !u!50 &6104501203256153520
 Rigidbody2D:
   serializedVersion: 4
@@ -198,6 +199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f285b0739221ce14996390e8c411d4cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bigBoom: {fileID: 5658538527621670510, guid: a8233cdfc31da2c4280ff7739afec1e4, type: 3}
+  boomParticle: {fileID: 3586429423824362661, guid: f96d5841640096840b1fc4c707aa2de5,
+    type: 3}
 --- !u!82 &477359970988867775
 AudioSource:
   m_ObjectHideFlags: 0

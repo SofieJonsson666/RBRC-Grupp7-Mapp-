@@ -3348,7 +3348,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  strengthDivider: 4
+  strengthDivider: 3
 --- !u!1001 &979698122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6803,6 +6803,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy_ProjectileBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099724303936380515, guid: 4b1ec70bb00b75f45812833ff6b4e22b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
