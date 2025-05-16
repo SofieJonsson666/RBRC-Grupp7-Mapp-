@@ -36,6 +36,16 @@ public class BirdControllerVer3 : MonoBehaviour
     [SerializeField] private Camera camera;
     [SerializeField] private CapsuleCollider2D capsuleCollider2;
 
+    //Variabler för röststyrning
+    [SerializeField] private bool voiceControlEnabled = true; //Hook to seetings menu
+    [SerializeField] private float voiceSensitivity = 0.1f; //Calibrate based on mic
+    [SerializeField] private int micSampleWindow = 128;
+
+    private AudioClip micClip;
+    private string micDevice;
+    private bool micInitialized = false;
+    //Slut
+
     private GameObject struggleEnemy;
     private Animator struggleEnemyAnimator;
 
@@ -57,7 +67,17 @@ public class BirdControllerVer3 : MonoBehaviour
         animator = GetComponent<Animator>();
 
         UpdateScreenBounds();
+
+        //Hitta mikrofon
+        if(voiceControlEnabled && Microphone.devices.Length > 0)
+        {
+            micDevice = Microphone.devices[0];
+            micClip = Microphone.Start(micDevice, true, 1, 44100);
+            micInitialized = true;
+        }
+        //Slut
     }
+    
 
     private void Update()
     {
@@ -86,6 +106,17 @@ public class BirdControllerVer3 : MonoBehaviour
         }
 
         isFlying = false;
+
+        //Ser till att fågeln flyger när man skriker
+        if (voiceControlEnabled && micInitialized && canMove)
+        {
+            float volume = GetMicVolume();
+            if (volume > voiceSensitivity)
+            {
+                isFlying = true;
+            }
+        }
+        //Slut
 
         if (Input.touchCount > 0 && canMove)
         {
@@ -191,6 +222,27 @@ public class BirdControllerVer3 : MonoBehaviour
             health--;
         }
     }
+
+    //Anpassa ljudstyrka beroende på hur högt man skriker
+    private float GetMicVolume()
+    {
+        if (!micInitialized || micClip == null) return 0f;
+
+        float[] samples = new float[micSampleWindow];
+        int micPos = Microphone.GetPosition(micDevice) - micSampleWindow;
+        if (micPos < 0) return 0f;
+
+        micClip.GetData(samples, micPos);
+
+        float sum = 0f;
+        foreach (float sample in samples)
+        {
+            sum += sample * sample;
+        }
+
+        return Mathf.Sqrt(sum / micSampleWindow); //RMS value
+    }
+    //Slut
 
     private void SaveSeeds()
     {
