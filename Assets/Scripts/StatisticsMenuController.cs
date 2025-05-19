@@ -5,6 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class StatisticsMenuController : MonoBehaviour
 {
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+    }
+
     public void BackToMainMenu()
     {
         Debug.Log("HELLO WE SHOULD GO BACK NOW");
