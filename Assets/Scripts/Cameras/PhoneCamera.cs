@@ -147,13 +147,13 @@ public class PhoneCamera : MonoBehaviour
         if (picturePreview.activeSelf)
         {
             picturePreview.SetActive(false);
-            cameraBtn.SetActive(false);
-            pictureBtns.SetActive(true);
+            cameraBtn.SetActive(true);
+            pictureBtns.SetActive(false);
             return;
         }
         picturePreview.SetActive(true);
-        cameraBtn.SetActive(true);
-        pictureBtns.SetActive(false);
+        cameraBtn.SetActive(false);
+        pictureBtns.SetActive(true);
     }
 
     public void Continue()
