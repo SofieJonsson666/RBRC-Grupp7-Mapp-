@@ -12,4 +12,7 @@ public class Character
     public Sprite characterSprite;
     public AnimatorOverrideController overrideController;
 
+
+    public int seedCost;
+    [HideInInspector] public bool isUnlocked; //DO NOT TOGGLE THIS IN INSPECTOR!!! Vi gör det här i koden i save data -sofie
 }
