@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using TreeEditor;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -13,8 +14,12 @@ public class CharacterManager : MonoBehaviour
     public TMP_Text nameText;
     public SpriteRenderer spriteRenderer;
     public Image lockIconBird;
+    public TMP_Text unlockHintText;
 
     private int selectedOption = 0;
+
+    public Material normalMaterial;
+    public Material greyMaterial;
 
     // Start is called before the first frame update
     void Start()
@@ -38,23 +43,35 @@ public class CharacterManager : MonoBehaviour
         for (int i = 0; i < characterDB.CharacterCount; i++)
         {
             Character character = characterDB.GetCharacter(i);
-            //character.isUnlocked = DataSaver.instance.unlockedCharacterIndices.Contains(i) || character.seedCost == 0;
-            if (i == 0)
+
+            if (i == 0) // Always unlock first character
             {
                 character.isUnlocked = true;
                 if (!DataSaver.instance.unlockedCharacterIndices.Contains(i))
                     DataSaver.instance.unlockedCharacterIndices.Add(i);
-            } 
+            }
+            else if (DataSaver.instance.unlockedCharacterIndices.Contains(i))
+            {
+                character.isUnlocked = true;
+            }
+            else if (DataSaver.instance.totalSeedAmount >= character.seedCost)
+            {
+                character.isUnlocked = true;
+                DataSaver.instance.unlockedCharacterIndices.Add(i);
+            }
             else
             {
-                character.isUnlocked = DataSaver.instance.unlockedCharacterIndices.Contains(i);
+                character.isUnlocked = false;
             }
         }
+
+        DataSaver.instance.SaveGame();
     }
 
     public void UnlockCharacter()
     {
         Character character = characterDB.GetCharacter(selectedOption);
+
 
         if (!character.isUnlocked && DataSaver.instance.totalSeedAmount >= character.seedCost)
         {
@@ -110,13 +127,25 @@ public class CharacterManager : MonoBehaviour
         spriteRenderer.sprite = character.characterSprite;
         //nameText.text = character.characterName;
 
-        if (character.isUnlocked)
+        if (!character.isUnlocked)
         {
-            nameText.text = character.characterName + " (Unlocked)";
+            /*int needed = character.seedCost - DataSaver.instance.totalSeedAmount;
+            needed = Mathf.Max(0, needed);
+            unlockHintText.text = $"Need {needed} more seeds to unlock.";*/
+
+            nameText.text = character.characterName + " (Locked)";
+            lockIconBird.gameObject.SetActive(true);
+            spriteRenderer.material = greyMaterial;
+
+            int needed = character.seedCost - DataSaver.instance.totalSeedAmount;
+            unlockHintText.text = $"Need {needed} more seeds to unlock";
         }
         else
         {
-            nameText.text = character.characterName + $" (Locked: {character.seedCost} seeds)";
+            nameText.text = character.characterName;
+            lockIconBird.gameObject.SetActive(false);
+            spriteRenderer.material = normalMaterial;
+            unlockHintText.text = "";
         }
     }
 
