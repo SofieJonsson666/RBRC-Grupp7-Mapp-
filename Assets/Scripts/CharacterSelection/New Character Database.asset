@@ -25,5 +25,5 @@ MonoBehaviour:
       type: 3}
     overrideController: {fileID: 22100000, guid: c504af99d0422ae4e830d96ccecfab49,
       type: 2}
-    seedCost: 0
+    seedCost: 10
     isUnlocked: 0
