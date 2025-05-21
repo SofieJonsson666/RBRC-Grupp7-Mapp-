@@ -133,7 +133,7 @@ public class CharacterManager : MonoBehaviour
             needed = Mathf.Max(0, needed);
             unlockHintText.text = $"Need {needed} more seeds to unlock.";*/
 
-            nameText.text = character.characterName + " (Locked)";
+            nameText.text = character.characterName;
             lockIconBird.gameObject.SetActive(true);
             spriteRenderer.material = greyMaterial;
 
