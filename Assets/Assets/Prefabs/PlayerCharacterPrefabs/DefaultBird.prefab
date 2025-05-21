@@ -168,6 +168,9 @@ MonoBehaviour:
     type: 3}
   camera: {fileID: 0}
   capsuleCollider2: {fileID: 5422241006582345651}
+  voiceControlEnabled: 1
+  voiceSensitivity: 0.1
+  micSampleWindow: 128
 --- !u!114 &8781691580735548584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +237,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.33541214, y: -0.25141948}
-  m_Size: {x: 1.2668068, y: 0.9241369}
+  m_Offset: {x: 0.41118318, y: -0.047781702}
+  m_Size: {x: 1.5208552, y: 1.5208551}
   m_Direction: 1

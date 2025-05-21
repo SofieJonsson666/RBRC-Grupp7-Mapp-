@@ -153,10 +153,22 @@ MonoBehaviour:
   flapForce: 5
   floorY: 1.3
   shootHorizontalOffset: 0.1
+  startingSpeed: 1
+  accelerationAmplitude: 1
+  meters: 0
   health: 3
   canDie: 1
+  canMove: 1
   seedCounter: {fileID: 0}
   healthUI: {fileID: 0}
+  gameOverScreen: {fileID: 0}
+  seedParticle: {fileID: 0}
+  featherParticle: {fileID: 0}
+  camera: {fileID: 0}
+  capsuleCollider2: {fileID: 0}
+  voiceControlEnabled: 1
+  voiceSensitivity: 0.1
+  micSampleWindow: 128
 --- !u!114 &8134913394666961763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +235,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3376456, y: -0.16337681}
-  m_Size: {x: 1.5992936, y: 1.5992937}
+  m_Offset: {x: 0.2450335, y: -0.11979473}
+  m_Size: {x: 1.4576516, y: 1.6101892}
   m_Direction: 0

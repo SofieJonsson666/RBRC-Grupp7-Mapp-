@@ -22,8 +22,10 @@ public class PhoneCamera : MonoBehaviour
     [SerializeField] private GameObject backgroundController;
     [SerializeField] private GameObject house;
 
-    [SerializeField] private int size;
-    public Renderer targetRenderer;
+    [SerializeField] private int sizeX;
+    [SerializeField] private int sizeY;
+    //public Renderer targetRenderer;
+    [SerializeField] private RawImage rawImage;
     [SerializeField] private GameObject pictureBtns;
     [SerializeField] private GameObject cameraBtn;
     [SerializeField] private GameObject picturePreview;
@@ -124,34 +126,60 @@ public class PhoneCamera : MonoBehaviour
         background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
     }
 
-    public Texture2D CapturePhoto()
+ /*   public Texture2D CapturePhoto()
     {
         Texture2D photo = new Texture2D(size, size);
-        photo.SetPixels(cam.GetPixels());
+        //photo.SetPixels(cam.GetPixels());
+        photo.ReadPixels(new Rect(Screen.width - size / 2, Screen.height - size / 2, size, size), 0, 0);
         photo.Apply();
         return photo;
-    }
+    }*/
 
     public void TakePictureAndApply()
     {
-        Texture2D capturedImage = CapturePhoto();
+        StartCoroutine(CapturePhoto());
+      /*  Texture2D capturedImage = CapturePhoto();
         InvertActives();
         if (capturedImage != null)
         {      
             targetRenderer.material.mainTexture = capturedImage;
-        }
+        }*/
+    }
+
+    private IEnumerator CapturePhoto()
+    {
+        InvertActives();
+
+        yield return null;
+        yield return new WaitForEndOfFrame();
+
+        
+
+        Texture2D photo = new Texture2D(sizeX, sizeY, TextureFormat.RGB24, false);
+
+        int SW = Screen.width / 2 - sizeX / 2;
+        int SH = Screen.height / 2 - sizeY / 2;
+
+        photo.ReadPixels(new Rect(SW, SH, sizeX, sizeY), 0, 0);
+        photo.Apply();
+
+        if (rawImage != null)
+        {
+            //rawImage.material.mainTexture = photo;
+            rawImage.texture = photo;
+        } 
     }
 
     public void InvertActives()
     {
-        if (picturePreview.activeSelf)
+        if (!cameraBtn.activeSelf)
         {
-            picturePreview.SetActive(false);
+            //picturePreview.SetActive(false);
             cameraBtn.SetActive(true);
             pictureBtns.SetActive(false);
             return;
         }
-        picturePreview.SetActive(true);
+        //picturePreview.SetActive(true);
         cameraBtn.SetActive(false);
         pictureBtns.SetActive(true);
     }
