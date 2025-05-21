@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using static SaveSeedData;
+using UnityEngine.SceneManagement;
 
 public class DataSaver : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class DataSaver : MonoBehaviour
     public List<int> unlockedCharacterIndices = new List<int>();
 
     private string savePath;
+    
 
     private void Awake()
     {
@@ -84,5 +86,21 @@ public class DataSaver : MonoBehaviour
     private void OnApplicationQuit()
     {
         SaveGame(); // this autosaves
+    }
+
+    public void ResetGameData()
+    {
+        highScore = 0;
+        totalSeedAmount = 0;
+        seedAmount = 0;
+        totalMetersTraveled = 0;
+        unlockedCharacterIndices.Clear();
+        selectedLanguage = "en";
+
+
+        SaveGame();
+        Debug.Log("Game data reset!");
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //this reloads gamedata used for debugging and editing, remove when game is finished
     }
 }
