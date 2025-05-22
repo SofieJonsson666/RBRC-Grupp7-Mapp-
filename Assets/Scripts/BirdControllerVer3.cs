@@ -7,7 +7,7 @@ public class BirdControllerVer3 : MonoBehaviour
 {
     [SerializeField] private float flapForce = 5f;
     [SerializeField] private float floorY = 1.1f;
-    [SerializeField] private float shootHorizontalOffset = 0.1f;
+    [SerializeField] private float shootHorizontalOffset = 0.2f;
     [SerializeField] private float startingSpeed = 1f;
     [SerializeField] private float accelerationAmplitude = 1f;
     [SerializeField] private float meters = 0;

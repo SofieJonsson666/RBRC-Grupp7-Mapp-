@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flapForce: 5
   floorY: 1.3
-  shootHorizontalOffset: 0.1
+  shootHorizontalOffset: 0.2
   startingSpeed: 10
   accelerationAmplitude: 1
   meters: 0
@@ -186,8 +186,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 3740503639714104953, guid: f2edfc9509985ae4188a19ff5d6e8fdb,
     type: 3}
   shootPoint: {fileID: 0}
-  shootForce: 10
-  shootCooldown: 0.2
+  shootForce: 30
+  shootCooldown: 2
   projectileLifetime: 3
   minSwipeDistance: 30
 --- !u!114 &8806087122837528040

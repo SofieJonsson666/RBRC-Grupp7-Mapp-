@@ -671,8 +671,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Highscore: 2000'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  m_sharedMaterial: {fileID: -8835476230319501204, guid: 53444ee96c932034cb4d3b4049c42396,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
