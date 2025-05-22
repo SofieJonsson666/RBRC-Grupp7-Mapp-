@@ -5,7 +5,7 @@ using TMPro;
 
 public class BirdControllerVer3 : MonoBehaviour
 {
-    [SerializeField] private float flapForce = 5f;
+    [SerializeField] private float flapForce = 7f;
     [SerializeField] private float floorY = 1.1f;
     [SerializeField] private float shootHorizontalOffset = 0.2f;
     [SerializeField] private float startingSpeed = 1f;
@@ -173,8 +173,12 @@ public class BirdControllerVer3 : MonoBehaviour
 
         if (isFlying && transform.position.y < maxHeight)
         {
-            rigidBody.AddForce(Vector2.up * flapForce * 5f, ForceMode2D.Force);
+            //rigidBody.AddForce(Vector2.up * flapForce * 5f, ForceMode2D.Force);
+            rigidBody.velocity = new Vector2(rigidBody.velocity.x, 0f);
+            //rigidBody.AddForce(Vector2.up * flapForce, ForceMode2D.Impulse);
+            rigidBody.velocity = new Vector2(rigidBody.velocity.x, flapForce);
         }
+        
 
         // Floor clamp
         if (transform.position.y <= floorY + 0.01f && rigidBody.velocity.y < 0f)
