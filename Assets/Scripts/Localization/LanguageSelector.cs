@@ -9,7 +9,6 @@ public class LanguageSelector : MonoBehaviour
 
     private void Start()
     {
-
         StartCoroutine(InitializeDropdown());
     }
 

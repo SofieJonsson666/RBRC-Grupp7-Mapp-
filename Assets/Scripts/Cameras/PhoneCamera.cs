@@ -22,13 +22,13 @@ public class PhoneCamera : MonoBehaviour
     [SerializeField] private GameObject backgroundController;
     [SerializeField] private GameObject house;
 
-    [SerializeField] private int sizeX;
-    [SerializeField] private int sizeY;
+    [SerializeField] private int size;
     //public Renderer targetRenderer;
     [SerializeField] private RawImage rawImage;
     [SerializeField] private GameObject pictureBtns;
     [SerializeField] private GameObject cameraBtn;
     [SerializeField] private GameObject picturePreview;
+    [SerializeField] private GameObject frame;
 
     private void Start()
     {
@@ -148,20 +148,21 @@ public class PhoneCamera : MonoBehaviour
 
     private IEnumerator CapturePhoto()
     {
-        InvertActives();
-
         yield return null;
         yield return new WaitForEndOfFrame();
 
-        
+        Texture2D photo = new Texture2D(size, size, TextureFormat.RGB24, false);
 
-        Texture2D photo = new Texture2D(sizeX, sizeY, TextureFormat.RGB24, false);
+        int SW = Screen.width / 2 - size / 2;
+        int SH = Screen.height / 2 - size / 2;
 
-        int SW = Screen.width / 2 - sizeX / 2;
-        int SH = Screen.height / 2 - sizeY / 2;
+        frame.SetActive(false);
+        cameraBtn.SetActive(false);
 
-        photo.ReadPixels(new Rect(SW, SH, sizeX, sizeY), 0, 0);
+        photo.ReadPixels(new Rect(SW, SH, size, size), 0, 0);
         photo.Apply();
+
+        InvertActives();
 
         if (rawImage != null)
         {
@@ -174,12 +175,12 @@ public class PhoneCamera : MonoBehaviour
     {
         if (!cameraBtn.activeSelf)
         {
-            //picturePreview.SetActive(false);
+            picturePreview.SetActive(false);
             cameraBtn.SetActive(true);
             pictureBtns.SetActive(false);
             return;
         }
-        //picturePreview.SetActive(true);
+        picturePreview.SetActive(true);
         cameraBtn.SetActive(false);
         pictureBtns.SetActive(true);
     }
