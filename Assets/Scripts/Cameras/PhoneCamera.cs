@@ -29,7 +29,7 @@ public class PhoneCamera : MonoBehaviour
     [SerializeField] private GameObject cameraBtn;
     [SerializeField] private GameObject picturePreview;
     [SerializeField] private GameObject frame;
-    [SerializeField] private GameObject plane;
+    [SerializeField] private SpriteRenderer bird;
 
     private void Start()
     {
@@ -172,7 +172,13 @@ public class PhoneCamera : MonoBehaviour
 
             Material photoMaterial = new Material(Shader.Find("Standard"));
             photoMaterial.mainTexture = photo;
-            plane.GetComponent<Renderer>().material = photoMaterial;
+            //plane.GetComponent<Renderer>().material = photoMaterial;
+
+            Sprite sprite = Sprite.Create(photo, new Rect(0, 0, size, size), new Vector2(0.5f, 0.5f));
+            bird.sprite = sprite;
+
+            bird.enabled = false;
+            bird.enabled = true;
         } 
     }
 
