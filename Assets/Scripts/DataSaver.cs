@@ -15,6 +15,10 @@ public class DataSaver : MonoBehaviour
     public bool ar;
     public bool gyro;
 
+    //Custom Bird saker
+    public Sprite CBSprite;
+    public SpriteRenderer CBRenderer;
+
     public float mps;
     public float metersTraveled;
     public float totalMetersTraveled;
@@ -102,5 +106,18 @@ public class DataSaver : MonoBehaviour
         Debug.Log("Game data reset!");
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //this reloads gamedata used for debugging and editing, remove when game is finished
+    }
+
+    public void UpdateCBSprite(Sprite sprite)
+    {
+        CBSprite = sprite;
+    }
+
+    public void ApplyCBSprite()
+    {
+        if(CBSprite != null)
+        {
+            CBRenderer.sprite = CBSprite;
+        }
     }
 }

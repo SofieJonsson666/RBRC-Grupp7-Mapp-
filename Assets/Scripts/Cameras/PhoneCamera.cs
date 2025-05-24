@@ -14,7 +14,6 @@ public class PhoneCamera : MonoBehaviour
     public AspectRatioFitter fit;
     public bool backSelected;
     public bool gameScene;
-    //public Renderer backgroundRenderer;
     [SerializeField] private GameObject cameraBackground;
 
     [SerializeField] private GameObject backgroundDetector;
@@ -23,13 +22,11 @@ public class PhoneCamera : MonoBehaviour
     [SerializeField] private GameObject house;
 
     [SerializeField] private int size;
-    //public Renderer targetRenderer;
-    [SerializeField] private RawImage rawImage;
     [SerializeField] private GameObject pictureBtns;
     [SerializeField] private GameObject cameraBtn;
-    [SerializeField] private GameObject picturePreview;
+    [SerializeField] private GameObject birdPreview;
     [SerializeField] private GameObject frame;
-    [SerializeField] private SpriteRenderer bird;
+    [SerializeField] private SpriteRenderer birdSprite;
 
     private void Start()
     {
@@ -127,24 +124,24 @@ public class PhoneCamera : MonoBehaviour
         background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
     }
 
- /*   public Texture2D CapturePhoto()
-    {
-        Texture2D photo = new Texture2D(size, size);
-        //photo.SetPixels(cam.GetPixels());
-        photo.ReadPixels(new Rect(Screen.width - size / 2, Screen.height - size / 2, size, size), 0, 0);
-        photo.Apply();
-        return photo;
-    }*/
+    /*   public Texture2D CapturePhoto()
+       {
+           Texture2D photo = new Texture2D(size, size);
+           //photo.SetPixels(cam.GetPixels());
+           photo.ReadPixels(new Rect(Screen.width - size / 2, Screen.height - size / 2, size, size), 0, 0);
+           photo.Apply();
+           return photo;
+       }*/
 
     public void TakePictureAndApply()
     {
         StartCoroutine(CapturePhoto());
-      /*  Texture2D capturedImage = CapturePhoto();
-        InvertActives();
-        if (capturedImage != null)
-        {      
-            targetRenderer.material.mainTexture = capturedImage;
-        }*/
+        /*  Texture2D capturedImage = CapturePhoto();
+          InvertActives();
+          if (capturedImage != null)
+          {      
+              targetRenderer.material.mainTexture = capturedImage;
+          }*/
     }
 
     private IEnumerator CapturePhoto()
@@ -158,46 +155,34 @@ public class PhoneCamera : MonoBehaviour
         Texture2D photo = new Texture2D(size, size, TextureFormat.RGB24, false);
 
         int SW = Screen.width / 2 - size / 2;
-        int SH = Screen.height / 2 - size / 2;   
+        int SH = Screen.height / 2 - size / 2;
 
         photo.ReadPixels(new Rect(SW, SH, size, size), 0, 0);
         photo.Apply();
 
         InvertActives();
 
-        if (rawImage != null)
-        {
-            //rawImage.material.mainTexture = photo;
-            rawImage.texture = photo;
-
-            Material photoMaterial = new Material(Shader.Find("Standard"));
-            photoMaterial.mainTexture = photo;
-            //plane.GetComponent<Renderer>().material = photoMaterial;
-
-            Sprite sprite = Sprite.Create(photo, new Rect(0, 0, size, size), new Vector2(0.5f, 0.5f));
-            bird.sprite = sprite;
-
-            bird.enabled = false;
-            bird.enabled = true;
-        } 
+        Sprite sprite = Sprite.Create(photo, new Rect(0, 0, size, size), new Vector2(0.5f, 0.5f));
+        birdSprite.sprite = sprite;
+        DataSaver.instance.UpdateCBSprite(sprite);
     }
 
     public void InvertActives()
     {
-        if (picturePreview.activeSelf)
+        if (birdPreview.activeSelf)
         {
             cameraBtn.SetActive(true);
             frame.SetActive(true);
-            picturePreview.SetActive(false); 
+            birdPreview.SetActive(false);
             pictureBtns.SetActive(false);
             return;
         }
-        picturePreview.SetActive(true);
+        birdPreview.SetActive(true);
         pictureBtns.SetActive(true);
     }
 
     public void Continue()
     {
-
+        SceneManager.LoadScene(1);
     }
 }

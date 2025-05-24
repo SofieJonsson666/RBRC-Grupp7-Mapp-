@@ -19,7 +19,7 @@ MonoBehaviour:
     overrideController: {fileID: 22100000, guid: 3a7821d95ae49f44c93090f92841e034,
       type: 2}
     seedCost: 0
-    isUnlocked: 0
+    isUnlocked: 1
   - characterName: Scrungly Rat
     characterSprite: {fileID: 2006870152, guid: f958509e3daa7d341ae17f15197ee977,
       type: 3}
