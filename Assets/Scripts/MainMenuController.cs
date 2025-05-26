@@ -100,7 +100,7 @@ public class MainMenuController : MonoBehaviour
         tutorialMenu.SetActive(true);
         tutorialOpen = true;*/
 
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(5);
     }
 
     public void ToStartMenu()

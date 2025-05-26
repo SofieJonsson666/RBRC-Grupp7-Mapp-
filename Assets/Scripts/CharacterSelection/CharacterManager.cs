@@ -127,6 +127,12 @@ public class CharacterManager : MonoBehaviour
         spriteRenderer.sprite = character.characterSprite;
         //nameText.text = character.characterName;
 
+        if (selectedOption == 2 && DataSaver.instance.CBSprite != null)
+        {
+            //DataSaver.instance.ApplyCBSprite();
+            print("CB");
+        }
+
         if (!character.isUnlocked)
         {
             /*int needed = character.seedCost - DataSaver.instance.totalSeedAmount;
