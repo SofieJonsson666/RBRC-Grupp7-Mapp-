@@ -975,6 +975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 241879921}
   - component: {fileID: 241879922}
+  - component: {fileID: 241879923}
   m_Layer: 0
   m_Name: BackgroundController
   m_TagString: BackgroundController
@@ -1010,6 +1011,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &241879923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241879920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ff8d943e9c07e4dbcc5b3b96c47146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: e53bec3072e52e749a79911d58274924, type: 2}
+  hueSpeed: 0.1
 --- !u!1 &243361778
 GameObject:
   m_ObjectHideFlags: 0
