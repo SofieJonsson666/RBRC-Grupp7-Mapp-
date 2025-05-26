@@ -8,6 +8,8 @@ public class MainMenuController : MonoBehaviour
 {
     [SerializeField] private GameObject optionsMenu;
     private bool optionsOpen;
+    [SerializeField] private GameObject tutorialMenu;
+    private bool tutorialOpen;
     [SerializeField] private TMP_Text arOnOff;
     [SerializeField] private TMP_Text gyroOnOff;
 
@@ -84,5 +86,25 @@ public class MainMenuController : MonoBehaviour
 
         DataSaver.instance.gyro = true;
         gyroOnOff.text = "ON";
+    }
+
+    public void Tutorial()
+    {
+        /*if (tutorialOpen)
+        {
+            tutorialMenu.SetActive(false);
+            tutorialOpen = false;
+            return;
+        }
+
+        tutorialMenu.SetActive(true);
+        tutorialOpen = true;*/
+
+        SceneManager.LoadScene(6);
+    }
+
+    public void ToStartMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
