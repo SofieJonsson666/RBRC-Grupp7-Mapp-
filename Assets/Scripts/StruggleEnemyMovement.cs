@@ -89,7 +89,7 @@ public class StruggleEnemyMovement : MonoBehaviour
             //add effects here later
             rb.velocity = Vector2.zero;
 
-            //musssiiiiccc
+            //musssiiiiccc hiii
         }
     }
 

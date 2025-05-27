@@ -261,7 +261,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23183715, y: 0.36055255}
+  m_Offset: {x: -0.5703461, y: 0.38501}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -272,7 +272,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.103513, y: 4.405848}
+  m_Size: {x: 3.443935, y: 4.454763}
   m_EdgeRadius: 0
 --- !u!114 &7912513749971603111
 MonoBehaviour:
@@ -286,6 +286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f285b0739221ce14996390e8c411d4cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bigBoom: {fileID: 0}
+  boomParticle: {fileID: 0}
 --- !u!114 &3537485391959961762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,4 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackzone: {fileID: 6007100456505170267}
   speed: 5
+  struggleBirdPosition: {fileID: 0}
+  colliderNormal: {fileID: 4626417686498858437}
+  colliderStruggle: {fileID: 0}
   _hasTarget: 0

@@ -194,8 +194,11 @@ public class BirdControllerVer3 : MonoBehaviour
         }
 
         // Lock to screen left offset
-        float desiredX = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width * shootHorizontalOffset, 0f, GetCameraZDistance())).x;
-        transform.position = new Vector3(desiredX, transform.position.y, transform.position.z);
+        if (!isStruggling)
+        {
+            float desiredX = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width * shootHorizontalOffset, 0f, GetCameraZDistance())).x;
+            transform.position = new Vector3(desiredX, transform.position.y, transform.position.z);
+        }
 
         // Set speed
         DataSaver.instance.metersTraveled += DataSaver.instance.mps * Time.deltaTime;
@@ -409,6 +412,7 @@ public class BirdControllerVer3 : MonoBehaviour
     private IEnumerator StopStruggling()
     {
         yield return new WaitForSeconds(0.5f);
+        capsuleCollider2.enabled = true;
         isStruggling = false;
         EndStruggle();
         struggleEnemyAnimator.SetTrigger("destroyNet");
