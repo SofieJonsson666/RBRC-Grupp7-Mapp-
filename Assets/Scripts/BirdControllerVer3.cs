@@ -162,11 +162,23 @@ public class BirdControllerVer3 : MonoBehaviour
             {
                 Debug.Log("L");
                 OnHit();
+
+                if (health <= 0 && canDie && !isDead)
+                {
+                    Die();
+                    SaveSeeds();
+                }
+
                 EndStruggle();
                 struggleTimeCounter = 0f;
                 StartCoroutine(StopStruggling());
             }
 
+        }
+
+        if (!isStruggling)
+        {
+            capsuleCollider2.enabled = true;
         }
 
         //Debug.Log(struggleEnemy);

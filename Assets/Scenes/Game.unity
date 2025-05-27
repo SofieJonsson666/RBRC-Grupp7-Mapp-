@@ -2663,7 +2663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &828876351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5474,12 +5474,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 4254135222348768471, guid: f6be8d41e9de86843a96c8cdae2c94c2,
     type: 3}
-  StruggleEnemyPrefab: {fileID: 5048106230864206176, guid: 41231df065d5d3d4cb5c3993c31d7bd0,
+  StruggleEnemyPrefab: {fileID: 6191453952003389227, guid: 0a753222ecd8ec942bedcf2d62daec3f,
     type: 3}
   enemyInterval: 3.5
   struggleEnemyInterval: 4
   groundY: 2.1
   spawnZ: 0
+  groundStruggleEnemyY: 3
 --- !u!4 &1580236216
 Transform:
   m_ObjectHideFlags: 0
