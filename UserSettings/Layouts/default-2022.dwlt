@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18
+  controlID: 50
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -636,9 +636,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.8393807, y: 6.003751, z: 0.042015627}
+    m_Target: {x: -7.221607, y: 6.932207, z: 0.030852536}
     speed: 2
-    m_Value: {x: -5.8393807, y: 6.003751, z: 0.042015627}
+    m_Value: {x: -7.221607, y: 6.932207, z: 0.030852536}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -688,9 +688,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.7984343
+    m_Target: 6.9147406
     speed: 2
-    m_Value: 5.7984343
+    m_Value: 6.9147406
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -761,7 +761,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Assets/Prefabs/EnemyPrefabs/TestStruggle
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -769,16 +769,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Assets/Prefabs/EnemyPrefabs/TestStruggle
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\sojo5949\Documents\GitHub\RBRC-Grupp7-Mapp-
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 120}
-    m_SelectedIDs: e0ed0100
-    m_LastClickedID: 126432
-    m_ExpandedIDs: 000000006a75000084750000c6ed0100caed0100d0ed01006a04020000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 216}
+    m_SelectedIDs: 5c6a0000
+    m_LastClickedID: 27228
+    m_ExpandedIDs: 000000002e6a0000306a00004c6a00004e6a0000526a00005e6a00009e6a00007e050100ae05010000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -806,7 +806,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006a750000
+    m_ExpandedIDs: 000000002e6a0000306a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -834,7 +834,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
+    m_ExpandedInstanceIDs: c6230000ee680000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -948,9 +948,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 5c6a0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 4a3af3ff543af3ffe4b5ffffcabcffffe2700000
+      m_ExpandedIDs: 8441ffffccbcffff16fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
