@@ -49,8 +49,12 @@ public class BirdControllerVer3 : MonoBehaviour
     private GameObject struggleEnemy;
     private Animator struggleEnemyAnimator;
 
+    [SerializeField] private float struggleTimer = 5f;
+    private float struggleTimeCounter;
+
     private void Start()
     {
+        struggleTimeCounter = 0f;
         DataSaver.instance.metersTraveled = 0;
         DataSaver.instance.seedAmount = 0;
         rigidBody = GetComponent<Rigidbody2D>();
@@ -145,6 +149,26 @@ public class BirdControllerVer3 : MonoBehaviour
         {
             StartCoroutine(StopStruggling());
         }
+
+        if(isStruggling)
+        {
+
+            if(struggleTimeCounter  <= 5f)
+            {
+                struggleTimeCounter += Time.deltaTime;
+                Debug.Log(struggleTimeCounter += Time.deltaTime);
+            }
+            if(struggleTimeCounter >= 5f)
+            {
+                Debug.Log("L");
+                OnHit();
+                EndStruggle();
+                struggleTimeCounter = 0f;
+                StartCoroutine(StopStruggling());
+            }
+
+        }
+
         //Debug.Log(struggleEnemy);
 
 #if UNITY_EDITOR
@@ -281,7 +305,9 @@ public class BirdControllerVer3 : MonoBehaviour
 
     public void EndStruggle()
     {
+        isStruggling = false;
         animator.SetBool("struggle", false);
+        capsuleCollider2.enabled = true;
         Time.timeScale = 1.0f;
         tappCount = 0;
         canMove = true;
@@ -412,8 +438,6 @@ public class BirdControllerVer3 : MonoBehaviour
     private IEnumerator StopStruggling()
     {
         yield return new WaitForSeconds(0.5f);
-        capsuleCollider2.enabled = true;
-        isStruggling = false;
         EndStruggle();
         struggleEnemyAnimator.SetTrigger("destroyNet");
         Destroy(struggleEnemy, 1f);

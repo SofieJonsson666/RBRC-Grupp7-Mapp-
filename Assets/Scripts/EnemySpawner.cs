@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private float groundY = 20f; // Set this to your ground level
     [SerializeField] private float spawnZ = 0f;
+    [SerializeField] private float groundStruggleEnemyY = 20f;
 
     private int counter;
 
@@ -61,7 +62,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnStruggleEnemy(GameObject struggleEnemy)
     {
-        Vector3 spawnPosition = new Vector3(17, groundY, spawnZ);
+        Vector3 spawnPosition = new Vector3(17, groundStruggleEnemyY, spawnZ);
         Instantiate(struggleEnemy, spawnPosition, Quaternion.identity);
     }
 }
