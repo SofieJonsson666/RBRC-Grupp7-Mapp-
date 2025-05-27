@@ -12,6 +12,7 @@ public class BirdControllerVer3 : MonoBehaviour
     [SerializeField] private float accelerationAmplitude = 1f;
     [SerializeField] private float meters = 0;
     [SerializeField] private int health = 3;
+    [SerializeField] private AudioClip pickupSound;
     private bool isDead = false;
 
     private Rigidbody2D rigidBody;
@@ -52,6 +53,8 @@ public class BirdControllerVer3 : MonoBehaviour
     [SerializeField] private float struggleTimer = 5f;
     private float struggleTimeCounter;
 
+    private AudioSource audioSource;
+
     private void Start()
     {
         struggleTimeCounter = 0f;
@@ -69,6 +72,12 @@ public class BirdControllerVer3 : MonoBehaviour
         struggleEnemy = null;
 
         animator = GetComponent<Animator>();
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
 
         UpdateScreenBounds();
 
@@ -377,6 +386,13 @@ public class BirdControllerVer3 : MonoBehaviour
             Destroy(collision.gameObject);
             DataSaver.instance.seedAmount++;
             seedCounter.text = DataSaver.instance.seedAmount.ToString();
+
+            
+
+            if (pickupSound != null)
+            {
+                audioSource.PlayOneShot(pickupSound);
+            }
         }
 
         if (collision.gameObject.CompareTag("StruggleEnemy"))

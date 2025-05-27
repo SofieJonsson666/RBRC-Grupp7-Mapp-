@@ -157,6 +157,7 @@ MonoBehaviour:
   accelerationAmplitude: 1
   meters: 0
   health: 3
+  pickupSound: {fileID: 8300000, guid: 45703304e9e7e584f8f350ae69a62d8f, type: 3}
   canDie: 1
   canMove: 1
   seedCounter: {fileID: 0}
@@ -171,6 +172,7 @@ MonoBehaviour:
   voiceControlEnabled: 1
   voiceSensitivity: 0.1
   micSampleWindow: 128
+  struggleTimer: 5
 --- !u!114 &8781691580735548584
 MonoBehaviour:
   m_ObjectHideFlags: 0
