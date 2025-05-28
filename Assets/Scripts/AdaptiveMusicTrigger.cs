@@ -6,11 +6,20 @@ using UnityEngine.SceneManagement;
 public class AdaptiveMusicTrigger : MonoBehaviour
 {
     private AdaptiveMusicPlayer musicManager;
+    
 
     void Start()
     {
         musicManager = FindObjectOfType<AdaptiveMusicPlayer>();
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (musicManager == null)
+        {
+            Debug.LogError("AdaptiveMusicPlayer not found!");
+            return;
+        }
+
+        musicManager.ResetAndPlay();
 
         switch (sceneIndex)
         {

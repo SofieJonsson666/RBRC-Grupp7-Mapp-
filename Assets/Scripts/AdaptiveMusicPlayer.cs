@@ -24,6 +24,17 @@ public class AdaptiveMusicPlayer : MonoBehaviour
         DontDestroyOnLoad(gameObject); // Keep music playing across scenes
     }
 
+    public void ResetAndPlay()
+    {
+        drums.volume = 1f;
+        bass.volume = 0f;
+        melody.volume = 0f;
+
+        if (!drums.isPlaying) drums.Play();
+        if (!bass.isPlaying) bass.Play();
+        if (!melody.isPlaying) melody.Play();
+    }
+
     private void Start()
     {
         // Start all tracks simultaneously for perfect sync
@@ -35,6 +46,13 @@ public class AdaptiveMusicPlayer : MonoBehaviour
         drums.volume = 1f;
         bass.volume = 0f;
         melody.volume = 0f;
+    }
+
+    public void StopAllMusic()
+    {
+        drums.Stop();
+        bass.Stop();
+        melody.Stop();
     }
 
     public void FadeInBass(float duration = 2f)

@@ -428,6 +428,9 @@ public class BirdControllerVer3 : MonoBehaviour
 
         animator.SetTrigger("Die");
 
+        FindObjectOfType<AdaptiveMusicPlayer>()?.StopAllMusic();
+
+
         //Time.timeScale = 0f;
 
         Invoke("ShowGameOverUI", 1f);

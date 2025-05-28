@@ -167,7 +167,7 @@ MonoBehaviour:
     type: 3}
   featherParticle: {fileID: 720644624887820774, guid: 020460e148ca7fb49a5c7d72390742bb,
     type: 3}
-  camera: {fileID: 0}
+  mainCamera: {fileID: 0}
   capsuleCollider2: {fileID: 5422241006582345651}
   voiceControlEnabled: 1
   voiceSensitivity: 0.1

@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         GameManager.Instance.RestartGame();
     }
 
-    //Det gamla scripted finns här nedan, jag ville testa en sak med projectiles spawner -sofie
+    
 
     private void Awake()
     {

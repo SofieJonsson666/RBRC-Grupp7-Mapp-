@@ -7062,6 +7062,11 @@ PrefabInstance:
       objectReference: {fileID: 1252156628}
     - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
       propertyPath: seedCounter
       value: 
       objectReference: {fileID: 1520342802}
