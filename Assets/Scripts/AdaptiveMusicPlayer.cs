@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class AdaptiveMusicPlayer : MonoBehaviour
 {
-    public AudioSource drums;
-    public AudioSource bass;
-    public AudioSource melody;
+    [SerializeField] public AudioSource drums;
+    [SerializeField] public AudioSource bass;
+    [SerializeField] public AudioSource melody;
 
     private static AdaptiveMusicPlayer instance;
+
+    
 
     private void Awake()
     {
