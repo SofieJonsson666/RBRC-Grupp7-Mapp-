@@ -34,7 +34,7 @@ public class BirdControllerVer3 : MonoBehaviour
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private ParticleSystem seedParticle;
     [SerializeField] private ParticleSystem featherParticle;
-    [SerializeField] private Camera camera;
+    [SerializeField] private Camera mainCamera;
     [SerializeField] private CapsuleCollider2D capsuleCollider2;
 
     //Variabler för röststyrning
@@ -345,7 +345,7 @@ public class BirdControllerVer3 : MonoBehaviour
             //health--;
             collision.collider.enabled = false;
 
-            CameraShake cameraShake = camera.GetComponent<CameraShake>();
+            CameraShake cameraShake = mainCamera.GetComponent<CameraShake>();
             StartCoroutine(cameraShake.Shake());
 
             if (health <= 0 && canDie && !isDead)
@@ -365,7 +365,7 @@ public class BirdControllerVer3 : MonoBehaviour
             //health--;
             collision.collider.enabled = false;
 
-            CameraShake cameraShake = camera.GetComponent<CameraShake>();
+            CameraShake cameraShake = mainCamera.GetComponent<CameraShake>();
             StartCoroutine(cameraShake.Shake());
 
             if (health <= 0 && canDie && !isDead)

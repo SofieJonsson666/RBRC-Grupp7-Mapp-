@@ -14,6 +14,7 @@ public class DataSaver : MonoBehaviour
     public int seedAmount;
     public bool ar;
     public bool gyro;
+    public bool voicecontrol;
 
     //Custom Bird saker
     public Sprite CBSprite;
@@ -54,6 +55,7 @@ public class DataSaver : MonoBehaviour
             selectedLanguage = this.selectedLanguage,
             ar = this.ar,
             gyro = this.gyro,
+            voicecontrol = this.voicecontrol,
 
             unlockedCharacterIndices = new List<int>(this.unlockedCharacterIndices)
         };
@@ -76,6 +78,7 @@ public class DataSaver : MonoBehaviour
             this.selectedLanguage = saveData.selectedLanguage;
             this.ar = saveData.ar;
             this.gyro = saveData.gyro;
+            this.voicecontrol = saveData.voicecontrol;
 
             this.unlockedCharacterIndices = saveData.unlockedCharacterIndices ?? new List<int>();
 

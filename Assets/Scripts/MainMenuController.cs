@@ -12,6 +12,7 @@ public class MainMenuController : MonoBehaviour
     private bool tutorialOpen;
     [SerializeField] private TMP_Text arOnOff;
     [SerializeField] private TMP_Text gyroOnOff;
+    [SerializeField] private TMP_Text voicecontrolOnOff;
 
     private void Start()
     {
@@ -35,6 +36,17 @@ public class MainMenuController : MonoBehaviour
             else
             {
                 gyroOnOff.text = "OFF";
+            }
+        }
+        if (voicecontrolOnOff != null)
+        {
+            if (DataSaver.instance.voicecontrol)
+            {
+                voicecontrolOnOff.text = "ON";
+            }
+            else
+            {
+                voicecontrolOnOff.text = "OFF";
             }
         }
     }
@@ -86,6 +98,19 @@ public class MainMenuController : MonoBehaviour
 
         DataSaver.instance.gyro = true;
         gyroOnOff.text = "ON";
+    }
+
+    public void Voicecontrol()
+    {
+        if (DataSaver.instance.voicecontrol)
+        {
+            DataSaver.instance.voicecontrol = false;
+            voicecontrolOnOff.text = "OFF";
+            return;
+        }
+
+        DataSaver.instance.voicecontrol = true;
+        voicecontrolOnOff.text = "ON";
     }
 
     public void Tutorial()
