@@ -26,7 +26,7 @@ public class AdaptiveMusicPlayer : MonoBehaviour
 
     public void ResetAndPlay()
     {
-        drums.volume = 1f;
+        drums.volume = 0.1f;
         bass.volume = 0f;
         melody.volume = 0f;
 
@@ -43,7 +43,7 @@ public class AdaptiveMusicPlayer : MonoBehaviour
         melody.Play();
 
         // Start with only drums audible
-        drums.volume = 1f;
+        drums.volume = 0.1f;
         bass.volume = 0f;
         melody.volume = 0f;
     }
@@ -69,7 +69,7 @@ public class AdaptiveMusicPlayer : MonoBehaviour
     {
         float time = 0f;
         float startVolume = source.volume;
-        float targetVolume = 1f;
+        float targetVolume = 0.1f;
 
         while (time < duration)
         {
