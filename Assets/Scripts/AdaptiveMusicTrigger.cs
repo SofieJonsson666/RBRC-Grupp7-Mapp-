@@ -30,6 +30,9 @@ public class AdaptiveMusicTrigger : MonoBehaviour
             case 5: //Tutorial
                 musicManager?.FadeInBass();
                 break;
+            case 6: //Tutorial2
+                musicManager.FadeInBass();
+                break;
 
         }
     }

@@ -113,7 +113,7 @@ public class MainMenuController : MonoBehaviour
         voicecontrolOnOff.text = "ON";
     }
 
-    public void Tutorial()
+    public void Tutorial1()
     {
         /*if (tutorialOpen)
         {
@@ -128,8 +128,18 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene(5);
     }
 
+    public void Tutorial2()
+    {
+        SceneManager.LoadScene(6);
+    }
+
     public void ToStartMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void ToPreviousTutorial()
+    {
+        SceneManager.LoadScene(5);
     }
 }

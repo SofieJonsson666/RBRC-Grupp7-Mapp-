@@ -5068,7 +5068,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1981490927}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
-        m_MethodName: Tutorial
+        m_MethodName: Tutorial1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
