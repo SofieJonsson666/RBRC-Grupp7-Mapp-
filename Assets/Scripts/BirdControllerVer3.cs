@@ -39,6 +39,7 @@ public class BirdControllerVer3 : MonoBehaviour
 
     //Variabler för röststyrning
     [SerializeField] private bool voiceControlEnabled = true; //Hook to seetings menu
+
     [SerializeField] private float voiceSensitivity = 0.1f; //Calibrate based on mic
     [SerializeField] private int micSampleWindow = 128;
 
@@ -82,7 +83,9 @@ public class BirdControllerVer3 : MonoBehaviour
         UpdateScreenBounds();
 
         //Hitta mikrofon
-        if(voiceControlEnabled && Microphone.devices.Length > 0)
+
+        // byt ut voiceControlEnabled till DataSaver.Instance.voicecontrol
+        if (voiceControlEnabled && Microphone.devices.Length > 0)
         {
             micDevice = Microphone.devices[0];
             micClip = Microphone.Start(micDevice, true, 1, 44100);
@@ -90,7 +93,6 @@ public class BirdControllerVer3 : MonoBehaviour
         }
         //Slut
     }
-    
 
     private void Update()
     {
@@ -159,15 +161,14 @@ public class BirdControllerVer3 : MonoBehaviour
             StartCoroutine(StopStruggling());
         }
 
-        if(isStruggling)
+        if (isStruggling)
         {
-
-            if(struggleTimeCounter  <= 5f)
+            if (struggleTimeCounter <= 5f)
             {
                 struggleTimeCounter += Time.deltaTime;
                 Debug.Log(struggleTimeCounter += Time.deltaTime);
             }
-            if(struggleTimeCounter >= 5f)
+            if (struggleTimeCounter >= 5f)
             {
                 Debug.Log("L");
                 OnHit();
@@ -182,7 +183,6 @@ public class BirdControllerVer3 : MonoBehaviour
                 struggleTimeCounter = 0f;
                 StartCoroutine(StopStruggling());
             }
-
         }
 
         if (!isStruggling)
@@ -223,7 +223,6 @@ public class BirdControllerVer3 : MonoBehaviour
             //rigidBody.AddForce(Vector2.up * flapForce, ForceMode2D.Impulse);
             rigidBody.velocity = new Vector2(rigidBody.velocity.x, flapForce);
         }
-        
 
         // Floor clamp
         if (transform.position.y <= floorY + 0.01f && rigidBody.velocity.y < 0f)
@@ -294,6 +293,7 @@ public class BirdControllerVer3 : MonoBehaviour
 
         return Mathf.Sqrt(sum / micSampleWindow); //RMS value
     }
+
     //Slut
 
     private void SaveSeeds()
@@ -386,8 +386,6 @@ public class BirdControllerVer3 : MonoBehaviour
             Destroy(collision.gameObject);
             DataSaver.instance.seedAmount++;
             seedCounter.text = DataSaver.instance.seedAmount.ToString();
-
-            
 
             if (pickupSound != null)
             {
