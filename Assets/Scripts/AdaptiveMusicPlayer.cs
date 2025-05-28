@@ -1,0 +1,65 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class AdaptiveMusicPlayer : MonoBehaviour
+{
+    public AudioSource drums;
+    public AudioSource bass;
+    public AudioSource melody;
+
+    private static AdaptiveMusicPlayer instance;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject); // Prevent duplicate
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject); // Keep music playing across scenes
+    }
+
+    private void Start()
+    {
+        // Start all tracks simultaneously for perfect sync
+        drums.Play();
+        bass.Play();
+        melody.Play();
+
+        // Start with only drums audible
+        drums.volume = 1f;
+        bass.volume = 0f;
+        melody.volume = 0f;
+    }
+
+    public void FadeInBass(float duration = 2f)
+    {
+        StartCoroutine(FadeIn(bass, duration));
+    }
+
+    public void FadeInMelody(float duration = 2f)
+    {
+        StartCoroutine(FadeIn(melody, duration));
+    }
+
+    private IEnumerator FadeIn(AudioSource source, float duration)
+    {
+        float time = 0f;
+        float startVolume = source.volume;
+        float targetVolume = 1f;
+
+        while (time < duration)
+        {
+            source.volume = Mathf.Lerp(startVolume, targetVolume, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        source.volume = targetVolume;
+
+        
+    }
+}
