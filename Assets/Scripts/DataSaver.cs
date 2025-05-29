@@ -103,6 +103,9 @@ public class DataSaver : MonoBehaviour
         totalMetersTraveled = 0;
         unlockedCharacterIndices.Clear();
         selectedLanguage = "en";
+        ar = false;
+        gyro = false;
+        voicecontrol = false;
 
 
         SaveGame();

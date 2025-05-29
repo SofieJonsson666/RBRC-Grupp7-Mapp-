@@ -19,6 +19,14 @@ public class BackgroundCharacterSpawner : MonoBehaviour
     {
         while (true)
         {
+            if (GameManager.Instance != null && GameManager.Instance.isGameOver)
+                yield break;
+
+            yield return new WaitForSeconds(spawnInterval);
+
+            if (GameManager.Instance != null && GameManager.Instance.isGameOver)
+                yield break;
+
             SpawnCharacter();
             yield return new WaitForSeconds(spawnInterval);
         }
