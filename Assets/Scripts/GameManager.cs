@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject pauseCanvas;
 
+    public int currentScore = 0;
+
     public void RestartGame()
     {
         isGameOver = false;

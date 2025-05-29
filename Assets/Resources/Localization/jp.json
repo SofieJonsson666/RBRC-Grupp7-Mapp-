@@ -55,6 +55,14 @@
     {
       "key": "custombird",
       "value": "鳥を自作する"
+    },
+    {
+      "key": "highscore",
+      "value": "ハイスコア"
+    },
+    {
+      "key": "currentscore",
+      "value": "スコア"
     }
   ]
 }

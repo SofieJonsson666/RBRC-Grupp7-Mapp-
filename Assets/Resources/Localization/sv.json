@@ -55,6 +55,14 @@
     {
       "key": "custombird",
       "value": "Gör en egen fågel"
+    },
+    {
+      "key": "highscore",
+      "value": "High Score"
+    },
+    {
+      "key": "currentscore",
+      "value": "Score"
     }
   ]
 }

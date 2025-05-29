@@ -55,6 +55,14 @@
     {
       "key": "custombird",
       "value": "Create Custom Bird"
+    },
+    {
+      "key": "highscore",
+      "value": "High Score"
+    },
+    {
+      "key": "currentscore",
+      "value": "Score"
     }
   ]
 }
