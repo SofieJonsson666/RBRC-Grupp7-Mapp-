@@ -18,6 +18,10 @@ public class CharacterDatabase : ScriptableObject
     public Character GetCharacter(int index)
     {
         return character[index];
+
+
     }
+
+    
 
 }

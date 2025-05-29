@@ -29,7 +29,9 @@ public class DataSaver : MonoBehaviour
     public List<int> unlockedCharacterIndices = new List<int>();
 
     private string savePath;
+
     
+
 
     private void Awake()
     {
@@ -41,7 +43,7 @@ public class DataSaver : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
 
-        savePath = Application.persistentDataPath + "/seedsave.json";
+        savePath = Path.Combine(Application.persistentDataPath, "seedsave.json");
         LoadGame(); //kommer ihåg saker från andra spelsessioner när spelet börjar -sofie
     }
 
@@ -63,6 +65,11 @@ public class DataSaver : MonoBehaviour
         string json = JsonUtility.ToJson(saveData, true);
         File.WriteAllText(savePath, json);
         Debug.Log("Game saved to: " + savePath);
+
+        if (string.IsNullOrEmpty(savePath))
+        {
+            savePath = Path.Combine(Application.persistentDataPath, "seedsave.json");
+        }
     }
 
     public void LoadGame()
@@ -79,14 +86,18 @@ public class DataSaver : MonoBehaviour
             this.ar = saveData.ar;
             this.gyro = saveData.gyro;
             this.voicecontrol = saveData.voicecontrol;
-
             this.unlockedCharacterIndices = saveData.unlockedCharacterIndices ?? new List<int>();
-
-            Debug.Log("Game loaded from: " + savePath);
         }
         else
         {
-            Debug.Log("No save file! Starting with default values!");
+            Debug.Log("No save file found. Using defaults.");
+            InitializeDefaults();
+            SaveGame(); // optional: immediately create default save
+        }
+
+        if (!unlockedCharacterIndices.Contains(0))
+        {
+            unlockedCharacterIndices.Add(0); // Just to be safe
         }
     }
 
@@ -97,21 +108,39 @@ public class DataSaver : MonoBehaviour
 
     public void ResetGameData()
     {
+        /*highScore = 0;
+        totalSeedAmount = 0;
+        seedAmount = 0;
+        totalMetersTraveled = 0;
+        unlockedCharacterIndices.Clear();
+        selectedLanguage = "en";
+
+
+        SaveGame();
+        Debug.Log("Game data reset!");
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //this reloads gamedata used for debugging and editing, remove when game is finished*/
+
+
+        if (File.Exists(savePath))
+        {
+            File.Delete(savePath);
+        }
+
+        InitializeDefaults();
+        SaveGame();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void InitializeDefaults()
+    {
         highScore = 0;
         totalSeedAmount = 0;
         seedAmount = 0;
         totalMetersTraveled = 0;
         unlockedCharacterIndices.Clear();
         selectedLanguage = "en";
-        ar = false;
-        gyro = false;
-        voicecontrol = false;
-
-
-        SaveGame();
-        Debug.Log("Game data reset!");
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //this reloads gamedata used for debugging and editing, remove when game is finished
+        unlockedCharacterIndices.Add(0); // default character
     }
 
     public void UpdateCBSprite(Sprite sprite)
@@ -121,7 +150,7 @@ public class DataSaver : MonoBehaviour
 
     public void ApplyCBSprite()
     {
-        if(CBSprite != null)
+        if (CBSprite != null)
         {
             CBRenderer.sprite = CBSprite;
         }
