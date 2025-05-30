@@ -16,12 +16,12 @@ public class AdaptiveMusicPlayer : MonoBehaviour
     {
         if (instance != null && instance != this)
         {
-            Destroy(gameObject); // Prevent duplicate
+            Destroy(gameObject); 
             return;
         }
 
         instance = this;
-        DontDestroyOnLoad(gameObject); // Keep music playing across scenes
+        DontDestroyOnLoad(gameObject); 
     }
 
     public void ResetAndPlay()
@@ -37,12 +37,12 @@ public class AdaptiveMusicPlayer : MonoBehaviour
 
     private void Start()
     {
-        // Start all tracks simultaneously for perfect sync
+        
         drums.Play();
         bass.Play();
         melody.Play();
 
-        // Start with only drums audible
+        
         drums.volume = 0.1f;
         bass.volume = 0f;
         melody.volume = 0f;

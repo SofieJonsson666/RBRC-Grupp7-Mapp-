@@ -55,16 +55,16 @@ public class StruggleEnemyMovement : MonoBehaviour
     {
         if (GameManager.Instance != null && GameManager.Instance.isGameOver)
         {
-            rb.velocity = Vector2.zero; // Stop movement when game is over
+            rb.velocity = Vector2.zero; 
             return;
         }
         actualSpeed = speed * DataSaver.instance.mps;
 
-        rb.velocity = new Vector2(-actualSpeed, rb.velocity.y); // Maintain vertical velocity for gravity
+        rb.velocity = new Vector2(-actualSpeed, rb.velocity.y); 
 
         if (CanMove && canMove)
         {
-            rb.velocity = new Vector2(-actualSpeed, rb.velocity.x); // <- This moves the enemy left
+            rb.velocity = new Vector2(-actualSpeed, rb.velocity.x); 
         }
         else
         {

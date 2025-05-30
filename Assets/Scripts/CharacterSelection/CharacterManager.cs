@@ -44,7 +44,7 @@ public class CharacterManager : MonoBehaviour
         {
             Character character = characterDB.GetCharacter(i);
 
-            if (i == 0) // Always unlock first character
+            if (i == 0)
             {
                 character.isUnlocked = true;
                 if (!DataSaver.instance.unlockedCharacterIndices.Contains(i))

@@ -11,7 +11,7 @@ public class BackgroundCharacterMovement : MonoBehaviour
     {
         transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
 
-        // Destroy the character once it's off-screen to the left
+        
         if (transform.position.x < destroyX)
         {
             Destroy(gameObject);

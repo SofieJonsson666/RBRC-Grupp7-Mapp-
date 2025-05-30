@@ -66,11 +66,11 @@ public class BirdShooter : MonoBehaviour
         Debug.Log("attack triggered");
         animator.SetTrigger("attack");
 
-        // Optional: reset velocity or add effects
+        
         rigidBody.velocity = Vector2.zero;
         rigidBody.gravityScale = 1;
 
-        // Optional: play sound, etc.
+       
     }
 
     private void Shoot(Vector2 start, Vector2 end)

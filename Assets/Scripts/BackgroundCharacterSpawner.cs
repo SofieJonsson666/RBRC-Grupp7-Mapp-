@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BackgroundCharacterSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject[] backgroundPrefabs; // Your 6 character prefabs
-    [SerializeField] private float spawnInterval = 5f; // Time between spawns
-    [SerializeField] private float spawnX = 15f; // Fixed X position to spawn at
+    [SerializeField] private GameObject[] backgroundPrefabs; 
+    [SerializeField] private float spawnInterval = 5f; 
+    [SerializeField] private float spawnX = 15f; 
     [SerializeField] private float minY = 1f;
     [SerializeField] private float maxY = 5f;
 

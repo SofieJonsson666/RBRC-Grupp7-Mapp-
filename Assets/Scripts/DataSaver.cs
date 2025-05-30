@@ -92,18 +92,18 @@ public class DataSaver : MonoBehaviour
         {
             Debug.Log("No save file found. Using defaults.");
             InitializeDefaults();
-            SaveGame(); // optional: immediately create default save
+            SaveGame(); 
         }
 
         if (!unlockedCharacterIndices.Contains(0))
         {
-            unlockedCharacterIndices.Add(0); // Just to be safe
+            unlockedCharacterIndices.Add(0); 
         }
     }
 
     private void OnApplicationQuit()
     {
-        SaveGame(); // this autosaves
+        SaveGame(); 
     }
 
     public void ResetGameData()
@@ -140,7 +140,7 @@ public class DataSaver : MonoBehaviour
         totalMetersTraveled = 0;
         unlockedCharacterIndices.Clear();
         selectedLanguage = "en";
-        unlockedCharacterIndices.Add(0); // default character
+        unlockedCharacterIndices.Add(0); 
     }
 
     public void UpdateCBSprite(Sprite sprite)

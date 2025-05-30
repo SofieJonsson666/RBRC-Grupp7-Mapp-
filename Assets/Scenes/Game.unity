@@ -6045,12 +6045,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f573fea9d639ede4ba6a2e6ab28d57e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seedInterval: 0.3
   SeedPrefab: {fileID: 2789325862199344426, guid: 2e8b3b0134adb6b47a3ace08de2a6bfd,
     type: 3}
-  seedInterval: 0.1
+  spawnX: 17
   spawnZ: -1
-  randBtm: 0.01
-  randTop: 7
+  minY: 1
+  maxY: 15
 --- !u!1 &1663155261
 GameObject:
   m_ObjectHideFlags: 0
