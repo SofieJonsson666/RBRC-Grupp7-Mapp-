@@ -13,6 +13,10 @@
       "value": "戻る"
     },
     {
+      "key": "next",
+      "value": "次"
+    },
+    {
       "key": "resume",
       "value": "再開"
     },
@@ -63,6 +67,46 @@
     {
       "key": "currentscore",
       "value": "スコア"
+    },
+    {
+      "key": "soundcontrol",
+      "value": "音声コントロール"
+    },
+    {
+      "key": "tutorial",
+      "value": "チュートリアル"
+    },
+    {
+      "key": "holdhorizontally",
+      "value": "画面を横向きで\n持とう！"
+    },
+    {
+      "key": "taptofly",
+      "value": "左手の親指で\nタップして上下に\n飛ぼう！"
+    },
+    {
+      "key": "taptoattack",
+      "value": "右手の親指で\nタップまたは\nスワイプして\n攻撃しよう！"
+    },
+    {
+      "key": "avoid",
+      "value": "警察と弾を避けよう！"
+    },
+    {
+      "key": "collectseeds",
+      "value": "種を集めよう!"
+    },
+    {
+      "key": "threelives",
+      "value": "ライフは3つだけ!\n敵や弾に気をつけて!"
+    },
+    {
+      "key": "enemynet",
+      "value": "網を持った敵に捕まってしまったら\n画面を素早くタップして\n網から脱出しよう!"
+    },
+    {
+      "key": "needseeds",
+      "value": "種が足りません!"
     }
   ]
 }

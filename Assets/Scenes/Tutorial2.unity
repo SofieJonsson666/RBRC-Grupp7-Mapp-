@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 416108572}
   - component: {fileID: 416108574}
   - component: {fileID: 416108573}
+  - component: {fileID: 416108575}
   m_Layer: 5
   m_Name: TutorialText2
   m_TagString: Untagged
@@ -258,6 +259,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416108571}
   m_CullTransparentMesh: 1
+--- !u!114 &416108575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416108571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: enemynet
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &443289940
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +398,7 @@ GameObject:
   - component: {fileID: 452644294}
   - component: {fileID: 452644296}
   - component: {fileID: 452644295}
+  - component: {fileID: 452644297}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -504,6 +522,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452644293}
   m_CullTransparentMesh: 1
+--- !u!114 &452644297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452644293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: back
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &550475328
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,6 +654,7 @@ GameObject:
   - component: {fileID: 1106926323}
   - component: {fileID: 1106926325}
   - component: {fileID: 1106926324}
+  - component: {fileID: 1106926326}
   m_Layer: 5
   m_Name: TutorialText1
   m_TagString: Untagged
@@ -744,6 +779,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106926322}
   m_CullTransparentMesh: 1
+--- !u!114 &1106926326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106926322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: threelives
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &1261092315
 GameObject:
   m_ObjectHideFlags: 0

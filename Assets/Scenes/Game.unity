@@ -815,9 +815,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: gameover
-  fontEnglish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
-  fontSwedish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
-  fontJapanese: {fileID: 11400000, guid: 8cf2987f648c6db4ea026b3f97da2fb0, type: 2}
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1001 &171847539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -903,6 +903,7 @@ GameObject:
   - component: {fileID: 197923265}
   - component: {fileID: 197923267}
   - component: {fileID: 197923266}
+  - component: {fileID: 197923268}
   m_Layer: 5
   m_Name: CurrentScoreLabel
   m_TagString: Untagged
@@ -1026,6 +1027,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197923264}
   m_CullTransparentMesh: 1
+--- !u!114 &197923268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197923264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: currentscore
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &220738862
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,9 +1949,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: quit
-  fontEnglish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
-  fontSwedish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
-  fontJapanese: {fileID: 11400000, guid: 8cf2987f648c6db4ea026b3f97da2fb0, type: 2}
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1001 &450290302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2400,7 +2417,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: HighScore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2464,7 +2481,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &731304943
@@ -2707,9 +2724,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: home
-  fontEnglish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
-  fontSwedish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
-  fontJapanese: {fileID: 11400000, guid: 8cf2987f648c6db4ea026b3f97da2fb0, type: 2}
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1001 &825435566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3534,9 +3551,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: resume
-  fontEnglish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
-  fontSwedish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
-  fontJapanese: {fileID: 11400000, guid: 8cf2987f648c6db4ea026b3f97da2fb0, type: 2}
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &960472692
 GameObject:
   m_ObjectHideFlags: 0
@@ -3549,6 +3566,7 @@ GameObject:
   - component: {fileID: 960472696}
   - component: {fileID: 960472695}
   - component: {fileID: 960472694}
+  - component: {fileID: 960472697}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -3694,6 +3712,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960472692}
   m_CullTransparentMesh: 1
+--- !u!114 &960472697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960472692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: resume
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4650,6 +4684,7 @@ GameObject:
   - component: {fileID: 1297270934}
   - component: {fileID: 1297270936}
   - component: {fileID: 1297270935}
+  - component: {fileID: 1297270937}
   m_Layer: 5
   m_Name: HighScoreLabel
   m_TagString: Untagged
@@ -4773,6 +4808,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297270933}
   m_CullTransparentMesh: 1
+--- !u!114 &1297270937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297270933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: highscore
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &1306874704
 GameObject:
   m_ObjectHideFlags: 0
@@ -4832,7 +4883,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: CurrentScore
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4896,7 +4947,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1306874707
@@ -6319,9 +6370,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: restart
-  fontEnglish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
-  fontSwedish: {fileID: 11400000, guid: 42c20001dae44ae4fbca26a4b146b213, type: 2}
-  fontJapanese: {fileID: 11400000, guid: 8cf2987f648c6db4ea026b3f97da2fb0, type: 2}
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1001 &1753723818
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -13.200012, y: -7.4}
+  m_AnchoredPosition: {x: -13.199951, y: -7.4}
   m_SizeDelta: {x: 160.09, y: 30}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &138462139
@@ -547,6 +547,7 @@ GameObject:
   - component: {fileID: 916131758}
   - component: {fileID: 916131760}
   - component: {fileID: 916131759}
+  - component: {fileID: 916131761}
   m_Layer: 5
   m_Name: TutorialText3
   m_TagString: Untagged
@@ -675,6 +676,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916131757}
   m_CullTransparentMesh: 1
+--- !u!114 &916131761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916131757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: taptoattack
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &1012907336
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +795,7 @@ GameObject:
   - component: {fileID: 1117338278}
   - component: {fileID: 1117338280}
   - component: {fileID: 1117338279}
+  - component: {fileID: 1117338281}
   m_Layer: 5
   m_Name: TutorialText1
   m_TagString: Untagged
@@ -904,6 +922,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117338277}
   m_CullTransparentMesh: 1
+--- !u!114 &1117338281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117338277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: holdhorizontally
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &1317248208
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +949,7 @@ GameObject:
   - component: {fileID: 1317248209}
   - component: {fileID: 1317248211}
   - component: {fileID: 1317248210}
+  - component: {fileID: 1317248212}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1038,6 +1073,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317248208}
   m_CullTransparentMesh: 1
+--- !u!114 &1317248212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317248208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: back
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &1505103447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,6 +1100,7 @@ GameObject:
   - component: {fileID: 1505103448}
   - component: {fileID: 1505103450}
   - component: {fileID: 1505103449}
+  - component: {fileID: 1505103451}
   m_Layer: 5
   m_Name: TutorialText2
   m_TagString: Untagged
@@ -1173,6 +1225,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505103447}
   m_CullTransparentMesh: 1
+--- !u!114 &1505103451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505103447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: taptofly
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &1598368204
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,6 +1421,7 @@ GameObject:
   - component: {fileID: 1756259168}
   - component: {fileID: 1756259170}
   - component: {fileID: 1756259169}
+  - component: {fileID: 1756259171}
   m_Layer: 5
   m_Name: TutorialText5
   m_TagString: Untagged
@@ -1477,6 +1546,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756259167}
   m_CullTransparentMesh: 1
+--- !u!114 &1756259171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756259167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: collectseeds
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &1768797700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,6 +1573,7 @@ GameObject:
   - component: {fileID: 1768797701}
   - component: {fileID: 1768797703}
   - component: {fileID: 1768797702}
+  - component: {fileID: 1768797704}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1614,6 +1700,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768797700}
   m_CullTransparentMesh: 1
+--- !u!114 &1768797704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768797700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: next
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &1976902005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1727,7 @@ GameObject:
   - component: {fileID: 1976902006}
   - component: {fileID: 1976902008}
   - component: {fileID: 1976902007}
+  - component: {fileID: 1976902009}
   m_Layer: 5
   m_Name: TutorialText4
   m_TagString: Untagged
@@ -1749,6 +1852,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1976902005}
   m_CullTransparentMesh: 1
+--- !u!114 &1976902009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976902005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: avoid
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &1982913022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,6 +1880,7 @@ GameObject:
   - component: {fileID: 1982913025}
   - component: {fileID: 1982913024}
   - component: {fileID: 1982913023}
+  - component: {fileID: 1982913027}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1858,6 +1978,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1982913027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982913022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 
+  fontEnglish: {fileID: 0}
+  fontSwedish: {fileID: 0}
+  fontJapanese: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

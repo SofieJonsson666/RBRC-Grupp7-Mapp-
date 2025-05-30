@@ -13,6 +13,10 @@
       "value": "Back"
     },
     {
+      "key": "next",
+      "value": "next"
+    },
+    {
       "key": "resume",
       "value": "Resume"
     },
@@ -63,6 +67,46 @@
     {
       "key": "currentscore",
       "value": "Score"
+    },
+    {
+      "key": "soundcontrol",
+      "value": "Sound Control"
+    },
+    {
+      "key": "tutorial",
+      "value": "Tutorial"
+    },
+    {
+      "key": "holdhorizontally",
+      "value": "Hold your device\nhorizontally!"
+    },
+    {
+      "key": "taptofly",
+      "value": "Tap with your\nleft thumb to fly\nup and down!"
+    },
+    {
+      "key": "taptoattack",
+      "value": "Tap or swipe\nwith your right\nthumb to attack!"
+    },
+    {
+      "key": "avoid",
+      "value": "Avoid cops and bullets!"
+    },
+    {
+      "key": "collectseeds",
+      "value": "Collect seeds!"
+    },
+    {
+      "key": "threelives",
+      "value": "You only have three\nlives! Be wary of\nbullets and enemies!"
+    },
+    {
+      "key": "enemynet",
+      "value": "If an enemy with a net catches\nyou, quickly tap your screen to\nbreak the net and escape!"
+    },
+    {
+      "key": "needseeds",
+      "value": "Need more seeds!"
     }
   ]
 }

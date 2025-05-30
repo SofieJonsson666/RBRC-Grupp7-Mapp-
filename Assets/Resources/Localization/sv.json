@@ -13,6 +13,10 @@
       "value": "Tillbaka"
     },
     {
+      "key": "next",
+      "value": "nästa"
+    },
+    {
       "key": "resume",
       "value": "Fortsätt"
     },
@@ -63,6 +67,46 @@
     {
       "key": "currentscore",
       "value": "Score"
+    },
+    {
+      "key": "soundcontrol",
+      "value": "Röststyrning"
+    },
+    {
+      "key": "tutorial",
+      "value": "Tutorial"
+    },
+    {
+      "key": "holdhorizontally",
+      "value": "Håll enheten\ni horisontellt läge!"
+    },
+    {
+      "key": "taptofly",
+      "value": "Tryck med vänster\ntumme för att\nflyga upp och ned!"
+    },
+    {
+      "key": "taptoattack",
+      "value": "Tryck eller\nswipa med höger\ntumme för att\nattackera"
+    },
+    {
+      "key": "avoid",
+      "value": "Undvik polis och bullets!"
+    },
+    {
+      "key": "collectseeds",
+      "value": "Samla på frön!"
+    },
+    {
+      "key": "threelives",
+      "value": "Du har bara tre liv!\nAkta dig för\nbullets och fiender!"
+    },
+    {
+      "key": "enemynet",
+      "value": "Om en fiende med ett nät fångar dig, tryck snabbt på skärmen för att bryta dig fri!"
+    },
+    {
+      "key": "needseeds",
+      "value": "Behöver fler frön!"
     }
   ]
 }
