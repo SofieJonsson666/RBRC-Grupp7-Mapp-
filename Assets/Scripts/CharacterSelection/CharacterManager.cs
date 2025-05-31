@@ -21,6 +21,8 @@ public class CharacterManager : MonoBehaviour
     public Material normalMaterial;
     public Material greyMaterial;
 
+    [SerializeField] private GameObject customBird;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -125,11 +127,16 @@ public class CharacterManager : MonoBehaviour
     {
         Character character = characterDB.GetCharacter(selectedOption);
         spriteRenderer.sprite = character.characterSprite;
+        customBird.SetActive(false);
         //nameText.text = character.characterName;
 
-        if (selectedOption == 2 && DataSaver.instance.CBSprite != null)
+        if (selectedOption == 2)
         {
-            //DataSaver.instance.ApplyCBSprite();
+            customBird.SetActive(true);
+            if (DataSaver.instance.CBSprite != null)
+            {      
+                DataSaver.instance.ApplyCBSprite(customBird.GetComponent<SpriteRenderer>());
+            }        
             print("CB");
         }
 

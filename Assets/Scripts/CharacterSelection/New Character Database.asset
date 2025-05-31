@@ -26,14 +26,12 @@ MonoBehaviour:
     overrideController: {fileID: 22100000, guid: c504af99d0422ae4e830d96ccecfab49,
       type: 2}
     seedCost: 10
-    isUnlocked: 0
-  - characterName: Custom Bird
-    characterSprite: {fileID: 2006870152, guid: f958509e3daa7d341ae17f15197ee977,
-      type: 3}
-    overrideController: {fileID: 22100000, guid: c504af99d0422ae4e830d96ccecfab49,
-      type: 2}
+    isUnlocked: 1
+  - characterName: "V\xC4LJ INTE"
+    characterSprite: {fileID: 0}
+    overrideController: {fileID: 0}
     seedCost: 20
-    isUnlocked: 0
+    isUnlocked: 1
   - characterName: Magpie
     characterSprite: {fileID: -1835019867, guid: 5a9417028bcf7cd4b9a2bf0bf177b5d5,
       type: 3}

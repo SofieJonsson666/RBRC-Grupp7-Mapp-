@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
 {
 
     public CharacterDatabase characterDB;
+ 
+    public GameObject customBird;
+    public GameObject otherBirds;
 
     public SpriteRenderer spriteRenderer;
 
@@ -30,14 +33,23 @@ public class Player : MonoBehaviour
 
     private void UpdateCharacter(int selectedOption)
     {
-        Character character = characterDB.GetCharacter(selectedOption);
-        spriteRenderer.sprite = character.characterSprite;
-
-        if (animator != null && character.overrideController != null)
+        if (selectedOption == 2)
         {
-            animator.runtimeAnimatorController = character.overrideController;
+            customBird.SetActive(true);
+            otherBirds.SetActive(false);
         }
 
+        else
+        {
+            customBird.SetActive(false);
+            Character character = characterDB.GetCharacter(selectedOption);
+            spriteRenderer.sprite = character.characterSprite;
+
+            if (animator != null && character.overrideController != null)
+            {
+                animator.runtimeAnimatorController = character.overrideController;
+            }
+        }
         Debug.Log("Loaded character index: " + selectedOption);
     }
 

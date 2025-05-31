@@ -16,9 +16,7 @@ public class DataSaver : MonoBehaviour
     public bool gyro;
     public bool voicecontrol;
 
-    //Custom Bird saker
     public Sprite CBSprite;
-    public SpriteRenderer CBRenderer;
 
     public float mps;
     public float metersTraveled;
@@ -148,7 +146,7 @@ public class DataSaver : MonoBehaviour
         CBSprite = sprite;
     }
 
-    public void ApplyCBSprite()
+    public void ApplyCBSprite(SpriteRenderer CBRenderer)
     {
         if (CBSprite != null)
         {

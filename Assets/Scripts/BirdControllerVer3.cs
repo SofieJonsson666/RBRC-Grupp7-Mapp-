@@ -103,7 +103,6 @@ public class BirdControllerVer3 : MonoBehaviour
 
         healthUI.text = health.ToString();
 
-        //Kollar om gyro är på
         if (DataSaver.instance.gyro)
         {
             Quaternion deviceRotation = gyro.attitude;
@@ -209,7 +208,6 @@ public class BirdControllerVer3 : MonoBehaviour
             return;
         }
 
-        //Gör så fågeln flyger med gyro
         if (DataSaver.instance.gyro)
         {
             print(Mathf.Clamp(((rotationZ - 90) * 0.02f), -1.5f, 1.5f));

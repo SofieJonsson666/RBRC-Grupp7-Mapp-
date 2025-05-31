@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 6448408778555849971}
   - component: {fileID: 1685049197683331743}
   m_Layer: 10
-  m_Name: CustomBird 1
+  m_Name: CustomBird
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
