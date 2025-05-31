@@ -18,7 +18,7 @@ public class MainMenuController : MonoBehaviour
     {
         if (arOnOff != null)
         {
-            if (DataSaver.instance.ar)
+            if (DataSaver.instance.useCameraBackground)
             {
                 arOnOff.text = "ON";
             }
@@ -76,14 +76,14 @@ public class MainMenuController : MonoBehaviour
 
     public void Ar()
     {
-        if (DataSaver.instance.ar)
+        if (DataSaver.instance.useCameraBackground)
         {
-            DataSaver.instance.ar = false;
+            DataSaver.instance.useCameraBackground = false;
             arOnOff.text = "OFF";
             return;
         }
 
-        DataSaver.instance.ar = true;
+        DataSaver.instance.useCameraBackground = true;
         arOnOff.text = "ON";
     }
 

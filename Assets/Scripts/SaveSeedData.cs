@@ -12,7 +12,7 @@ public class SaveSeedData : MonoBehaviour
         public float totalMetersTraveled;
 
         public string selectedLanguage;
-        public bool ar;
+        public bool useCameraBackground;
         public bool gyro;
         public bool voicecontrol;
 

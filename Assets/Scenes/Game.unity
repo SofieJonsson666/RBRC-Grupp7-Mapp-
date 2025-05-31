@@ -3843,18 +3843,7 @@ MonoBehaviour:
   background: {fileID: 2016324106}
   fit: {fileID: 2016324105}
   backSelected: 1
-  gameScene: 1
   cameraBackground: {fileID: 2016324103}
-  backgroundDetector: {fileID: 39643090}
-  backgroundSpawner: {fileID: 1330672624}
-  backgroundController: {fileID: 241879920}
-  house: {fileID: 1567613957}
-  size: 0
-  pictureBtns: {fileID: 0}
-  cameraBtn: {fileID: 0}
-  birdPreview: {fileID: 0}
-  frame: {fileID: 0}
-  birdSprite: {fileID: 0}
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7602,6 +7591,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
+      propertyPath: house
+      value: 
+      objectReference: {fileID: 1567613957}
+    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 963194227}
@@ -7617,6 +7611,11 @@ PrefabInstance:
       objectReference: {fileID: 963194227}
     - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
+      propertyPath: phoneScript
+      value: 
+      objectReference: {fileID: 963194229}
+    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
       propertyPath: seedCounter
       value: 
       objectReference: {fileID: 1520342802}
@@ -7630,6 +7629,26 @@ PrefabInstance:
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 832271402}
+    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
+      propertyPath: charaterSpawner
+      value: 
+      objectReference: {fileID: 828876350}
+    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
+      propertyPath: backgroundSpawner
+      value: 
+      objectReference: {fileID: 1330672624}
+    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
+      propertyPath: backgroundDetector
+      value: 
+      objectReference: {fileID: 39643090}
+    - target: {fileID: 5379821906864362277, guid: 441db6982ea02974e9c4c54441eefa70,
+        type: 3}
+      propertyPath: backgroundController
+      value: 
+      objectReference: {fileID: 241879920}
     - target: {fileID: 6704993082979942387, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
       propertyPath: m_Name
@@ -7762,10 +7781,10 @@ SceneRoots:
   - {fileID: 39643092}
   - {fileID: 1330672625}
   - {fileID: 241879921}
+  - {fileID: 1567613958}
   - {fileID: 1861133042}
   - {fileID: 1580236216}
   - {fileID: 1605137707}
-  - {fileID: 1567613958}
   - {fileID: 1813058572}
   - {fileID: 1434513609}
   - {fileID: 2053915710}

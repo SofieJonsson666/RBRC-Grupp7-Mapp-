@@ -936,8 +936,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 767883300}
-        m_TargetAssemblyTypeName: PhoneCamera, Assembly-CSharp
+      - m_Target: {fileID: 767883301}
+        m_TargetAssemblyTypeName: BirdCamera, Assembly-CSharp
         m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
@@ -1106,6 +1106,7 @@ GameObject:
   - component: {fileID: 767883298}
   - component: {fileID: 767883297}
   - component: {fileID: 767883300}
+  - component: {fileID: 767883301}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1202,18 +1203,26 @@ MonoBehaviour:
   background: {fileID: 1843675528}
   fit: {fileID: 1843675527}
   backSelected: 0
-  gameScene: 0
   cameraBackground: {fileID: 1843675525}
-  backgroundDetector: {fileID: 0}
-  backgroundSpawner: {fileID: 0}
-  backgroundController: {fileID: 0}
-  house: {fileID: 0}
+--- !u!114 &767883301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767883296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ccaa4a88868b9428c3b78b6c100e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   size: 400
   pictureBtns: {fileID: 269752479}
   cameraBtn: {fileID: 934377673}
   birdPreview: {fileID: 6704993083476998163}
   frame: {fileID: 655488041}
-  birdSprite: {fileID: 1875361218312960931}
+  birdSprite: {fileID: 5080302435118995333}
+  phoneScript: {fileID: 767883300}
 --- !u!1 &871265549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,8 +1377,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 767883300}
-        m_TargetAssemblyTypeName: PhoneCamera, Assembly-CSharp
+      - m_Target: {fileID: 767883301}
+        m_TargetAssemblyTypeName: BirdCamera, Assembly-CSharp
         m_MethodName: TakePictureAndApply
         m_Mode: 1
         m_Arguments:
@@ -2198,8 +2207,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 767883300}
-        m_TargetAssemblyTypeName: PhoneCamera, Assembly-CSharp
+      - m_Target: {fileID: 767883301}
+        m_TargetAssemblyTypeName: BirdCamera, Assembly-CSharp
         m_MethodName: InvertActives
         m_Mode: 1
         m_Arguments:
@@ -2489,6 +2498,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ccaa4a88868b9428c3b78b6c100e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  size: 0
+  pictureBtns: {fileID: 0}
+  cameraBtn: {fileID: 0}
+  birdPreview: {fileID: 0}
+  frame: {fileID: 0}
+  birdSprite: {fileID: 0}
+  phoneScript: {fileID: 0}
 --- !u!4 &2009042373
 Transform:
   m_ObjectHideFlags: 0
@@ -2517,12 +2533,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
---- !u!212 &1875361218312960931 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 275971526535251897, guid: 48b1b3dae8f383046bd60387f9fc0bb2,
-    type: 3}
-  m_PrefabInstance: {fileID: 5080302435118995332}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5080302435118995332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2625,6 +2635,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48b1b3dae8f383046bd60387f9fc0bb2, type: 3}
+--- !u!212 &5080302435118995333 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 495664508037051029, guid: 48b1b3dae8f383046bd60387f9fc0bb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5080302435118995332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6704993083476998163 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4686211718212246563, guid: 48b1b3dae8f383046bd60387f9fc0bb2,

@@ -13,42 +13,14 @@ public class PhoneCamera : MonoBehaviour
     public RawImage background;
     public AspectRatioFitter fit;
     public bool backSelected;
-    public bool gameScene;
     [SerializeField] private GameObject cameraBackground;
 
-    [SerializeField] private GameObject backgroundDetector;
-    [SerializeField] private GameObject backgroundSpawner;
-    [SerializeField] private GameObject backgroundController;
-    [SerializeField] private GameObject house;
-
-    [SerializeField] private int size;
-    [SerializeField] private GameObject pictureBtns;
-    [SerializeField] private GameObject cameraBtn;
-    [SerializeField] private GameObject birdPreview;
-    [SerializeField] private GameObject frame;
-    [SerializeField] private SpriteRenderer birdSprite;
-
-    private void Start()
-    {
-        Activate();
-    }
-
-    public void Activate()
+    public bool Activate()
     {
         if (cam != null && cam.isPlaying)
         {
             cam.Stop();
             cam = null;
-        }
-
-        if (backSelected && gameScene)
-        {
-            if (!DataSaver.instance.ar)
-            {
-                cameraBackground.SetActive(false);
-                camAvailable = false;
-                return;
-            }
         }
 
         WebCamDevice[] devices = WebCamTexture.devices;
@@ -58,7 +30,7 @@ public class PhoneCamera : MonoBehaviour
             cameraBackground.SetActive(false);
             print("Fel");
             camAvailable = false;
-            return;
+            return false;
         }
 
         for (int i = 0; i < devices.Length; i++)
@@ -81,24 +53,18 @@ public class PhoneCamera : MonoBehaviour
             {
                 SceneManager.LoadScene(5);
             }
-            return;
+            return false;
         }
 
         defaultBackground = background.texture;
         cameraBackground.SetActive(true);
 
-        if (gameScene)
-        {
-            backgroundDetector.SetActive(false);
-            backgroundSpawner.SetActive(false);
-            backgroundController.SetActive(false);
-            house.SetActive(false);
-        }
-
         cam.Play();
         background.texture = cam;
 
         camAvailable = true;
+
+        return true;
     }
 
     private void Update()
@@ -108,12 +74,6 @@ public class PhoneCamera : MonoBehaviour
             return;
         }
 
-        /*Vector3 scale = backgroundRenderer.transform.localScale;
-        scale.y = backCam.videoVerticallyMirrored ? -Mathf.Abs(scale.y) : Mathf.Abs(scale.y);
-        backgroundRenderer.transform.localScale = scale;
-
-        backgroundRenderer.transform.localEulerAngles = new Vector3(0, 0, -backCam.videoRotationAngle);*/
-
         float ratio = (float)cam.width / (float)cam.height;
         fit.aspectRatio = ratio;
 
@@ -122,67 +82,5 @@ public class PhoneCamera : MonoBehaviour
 
         int orient = -cam.videoRotationAngle;
         background.rectTransform.localEulerAngles = new Vector3(0, 0, orient);
-    }
-
-    /*   public Texture2D CapturePhoto()
-       {
-           Texture2D photo = new Texture2D(size, size);
-           //photo.SetPixels(cam.GetPixels());
-           photo.ReadPixels(new Rect(Screen.width - size / 2, Screen.height - size / 2, size, size), 0, 0);
-           photo.Apply();
-           return photo;
-       }*/
-
-    public void TakePictureAndApply()
-    {
-        StartCoroutine(CapturePhoto());
-        /*  Texture2D capturedImage = CapturePhoto();
-          InvertActives();
-          if (capturedImage != null)
-          {      
-              targetRenderer.material.mainTexture = capturedImage;
-          }*/
-    }
-
-    private IEnumerator CapturePhoto()
-    {
-        frame.SetActive(false);
-        cameraBtn.SetActive(false);
-
-        yield return null;
-        yield return new WaitForEndOfFrame();
-
-        Texture2D photo = new Texture2D(size, size, TextureFormat.RGB24, false);
-
-        int SW = Screen.width / 2 - size / 2;
-        int SH = Screen.height / 2 - size / 2;
-
-        photo.ReadPixels(new Rect(SW, SH, size, size), 0, 0);
-        photo.Apply();
-
-        InvertActives();
-
-        Sprite sprite = Sprite.Create(photo, new Rect(0, 0, size, size), new Vector2(0.5f, 0.5f));
-        birdSprite.sprite = sprite;
-        DataSaver.instance.UpdateCBSprite(sprite);
-    }
-
-    public void InvertActives()
-    {
-        if (birdPreview.activeSelf)
-        {
-            cameraBtn.SetActive(true);
-            frame.SetActive(true);
-            birdPreview.SetActive(false);
-            pictureBtns.SetActive(false);
-            return;
-        }
-        birdPreview.SetActive(true);
-        pictureBtns.SetActive(true);
-    }
-
-    public void Continue()
-    {
-        SceneManager.LoadScene(1);
     }
 }

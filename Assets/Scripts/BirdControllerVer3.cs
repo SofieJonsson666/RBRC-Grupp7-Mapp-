@@ -56,6 +56,13 @@ public class BirdControllerVer3 : MonoBehaviour
 
     private AudioSource audioSource;
 
+    [SerializeField] private GameObject backgroundDetector;
+    [SerializeField] private GameObject backgroundSpawner;
+    [SerializeField] private GameObject backgroundController;
+    [SerializeField] private GameObject house;
+    [SerializeField] private GameObject charaterSpawner;
+    [SerializeField] private PhoneCamera phoneScript;
+
     private void Start()
     {
         struggleTimeCounter = 0f;
@@ -91,6 +98,8 @@ public class BirdControllerVer3 : MonoBehaviour
             micInitialized = true;
         }
         //Slut
+
+        CameraBackground();
     }
 
     private void Update()
@@ -467,5 +476,16 @@ public class BirdControllerVer3 : MonoBehaviour
         EndStruggle();
         struggleEnemyAnimator.SetTrigger("destroyNet");
         Destroy(struggleEnemy, 1f);
+    }
+
+    private void CameraBackground(){
+        if (DataSaver.instance.useCameraBackground && phoneScript.Activate())
+        {
+            charaterSpawner.SetActive(false);
+            backgroundDetector.SetActive(false);
+            backgroundSpawner.SetActive(false);
+            backgroundController.SetActive(false);
+            house.SetActive(false);
+        }
     }
 }

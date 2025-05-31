@@ -12,7 +12,7 @@ public class DataSaver : MonoBehaviour
     public int highScore = 0;
     public int totalSeedAmount;
     public int seedAmount;
-    public bool ar;
+    public bool useCameraBackground;
     public bool gyro;
     public bool voicecontrol;
 
@@ -27,9 +27,6 @@ public class DataSaver : MonoBehaviour
     public List<int> unlockedCharacterIndices = new List<int>();
 
     private string savePath;
-
-    
-
 
     private void Awake()
     {
@@ -53,7 +50,7 @@ public class DataSaver : MonoBehaviour
             totalSeedAmount = this.totalSeedAmount,
             totalMetersTraveled = this.totalMetersTraveled,
             selectedLanguage = this.selectedLanguage,
-            ar = this.ar,
+            useCameraBackground = this.useCameraBackground,
             gyro = this.gyro,
             voicecontrol = this.voicecontrol,
 
@@ -81,7 +78,7 @@ public class DataSaver : MonoBehaviour
             this.totalSeedAmount = saveData.totalSeedAmount;
             this.totalMetersTraveled = saveData.totalMetersTraveled;
             this.selectedLanguage = saveData.selectedLanguage;
-            this.ar = saveData.ar;
+            this.useCameraBackground = saveData.useCameraBackground;
             this.gyro = saveData.gyro;
             this.voicecontrol = saveData.voicecontrol;
             this.unlockedCharacterIndices = saveData.unlockedCharacterIndices ?? new List<int>();
