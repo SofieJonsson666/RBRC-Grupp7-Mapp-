@@ -172,7 +172,6 @@ public class CharacterManager : MonoBehaviour
         Character character = characterDB.GetCharacter(selectedOption);
         hatOnBird.rectTransform.anchoredPosition = character.hatOnBird.rectTransform.anchoredPosition;
         hatOnBird.rectTransform.rotation = character.hatOnBird.rectTransform.rotation;
-        //thisTransform.sizeDelta = character.birdSize.sizeDelta;
     }
 
     private void Load()
