@@ -84,8 +84,7 @@ public class BirdControllerVer3 : MonoBehaviour
 
         //Hitta mikrofon
 
-        // byt ut voiceControlEnabled till DataSaver.Instance.voicecontrol
-        if (voiceControlEnabled && Microphone.devices.Length > 0)
+        if (DataSaver.instance.voicecontrol && Microphone.devices.Length > 0)
         {
             micDevice = Microphone.devices[0];
             micClip = Microphone.Start(micDevice, true, 1, 44100);
