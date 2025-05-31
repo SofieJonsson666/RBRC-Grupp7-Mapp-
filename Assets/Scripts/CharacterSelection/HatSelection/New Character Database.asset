@@ -18,6 +18,8 @@ MonoBehaviour:
       type: 3}
     overrideController: {fileID: 22100000, guid: 3a7821d95ae49f44c93090f92841e034,
       type: 2}
+    hatOnBird: {fileID: 4814793246124897115, guid: d917adb96b311554cb6e7bdf5e5a488c,
+      type: 3}
     seedCost: 0
     isUnlocked: 1
   - characterName: Scrungly Rat
@@ -25,11 +27,15 @@ MonoBehaviour:
       type: 3}
     overrideController: {fileID: 22100000, guid: c504af99d0422ae4e830d96ccecfab49,
       type: 2}
+    hatOnBird: {fileID: 6501522060599902417, guid: efd5c86319cb04e45aa2e62cad6619bb,
+      type: 3}
     seedCost: 10
     isUnlocked: 1
   - characterName: Custom Bird
     characterSprite: {fileID: 0}
     overrideController: {fileID: 0}
+    hatOnBird: {fileID: 7401639550634223147, guid: 9ec8e1a18b2ac3540975e9e63ba3a41f,
+      type: 3}
     seedCost: 20
     isUnlocked: 1
   - characterName: Magpie
@@ -37,11 +43,15 @@ MonoBehaviour:
       type: 3}
     overrideController: {fileID: 22100000, guid: 6bf19026d21d08d42b55c8fe8838279f,
       type: 2}
+    hatOnBird: {fileID: 1455328713511362880, guid: 314fada9d75422d40ad9ecdb5d3e4d25,
+      type: 3}
     seedCost: 40
     isUnlocked: 1
   - characterName: Dracula's parrot
     characterSprite: {fileID: 21300000, guid: 074a95050d1d125458e78437e9cb0a2e, type: 3}
     overrideController: {fileID: 22100000, guid: 9e6d8c688dfbeaa488e3820edb683a92,
       type: 2}
+    hatOnBird: {fileID: 6748695345789735336, guid: 3acacb13d1493394c819e642280543bf,
+      type: 3}
     seedCost: 50
     isUnlocked: 1

@@ -14,7 +14,9 @@ public class CharacterManager : MonoBehaviour
     public TMP_Text nameText;
     public SpriteRenderer spriteRenderer;
     public Image lockIconBird;
+    public Image hatPosition;
     public TMP_Text unlockHintText;
+    public RectTransform thisTransform;
 
     private int selectedOption = 0;
 
@@ -38,6 +40,7 @@ public class CharacterManager : MonoBehaviour
         }
 
         UpdateCharacter(selectedOption);
+        SetHatPosition(hatPosition);
     }
 
     private void SyncUnlocks()
@@ -107,6 +110,7 @@ public class CharacterManager : MonoBehaviour
         }
 
         UpdateCharacter(selectedOption);
+        SetHatPosition(hatPosition);
         Save();
     }
 
@@ -120,6 +124,7 @@ public class CharacterManager : MonoBehaviour
         }
 
         UpdateCharacter(selectedOption);
+        SetHatPosition(hatPosition);
         Save();
     }
 
@@ -160,6 +165,14 @@ public class CharacterManager : MonoBehaviour
             spriteRenderer.material = normalMaterial;
             unlockHintText.text = "";
         }
+    }
+
+    private void SetHatPosition(Image hatOnBird)
+    {
+        Character character = characterDB.GetCharacter(selectedOption);
+        hatOnBird.rectTransform.anchoredPosition = character.hatOnBird.rectTransform.anchoredPosition;
+        hatOnBird.rectTransform.rotation = character.hatOnBird.rectTransform.rotation;
+        //thisTransform.sizeDelta = character.birdSize.sizeDelta;
     }
 
     private void Load()

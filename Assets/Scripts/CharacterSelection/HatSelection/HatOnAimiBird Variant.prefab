@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2268048790065275635
+--- !u!1001 &6261069130380349979
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 6148417350384028472, guid: d917adb96b311554cb6e7bdf5e5a488c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.94224274
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6148417350384028472, guid: d917adb96b311554cb6e7bdf5e5a488c,
         type: 3}
@@ -81,17 +81,17 @@ PrefabInstance:
     - target: {fileID: 6148417350384028472, guid: d917adb96b311554cb6e7bdf5e5a488c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.33493078
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6148417350384028472, guid: d917adb96b311554cb6e7bdf5e5a488c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 68.6
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 6148417350384028472, guid: d917adb96b311554cb6e7bdf5e5a488c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 17.6
+      value: -4.4
       objectReference: {fileID: 0}
     - target: {fileID: 6148417350384028472, guid: d917adb96b311554cb6e7bdf5e5a488c,
         type: 3}
@@ -106,12 +106,12 @@ PrefabInstance:
     - target: {fileID: 6148417350384028472, guid: d917adb96b311554cb6e7bdf5e5a488c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -39.137
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7416019182864926195, guid: d917adb96b311554cb6e7bdf5e5a488c,
         type: 3}
       propertyPath: m_Name
-      value: HatOnEthansBird Variant
+      value: HatOnAimiBird Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
