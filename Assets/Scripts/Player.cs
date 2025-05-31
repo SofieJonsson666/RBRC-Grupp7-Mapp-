@@ -9,7 +9,6 @@ public class Player : MonoBehaviour
     public CharacterDatabase characterDB;
  
     public GameObject customBird;
-    public GameObject otherBirds;
 
     public SpriteRenderer spriteRenderer;
 
@@ -36,7 +35,15 @@ public class Player : MonoBehaviour
         if (selectedOption == 2)
         {
             customBird.SetActive(true);
-            otherBirds.SetActive(false);
+            DataSaver.instance.ApplyCBSprite(customBird.GetComponent<SpriteRenderer>());
+
+            spriteRenderer.sprite = null;
+            Destroy(spriteRenderer);
+
+            if (animator != null)
+            {
+                animator.runtimeAnimatorController = null;
+            }
         }
 
         else

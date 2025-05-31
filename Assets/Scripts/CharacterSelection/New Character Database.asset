@@ -27,7 +27,7 @@ MonoBehaviour:
       type: 2}
     seedCost: 10
     isUnlocked: 1
-  - characterName: "V\xC4LJ INTE"
+  - characterName: Custom Bird
     characterSprite: {fileID: 0}
     overrideController: {fileID: 0}
     seedCost: 20
@@ -38,4 +38,4 @@ MonoBehaviour:
     overrideController: {fileID: 22100000, guid: 6bf19026d21d08d42b55c8fe8838279f,
       type: 2}
     seedCost: 40
-    isUnlocked: 0
+    isUnlocked: 1

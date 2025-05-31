@@ -209,7 +209,7 @@ public class BirdControllerVer3 : MonoBehaviour
 
         if (DataSaver.instance.gyro)
         {
-            print(Mathf.Clamp(((rotationZ - 90) * 0.02f), -1.5f, 1.5f));
+            //print(Mathf.Clamp(((rotationZ - 90) * 0.02f), -1.5f, 1.5f));
             rigidBody.gravityScale = Mathf.Clamp((rotationZ - 90) * 0.02f, -2f, 2f);
         }
 
