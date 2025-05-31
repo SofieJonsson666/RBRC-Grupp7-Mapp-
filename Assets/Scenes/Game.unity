@@ -7623,23 +7623,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1875361219963452483, guid: 441db6982ea02974e9c4c54441eefa70,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1835019867, guid: 5a9417028bcf7cd4b9a2bf0bf177b5d5,
-        type: 3}
     - target: {fileID: 2393253134301764212, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
       propertyPath: floorY
       value: 1.35
       objectReference: {fileID: 0}
-    - target: {fileID: 3070972478775922990, guid: 441db6982ea02974e9c4c54441eefa70,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 6bf19026d21d08d42b55c8fe8838279f,
-        type: 2}
     - target: {fileID: 4286746923166131400, guid: 441db6982ea02974e9c4c54441eefa70,
         type: 3}
       propertyPath: health
