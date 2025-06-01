@@ -142,4 +142,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 233562108111451205}
-  confirmClip: {fileID: 8300000, guid: f74be5326a4416e49b653c72c2ca8769, type: 3}
+  confirmClip: {fileID: 8300000, guid: 251dcaf681a4b854ab2b29a6b0e25194, type: 3}
