@@ -15,6 +15,8 @@ MonoBehaviour:
   hat:
   - hatSprite: {fileID: 21300000, guid: a4c6c09b4bb0b064293efcc19730dd09, type: 3}
     hatSpriteIcon: {fileID: 21300000, guid: 4349ea8b62e60fe4897f0162d748b1e2, type: 3}
+  - hatSprite: {fileID: 21300000, guid: 9f09e71c8f963a448bcc5c7bef12a0d7, type: 3}
+    hatSpriteIcon: {fileID: 21300000, guid: d2122f8079aa0f343b4546dfea22d0f2, type: 3}
   - hatSprite: {fileID: 21300000, guid: ecbc5381e98c0ab4baabb2d713f28172, type: 3}
     hatSpriteIcon: {fileID: 21300000, guid: 6c3e79008c61a8b41b632972549ca1cc, type: 3}
   - hatSprite: {fileID: 21300000, guid: 7daa01e281d9f1f4a919333f2ee194d7, type: 3}
