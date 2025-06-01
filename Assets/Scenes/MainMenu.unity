@@ -450,7 +450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &219192839
 RectTransform:
   m_ObjectHideFlags: 0
@@ -470,7 +470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 400, y: 197}
+  m_AnchoredPosition: {x: 400, y: 227}
   m_SizeDelta: {x: 1920, y: 914.2857}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &219192840
@@ -1071,7 +1071,6 @@ MonoBehaviour:
   optionsMenu: {fileID: 219192838}
   tutorialMenu: {fileID: 0}
   arOnOff: {fileID: 0}
-  gyroOnOff: {fileID: 0}
   voicecontrolOnOff: {fileID: 0}
 --- !u!114 &682473752
 MonoBehaviour:
@@ -1345,7 +1344,7 @@ RectTransform:
   m_GameObject: {fileID: 799839647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3094, y: 1.3094, z: 1.3094}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 219192839}
@@ -1448,7 +1447,6 @@ MonoBehaviour:
   optionsMenu: {fileID: 219192838}
   tutorialMenu: {fileID: 0}
   arOnOff: {fileID: 0}
-  gyroOnOff: {fileID: 0}
   voicecontrolOnOff: {fileID: 0}
 --- !u!114 &814846412
 MonoBehaviour:
@@ -2449,7 +2447,6 @@ MonoBehaviour:
   optionsMenu: {fileID: 219192838}
   tutorialMenu: {fileID: 0}
   arOnOff: {fileID: 0}
-  gyroOnOff: {fileID: 0}
   voicecontrolOnOff: {fileID: 0}
 --- !u!1 &1293213736
 GameObject:
@@ -2506,7 +2503,6 @@ MonoBehaviour:
   optionsMenu: {fileID: 219192838}
   tutorialMenu: {fileID: 0}
   arOnOff: {fileID: 0}
-  gyroOnOff: {fileID: 0}
   voicecontrolOnOff: {fileID: 0}
 --- !u!114 &1293213739
 MonoBehaviour:
@@ -3514,7 +3510,6 @@ MonoBehaviour:
   optionsMenu: {fileID: 0}
   tutorialMenu: {fileID: 0}
   arOnOff: {fileID: 1903095170}
-  gyroOnOff: {fileID: 0}
   voicecontrolOnOff: {fileID: 0}
 --- !u!114 &1684868544
 MonoBehaviour:
@@ -3994,7 +3989,6 @@ MonoBehaviour:
   optionsMenu: {fileID: 0}
   tutorialMenu: {fileID: 0}
   arOnOff: {fileID: 0}
-  gyroOnOff: {fileID: 0}
   voicecontrolOnOff: {fileID: 1368478294}
 --- !u!114 &1908261028
 MonoBehaviour:
@@ -4747,7 +4741,6 @@ MonoBehaviour:
   optionsMenu: {fileID: 0}
   tutorialMenu: {fileID: 1981490922}
   arOnOff: {fileID: 0}
-  gyroOnOff: {fileID: 0}
   voicecontrolOnOff: {fileID: 0}
 --- !u!1 &1984701571
 GameObject:
