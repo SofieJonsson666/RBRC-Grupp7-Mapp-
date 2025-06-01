@@ -5,14 +5,16 @@ using UnityEngine;
 public class BackgroundMover : MonoBehaviour
 {
     [SerializeField]
-    private float speed = DataSaver.instance.mps;
+    private float speed = 10;
 
     private Rigidbody rb;
 
     private void Start()
     {
+        speed = DataSaver.instance.mps;
+
         GameObject controller = GameObject.FindGameObjectWithTag("BackgroundController");
-        speed = controller.GetComponent<BackgroundController>().speed;
+        //speed = controller.GetComponent<BackgroundController>().speed;
         rb = GetComponent<Rigidbody>();
         rb.velocity = new Vector3(-speed, 0, 0);
     }

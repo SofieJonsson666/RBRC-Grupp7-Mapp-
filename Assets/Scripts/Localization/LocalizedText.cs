@@ -20,29 +20,36 @@ public class LocalizedText : MonoBehaviour
 
     public void UpdateText()
     {
-        if (textField == null)
-            textField = GetComponent<TMP_Text>();
-
-        string translation = LocalizationManager.Instance.GetLocalizedValue(key);
-        Debug.Log($"Localized key: {key} => {translation}");
-
-        textField.text = translation;
-
-        switch (LocalizationManager.Instance.currentLanguage)
+        try
         {
-            case "en":
-                textField.font = fontEnglish;
-                break;
-            case "sv":
-                textField.font = fontSwedish;
-                break;
-            case "jp":
-                textField.font = fontJapanese;
-                break;
+            if (textField == null)
+                textField = GetComponent<TMP_Text>();
+
+            string translation = LocalizationManager.Instance.GetLocalizedValue(key);
+            Debug.Log($"Localized key: {key} => {translation}");
+
+            textField.text = translation;
+
+            switch (LocalizationManager.Instance.currentLanguage)
+            {
+                case "en":
+                    textField.font = fontEnglish;
+                    break;
+
+                case "sv":
+                    textField.font = fontSwedish;
+                    break;
+
+                case "jp":
+                    textField.font = fontJapanese;
+                    break;
+            }
+
+            Debug.Log($"[{gameObject.name}] Updating key '{key}' to '{LocalizationManager.Instance.GetLocalizedValue(key)}'");
         }
-
-        Debug.Log($"[{gameObject.name}] Updating key '{key}' to '{LocalizationManager.Instance.GetLocalizedValue(key)}'");
-
-
+        catch (System.Exception)
+        {
+            throw;
+        }
     }
 }

@@ -17,7 +17,7 @@ public class DataSaver : MonoBehaviour
 
     public Sprite CBSprite;
 
-    public float mps;
+    public float mps = 10;
     public float metersTraveled;
     public float totalMetersTraveled;
 
@@ -84,18 +84,18 @@ public class DataSaver : MonoBehaviour
         {
             Debug.Log("No save file found. Using defaults.");
             InitializeDefaults();
-            SaveGame(); 
+            SaveGame();
         }
 
         if (!unlockedCharacterIndices.Contains(0))
         {
-            unlockedCharacterIndices.Add(0); 
+            unlockedCharacterIndices.Add(0);
         }
     }
 
     private void OnApplicationQuit()
     {
-        SaveGame(); 
+        SaveGame();
     }
 
     public void ResetGameData()
@@ -107,12 +107,10 @@ public class DataSaver : MonoBehaviour
         unlockedCharacterIndices.Clear();
         selectedLanguage = "en";
 
-
         SaveGame();
         Debug.Log("Game data reset!");
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //this reloads gamedata used for debugging and editing, remove when game is finished*/
-
 
         if (File.Exists(savePath))
         {
@@ -132,7 +130,7 @@ public class DataSaver : MonoBehaviour
         totalMetersTraveled = 0;
         unlockedCharacterIndices.Clear();
         selectedLanguage = "en";
-        unlockedCharacterIndices.Add(0); 
+        unlockedCharacterIndices.Add(0);
     }
 
     public void UpdateCBSprite(Sprite sprite)
