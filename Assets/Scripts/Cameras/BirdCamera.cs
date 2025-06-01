@@ -15,18 +15,15 @@ public class BirdCamera : MonoBehaviour
     [SerializeField] private PhoneCamera phoneScript;
 
     private int size;
-    private float CBSizeDifference = 1.93f;
-    private int sizeOffset = 70;
 
     private void Start()
     {
-        phoneScript.Activate();
-        size = (Screen.height * 3) / 5 + sizeOffset;
+        if (!phoneScript.Activate())
+        {
+            SceneManager.LoadScene(1);
+        }
+        size = (Screen.height * 3) / 5;
         print(size);
-        //float frameSize = size / (Camera.main.orthographicSize * 2f) / 10;
-        //frame.transform.localScale = new Vector3(frameSize, frameSize);
-        //birdPreview.transform.localScale = new Vector3(frameSize * CBSizeDifference, frameSize * CBSizeDifference);
-        //print(frameSize);
     }
 
     public void TakePictureAndApply()
@@ -35,7 +32,7 @@ public class BirdCamera : MonoBehaviour
     }
 
     private IEnumerator CapturePhoto()
-    {  
+    {
         frame.SetActive(false);
         cameraBtn.SetActive(false);
 
@@ -46,18 +43,19 @@ public class BirdCamera : MonoBehaviour
 
         int XStart = Screen.width / 2 - size / 2;
         int YStart = Screen.height / 2 - size / 2;
-        int XSlut = Screen.width / 2 + size / 2;
-        int YSlut = Screen.height / 2 + size / 2;
+        int XEnd = Screen.width / 2 + size / 2;
+        int YEnd = Screen.height / 2 + size / 2;
 
-        photo.ReadPixels(new Rect(XStart, YStart, XSlut, YSlut), 0, 0);
-        Debug.Log("sw: " +XStart  + " SH: " + YStart + " SIZE:"+ size + "sw: " + XSlut + " SH: " + YSlut);
+        photo.ReadPixels(new Rect(XStart, YStart, size, size), 0, 0);
+        Debug.Log("sw: " + XStart + " SH: " + YStart + " SIZE:" + size + "sw: " + XEnd + " SH: " + YEnd);
         photo.Apply();
 
         InvertActives();
 
         Sprite sprite = Sprite.Create(photo, new Rect(0, 0, size, size), new Vector2(0.5f, 0.5f));
         birdSprite.sprite = sprite;
-       // birdSprite.transform.localScale = new Vector3(size, size);
+
+        birdSprite.transform.localScale = new Vector3(0.4f, 0.4f);
         DataSaver.instance.UpdateCBSprite(sprite);
     }
 
