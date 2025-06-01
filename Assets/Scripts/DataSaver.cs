@@ -13,7 +13,6 @@ public class DataSaver : MonoBehaviour
     public int totalSeedAmount;
     public int seedAmount;
     public bool useCameraBackground;
-    public bool gyro;
     public bool voicecontrol;
 
     public Sprite CBSprite;
@@ -51,7 +50,6 @@ public class DataSaver : MonoBehaviour
             totalMetersTraveled = this.totalMetersTraveled,
             selectedLanguage = this.selectedLanguage,
             useCameraBackground = this.useCameraBackground,
-            gyro = this.gyro,
             voicecontrol = this.voicecontrol,
 
             unlockedCharacterIndices = new List<int>(this.unlockedCharacterIndices)
@@ -79,7 +77,6 @@ public class DataSaver : MonoBehaviour
             this.totalMetersTraveled = saveData.totalMetersTraveled;
             this.selectedLanguage = saveData.selectedLanguage;
             this.useCameraBackground = saveData.useCameraBackground;
-            this.gyro = saveData.gyro;
             this.voicecontrol = saveData.voicecontrol;
             this.unlockedCharacterIndices = saveData.unlockedCharacterIndices ?? new List<int>();
         }

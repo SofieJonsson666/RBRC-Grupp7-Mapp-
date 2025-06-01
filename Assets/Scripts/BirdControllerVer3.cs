@@ -26,9 +26,6 @@ public class BirdControllerVer3 : MonoBehaviour
     public bool canMove = true;
     private int tappCount;
 
-    private Gyroscope gyro;
-    private float rotationZ;
-
     [SerializeField] private TMP_Text seedCounter;
     [SerializeField] private TMP_Text healthUI;
     [SerializeField] private GameObject gameOverScreen;
@@ -51,6 +48,9 @@ public class BirdControllerVer3 : MonoBehaviour
     private GameObject struggleEnemy;
     private Animator struggleEnemyAnimator;
 
+    public bool CBSelected = false;
+    private Animator CBAnimator;
+
     [SerializeField] private float struggleTimer = 5f;
     private float struggleTimeCounter;
 
@@ -72,14 +72,12 @@ public class BirdControllerVer3 : MonoBehaviour
         rigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
         rigidBody.gravityScale = 1f;
 
-        gyro = Input.gyro;
-        gyro.enabled = true;
-
         tappCount = 0;
         struggleEnemy = null;
         struggleEnemy = null;
 
         animator = GetComponent<Animator>();
+        CBAnimator = transform.Find("CustomBird").GetComponentInChildren<Animator>();
 
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
@@ -110,22 +108,6 @@ public class BirdControllerVer3 : MonoBehaviour
         }
 
         healthUI.text = health.ToString();
-
-        if (DataSaver.instance.gyro)
-        {
-            Quaternion deviceRotation = gyro.attitude;
-
-            Quaternion correctedRotation = new Quaternion(
-                deviceRotation.x,
-                deviceRotation.y,
-                -deviceRotation.z,
-                -deviceRotation.w);
-
-            Vector3 eulerRotation = correctedRotation.eulerAngles;
-            //print(eulerRotation.z);
-            rotationZ = eulerRotation.z;
-            return;
-        }
 
         isFlying = false;
 
@@ -216,12 +198,6 @@ public class BirdControllerVer3 : MonoBehaviour
             return;
         }
 
-        if (DataSaver.instance.gyro)
-        {
-            //print(Mathf.Clamp(((rotationZ - 90) * 0.02f), -1.5f, 1.5f));
-            rigidBody.gravityScale = Mathf.Clamp((rotationZ - 90) * 0.02f, -2f, 2f);
-        }
-
         if (isFlying && transform.position.y < maxHeight)
         {
             //rigidBody.AddForce(Vector2.up * flapForce * 5f, ForceMode2D.Force);
@@ -277,6 +253,11 @@ public class BirdControllerVer3 : MonoBehaviour
             //musssiiiiccc
 
             health--;
+
+            if (CBSelected)
+            {
+                //CBAnimator.SetBool(damageTaken);
+            }
         }
     }
 
@@ -299,8 +280,6 @@ public class BirdControllerVer3 : MonoBehaviour
 
         return Mathf.Sqrt(sum / micSampleWindow); //RMS value
     }
-
-    //Slut
 
     private void SaveSeeds()
     {

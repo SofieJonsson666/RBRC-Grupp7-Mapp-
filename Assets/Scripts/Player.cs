@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 
     public Animator animator;
 
+    [SerializeField] private BirdControllerVer3 birdController;
+
     private int selectedOption = 0;
 
     void Start()
@@ -34,6 +36,7 @@ public class Player : MonoBehaviour
     {
         if (selectedOption == 2)
         {
+            birdController.CBSelected = true;
             customBird.SetActive(true);
             DataSaver.instance.ApplyCBSprite(customBird.GetComponent<SpriteRenderer>());
 
