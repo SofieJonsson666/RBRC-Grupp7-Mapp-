@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -13.199951, y: -7.4}
-  m_SizeDelta: {x: 160.09, y: 30}
+  m_AnchoredPosition: {x: -20, y: -0.00000047683716}
+  m_SizeDelta: {x: 70, y: 72}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &138462139
 MonoBehaviour:
@@ -177,7 +177,6 @@ MonoBehaviour:
   optionsMenu: {fileID: 0}
   tutorialMenu: {fileID: 0}
   arOnOff: {fileID: 0}
-  gyroOnOff: {fileID: 0}
   voicecontrolOnOff: {fileID: 0}
 --- !u!114 &138462140
 MonoBehaviour:
@@ -255,8 +254,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a7fa9648957b95f4da45507fd859e7f7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -422,7 +421,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 6.4000244, y: -9}
+  m_AnchoredPosition: {x: 11.529999, y: -8.02}
   m_SizeDelta: {x: 160.33, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &800124301
@@ -444,7 +443,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -455,7 +454,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300000, guid: 4af0442cc99318e48b2c577e8be18795, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -501,8 +500,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: c0d5e6d7dedc1b8459f099a0a169fdc6, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -534,7 +533,6 @@ MonoBehaviour:
   optionsMenu: {fileID: 0}
   tutorialMenu: {fileID: 0}
   arOnOff: {fileID: 0}
-  gyroOnOff: {fileID: 0}
   voicecontrolOnOff: {fileID: 0}
 --- !u!1 &916131757
 GameObject:
@@ -1620,9 +1618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Next
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
   m_sharedMaterial: {fileID: -8835476230319501204, guid: 53444ee96c932034cb4d3b4049c42396,
@@ -1633,7 +1629,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
