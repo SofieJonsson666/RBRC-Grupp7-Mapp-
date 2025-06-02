@@ -312,8 +312,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f285b0739221ce14996390e8c411d4cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bigBoom: {fileID: 0}
-  boomParticle: {fileID: 0}
+  bigBoom: {fileID: 5658538527621670510, guid: a8233cdfc31da2c4280ff7739afec1e4, type: 3}
+  boomParticle: {fileID: 3586429423824362661, guid: f96d5841640096840b1fc4c707aa2de5,
+    type: 3}
 --- !u!95 &5380991692872455552
 Animator:
   serializedVersion: 5
@@ -371,7 +372,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.0000005, y: 5.1269536}
+    oldSize: {x: 4, y: 4.1015625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
