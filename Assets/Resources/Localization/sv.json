@@ -90,7 +90,7 @@
     },
     {
       "key": "avoid",
-      "value": "Undvik polis och bullets!"
+      "value": "Undvik polis och skott!"
     },
     {
       "key": "collectseeds",
@@ -98,7 +98,7 @@
     },
     {
       "key": "threelives",
-      "value": "Du har bara tre liv!\nAkta dig för\nbullets och fiender!"
+      "value": "Du har bara tre liv!\nAkta dig för\nskott och fiender!"
     },
     {
       "key": "enemynet",
@@ -107,6 +107,27 @@
     {
       "key": "needseeds",
       "value": "Behöver fler frön!"
+    },
+    {
+      "key": "camerabackground",
+      "value": "Kamera\nBakgrund"
+    },
+    {
+      "key": "flipcam",
+      "value": "Byt Kamera"
+    },
+    {
+      "key": "camerainstruction",
+      "value": "Centrera\nAnsiktet och titta\nåt höger"
+    },
+    {
+      "key": "continue",
+      "value": "Klar"
+    },
+    {
+      "key": "tryagain",
+      "value": "Försök igen"
     }
+
   ]
 }

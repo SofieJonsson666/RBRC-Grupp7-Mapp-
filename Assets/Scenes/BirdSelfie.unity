@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 400851014}
   - component: {fileID: 400851016}
   - component: {fileID: 400851015}
+  - component: {fileID: 400851017}
   m_Layer: 5
   m_Name: TryAgainTxt
   m_TagString: Untagged
@@ -559,6 +560,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400851013}
   m_CullTransparentMesh: 1
+--- !u!114 &400851017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400851013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: tryagain
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &522563569
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +587,7 @@ GameObject:
   - component: {fileID: 522563570}
   - component: {fileID: 522563572}
   - component: {fileID: 522563571}
+  - component: {fileID: 522563573}
   m_Layer: 5
   m_Name: FlipTxt
   m_TagString: Untagged
@@ -694,6 +712,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522563569}
   m_CullTransparentMesh: 1
+--- !u!114 &522563573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522563569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: flipcam
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &523318891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1909,6 +1943,7 @@ GameObject:
   - component: {fileID: 1469551169}
   - component: {fileID: 1469551171}
   - component: {fileID: 1469551170}
+  - component: {fileID: 1469551172}
   m_Layer: 5
   m_Name: GuideTxt
   m_TagString: Untagged
@@ -2033,6 +2068,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469551168}
   m_CullTransparentMesh: 1
+--- !u!114 &1469551172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469551168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: camerainstruction
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &1528632804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,6 +2354,7 @@ GameObject:
   - component: {fileID: 1771078362}
   - component: {fileID: 1771078364}
   - component: {fileID: 1771078363}
+  - component: {fileID: 1771078365}
   m_Layer: 5
   m_Name: ContinueBtn
   m_TagString: Untagged
@@ -2427,6 +2479,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771078361}
   m_CullTransparentMesh: 1
+--- !u!114 &1771078365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771078361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: continue
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &1774104087
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,6 +2506,7 @@ GameObject:
   - component: {fileID: 1774104088}
   - component: {fileID: 1774104090}
   - component: {fileID: 1774104089}
+  - component: {fileID: 1774104091}
   m_Layer: 5
   m_Name: BackTxt
   m_TagString: Untagged
@@ -2562,6 +2631,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774104087}
   m_CullTransparentMesh: 1
+--- !u!114 &1774104091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774104087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: back
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1 &1828242758
 GameObject:
   m_ObjectHideFlags: 0

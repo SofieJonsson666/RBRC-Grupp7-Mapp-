@@ -107,6 +107,26 @@
     {
       "key": "needseeds",
       "value": "Need more seeds!"
+    },
+    {
+      "key": "camerabackground",
+      "value": "Camera Background"
+    },
+    {
+      "key": "flipcam",
+      "value": "Flip Camera"
+    },
+    {
+      "key": "camerainstruction",
+      "value": "Center your\nFace and look\nto the Right"
+    },
+    {
+      "key": "continue",
+      "value": "Continue"
+    },
+    {
+      "key": "tryagain",
+      "value": "Try Again"
     }
   ]
 }

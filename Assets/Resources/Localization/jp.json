@@ -107,6 +107,26 @@
     {
       "key": "needseeds",
       "value": "種が足りません!"
+    },
+    {
+      "key": "camerabackground",
+      "value": "カメラ\n背景"
+    },
+    {
+      "key": "flipcam",
+      "value": "カメラ切替"
+    },
+    {
+      "key": "camerainstruction",
+      "value": "顔を中心に合わせて右を見てください"
+    },
+    {
+      "key": "continue",
+      "value": "完成"
+    },
+    {
+      "key": "tryagain",
+      "value": "もう一度"
     }
   ]
 }

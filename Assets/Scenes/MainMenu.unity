@@ -5188,7 +5188,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Option A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8cf2987f648c6db4ea026b3f97da2fb0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6c1babed0869b56449b8a983d62d9f81, type: 2}
   m_sharedMaterial: {fileID: 4094881361868880327, guid: 8cf2987f648c6db4ea026b3f97da2fb0,
     type: 2}
   m_fontSharedMaterials: []
@@ -5214,10 +5214,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 14
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 30
   m_fontStyle: 0
@@ -5253,7 +5253,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &876348969
@@ -5711,6 +5711,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   languageDropdown: {fileID: 2066228694}
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  dropdownLabel: {fileID: 1593313816}
+  dropdownItemText: {fileID: 876348968}
 --- !u!4 &961861049
 Transform:
   m_ObjectHideFlags: 0
@@ -9015,6 +9020,7 @@ GameObject:
   - component: {fileID: 1476310380}
   - component: {fileID: 1476310382}
   - component: {fileID: 1476310381}
+  - component: {fileID: 1476310383}
   m_Layer: 5
   m_Name: CameraBackgroundTxt
   m_TagString: Untagged
@@ -9139,6 +9145,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476310379}
   m_CullTransparentMesh: 1
+--- !u!114 &1476310383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476310379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c989c0dee5897e84ba829317f218c9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: camerabackground
+  fontEnglish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontSwedish: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
+  fontJapanese: {fileID: 11400000, guid: 5d3254020ee912d4ca504b1353b2874e, type: 2}
 --- !u!1001 &1509192685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9637,8 +9659,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: English
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 53444ee96c932034cb4d3b4049c42396, type: 2}
-  m_sharedMaterial: {fileID: -8835476230319501204, guid: 53444ee96c932034cb4d3b4049c42396,
+  m_fontAsset: {fileID: 11400000, guid: 6c1babed0869b56449b8a983d62d9f81, type: 2}
+  m_sharedMaterial: {fileID: -7411093794196206882, guid: 6c1babed0869b56449b8a983d62d9f81,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -9702,7 +9724,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 7.9223595}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1593313817
