@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: IzabellaBird_Override
+  m_Controller: {fileID: 9100000, guid: 406a1c47288db694792627d16213bb80, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: aafcc85315e892b45942d1df1323d2df, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: aafcc85315e892b45942d1df1323d2df, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b1e8d6284a34a9f4f9ac00d83a5c823d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b1e8d6284a34a9f4f9ac00d83a5c823d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8967642ac250adf4abd1cb71bf54226f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8967642ac250adf4abd1cb71bf54226f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5d4d038174f824a4e842ecccb03be9dd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5d4d038174f824a4e842ecccb03be9dd, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8aad6aa1a52994f438e02266f70e9e2d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8aad6aa1a52994f438e02266f70e9e2d, type: 2}
