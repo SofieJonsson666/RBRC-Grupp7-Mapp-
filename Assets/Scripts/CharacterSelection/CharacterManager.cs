@@ -13,6 +13,10 @@ public class CharacterManager : MonoBehaviour
 
     public TMP_Text nameText;
     //public SpriteRenderer spriteRenderer;
+
+    public GameObject rigContainer;
+    private GameObject currentRigInstance;
+
     public Image spriteRenderer;
     public Image lockIconBird;
     public Image hatPosition;
@@ -134,9 +138,28 @@ public class CharacterManager : MonoBehaviour
     private void UpdateCharacter(int selectedOption)
     {
         Character character = characterDB.GetCharacter(selectedOption);
-        spriteRenderer.sprite = character.characterSprite;
-        customBird.SetActive(false);
+        //spriteRenderer.sprite = character.characterSprite;
+        //customBird.SetActive(false);
         //nameText.text = character.characterName;
+
+        spriteRenderer.gameObject.SetActive(false);
+
+        if (currentRigInstance != null)
+            Destroy(currentRigInstance);
+
+        if (character.characterSprite != null)
+        {
+            spriteRenderer.sprite = character.characterSprite;
+            spriteRenderer.gameObject.SetActive(true);
+        }
+        else if (character.characterPrefab != null)
+        {
+            currentRigInstance = Instantiate(character.characterPrefab, rigContainer.transform);
+            Animator anim = currentRigInstance.GetComponent<Animator>();
+            if (anim && character.overrideController != null)
+                anim.runtimeAnimatorController = character.overrideController;
+        }
+
 
         if (selectedOption == 2)
         {

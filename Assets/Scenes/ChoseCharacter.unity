@@ -2454,6 +2454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterDB: {fileID: 11400000, guid: 08decb9ff77966f4c89bf51f00e9c3cd, type: 2}
   nameText: {fileID: 1106195372}
+  rigContainer: {fileID: 0}
   spriteRenderer: {fileID: 937807121}
   lockIconBird: {fileID: 1252672168}
   hatPosition: {fileID: 318282894}
@@ -4827,6 +4828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterDB: {fileID: 11400000, guid: 08decb9ff77966f4c89bf51f00e9c3cd, type: 2}
   nameText: {fileID: 1106195372}
+  rigContainer: {fileID: 0}
   spriteRenderer: {fileID: 1919723508}
   lockIconBird: {fileID: 1252672168}
   hatPosition: {fileID: 0}
