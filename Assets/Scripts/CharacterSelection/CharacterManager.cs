@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-using TreeEditor;
+
 
 public class CharacterManager : MonoBehaviour
 {
