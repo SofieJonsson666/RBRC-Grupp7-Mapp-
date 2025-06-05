@@ -203,7 +203,7 @@ public class CharacterManager : MonoBehaviour
         spriteRenderer.gameObject.SetActive(false);
         thisTransform.gameObject.SetActive(true);
 
-        if (currentRigInstance != null)
+        /*if (currentRigInstance != null)
             Destroy(currentRigInstance);
 
         if (character.characterSprite != null)
@@ -218,6 +218,7 @@ public class CharacterManager : MonoBehaviour
             if (anim && character.overrideController != null)
                 anim.runtimeAnimatorController = character.overrideController;
         }
+        */
 
 
         if (selectedOption == 2)
