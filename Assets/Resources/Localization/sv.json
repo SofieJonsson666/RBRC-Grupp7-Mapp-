@@ -2,7 +2,7 @@
   "items": [
     {
       "key": "play",
-      "value": "Play"
+      "value": "Starta"
     },
     {
       "key": "pause",
@@ -14,7 +14,7 @@
     },
     {
       "key": "next",
-      "value": "nästa"
+      "value": "Nästa"
     },
     {
       "key": "resume",
@@ -50,7 +50,7 @@
     },
     {
       "key": "restart",
-      "value": "Restart"
+      "value": "Starta om"
     },
     {
       "key": "language",
