@@ -41,7 +41,8 @@ public class Player : MonoBehaviour
             DataSaver.instance.ApplyCBSprite(customBird.GetComponent<SpriteRenderer>());
 
             spriteRenderer.sprite = null;
-            Destroy(spriteRenderer);
+            //Destroy(spriteRenderer);
+            spriteRenderer.enabled = false;
 
             if (animator != null)
             {
@@ -54,6 +55,7 @@ public class Player : MonoBehaviour
             customBird.SetActive(false);
             Character character = characterDB.GetCharacter(selectedOption);
             spriteRenderer.sprite = character.characterSprite;
+            spriteRenderer.enabled = true;
 
             if (animator != null && character.overrideController != null)
             {
