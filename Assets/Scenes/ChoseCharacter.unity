@@ -2848,7 +2848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hatDB: {fileID: 11400000, guid: 53692a279aafb45479044400eeb92d41, type: 2}
-  hatSR: {fileID: 0}
+  hatSR: {fileID: 318282894}
   hatIconSR: {fileID: 536017252}
   hatIconLSR: {fileID: 949136695}
   hatIconRSR: {fileID: 884545837}
