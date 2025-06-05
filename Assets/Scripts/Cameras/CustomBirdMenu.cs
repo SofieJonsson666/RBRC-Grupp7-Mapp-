@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CustomBirdMenu : MonoBehaviour
 {
     [SerializeField] private Camera camera;
+
     public void ChangeScene(int sceneID)
     {
         SceneManager.LoadScene(sceneID);

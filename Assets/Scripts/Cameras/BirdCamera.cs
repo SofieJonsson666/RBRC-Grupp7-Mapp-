@@ -14,6 +14,9 @@ public class BirdCamera : MonoBehaviour
     [SerializeField] private SpriteRenderer birdSprite;
     [SerializeField] private PhoneCamera phoneScript;
 
+    [SerializeField] private AudioClip photoSound;
+    private AudioSource audioSource;
+
     private int size;
 
     private void Start()
@@ -24,10 +27,14 @@ public class BirdCamera : MonoBehaviour
         }
         size = (Screen.height * 3) / 5;
         print(size);
+
+        audioSource = GetComponent<AudioSource>();
     }
 
-    public void TakePictureAndApply()
-    {
+    public void TakePictureAndApply() 
+    { 
+        audioSource.PlayOneShot(photoSound);
+
         StartCoroutine(CapturePhoto());
     }
 
