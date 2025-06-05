@@ -12,7 +12,7 @@ public class Character
     public string characterName;
     public Sprite characterSprite;
 
-    public GameObject characterPrefab;
+    //public GameObject characterPrefab;
 
     public AnimatorOverrideController overrideController;
     public Image hatOnBird;
