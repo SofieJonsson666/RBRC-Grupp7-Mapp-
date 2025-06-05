@@ -13,6 +13,7 @@ public class Character
     public Sprite characterSprite;
     public AnimatorOverrideController overrideController;
     public Image hatOnBird;
+    public RectTransform birdSize;
 
 
     public int seedCost = 0;

@@ -12,7 +12,8 @@ public class CharacterManager : MonoBehaviour
     public CharacterDatabase characterDB;
 
     public TMP_Text nameText;
-    public SpriteRenderer spriteRenderer;
+    //public SpriteRenderer spriteRenderer;
+    public Image spriteRenderer;
     public Image lockIconBird;
     public Image hatPosition;
     public TMP_Text unlockHintText;
@@ -172,6 +173,7 @@ public class CharacterManager : MonoBehaviour
         Character character = characterDB.GetCharacter(selectedOption);
         hatOnBird.rectTransform.anchoredPosition = character.hatOnBird.rectTransform.anchoredPosition;
         hatOnBird.rectTransform.rotation = character.hatOnBird.rectTransform.rotation;
+        thisTransform.sizeDelta = character.birdSize.sizeDelta;
     }
 
     private void Load()
