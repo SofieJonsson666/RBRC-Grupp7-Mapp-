@@ -11,6 +11,9 @@ public class Character
 
     public string characterName;
     public Sprite characterSprite;
+
+    public GameObject riggedCharacterPrefab;
+
     public AnimatorOverrideController overrideController;
     public Image hatOnBird;
     public RectTransform birdSize;

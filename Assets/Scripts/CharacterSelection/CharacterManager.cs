@@ -19,6 +19,8 @@ public class CharacterManager : MonoBehaviour
     public TMP_Text unlockHintText;
     public RectTransform thisTransform;
 
+    public bool usesAnimator;
+
     private int selectedOption = 0;
 
     public Material normalMaterial;

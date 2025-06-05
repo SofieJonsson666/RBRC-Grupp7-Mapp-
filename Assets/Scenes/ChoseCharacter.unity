@@ -2459,6 +2459,7 @@ MonoBehaviour:
   hatPosition: {fileID: 318282894}
   unlockHintText: {fileID: 1370430412}
   thisTransform: {fileID: 937807120}
+  usesAnimator: 0
   normalMaterial: {fileID: 2100000, guid: 9f6dd6ac8369a214c8ef306a698e56bf, type: 2}
   greyMaterial: {fileID: 2100000, guid: 0857406d72082c2488474d878a511f83, type: 2}
   customBird: {fileID: 504000422}
@@ -4831,6 +4832,7 @@ MonoBehaviour:
   hatPosition: {fileID: 0}
   unlockHintText: {fileID: 1370430412}
   thisTransform: {fileID: 0}
+  usesAnimator: 0
   normalMaterial: {fileID: 2100000, guid: 9f6dd6ac8369a214c8ef306a698e56bf, type: 2}
   greyMaterial: {fileID: 2100000, guid: 0857406d72082c2488474d878a511f83, type: 2}
   customBird: {fileID: 504000422}
