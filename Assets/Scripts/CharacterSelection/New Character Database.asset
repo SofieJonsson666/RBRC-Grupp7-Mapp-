@@ -16,7 +16,7 @@ MonoBehaviour:
   - characterName: Default Bird
     characterSprite: {fileID: -461411572, guid: bb265867c8acfc04e81609114097a329,
       type: 3}
-    riggedCharacterPrefab: {fileID: 0}
+    characterPrefab: {fileID: 0}
     overrideController: {fileID: 22100000, guid: 3a7821d95ae49f44c93090f92841e034,
       type: 2}
     hatOnBird: {fileID: 3303013745071218660, guid: 19a3907839fcc544fa3a336b9fadd1a1,
@@ -28,7 +28,7 @@ MonoBehaviour:
   - characterName: Scrungly Rat
     characterSprite: {fileID: 2006870152, guid: f958509e3daa7d341ae17f15197ee977,
       type: 3}
-    riggedCharacterPrefab: {fileID: 0}
+    characterPrefab: {fileID: 0}
     overrideController: {fileID: 22100000, guid: c504af99d0422ae4e830d96ccecfab49,
       type: 2}
     hatOnBird: {fileID: 7230462815260132461, guid: b0280f536f9c6074f90d902976934ef9,
@@ -39,17 +39,18 @@ MonoBehaviour:
     isUnlocked: 1
   - characterName: Custom Bird
     characterSprite: {fileID: 0}
-    riggedCharacterPrefab: {fileID: 0}
+    characterPrefab: {fileID: 0}
     overrideController: {fileID: 0}
     hatOnBird: {fileID: 7401639550634223147, guid: 9ec8e1a18b2ac3540975e9e63ba3a41f,
       type: 3}
-    birdSize: {fileID: 0}
+    birdSize: {fileID: 4093007763781940140, guid: 5adde8f5302cb3d4daff15c2ab3a7801,
+      type: 3}
     seedCost: 20
     isUnlocked: 1
   - characterName: Magpie
     characterSprite: {fileID: -1835019867, guid: 5a9417028bcf7cd4b9a2bf0bf177b5d5,
       type: 3}
-    riggedCharacterPrefab: {fileID: 0}
+    characterPrefab: {fileID: 0}
     overrideController: {fileID: 22100000, guid: 6bf19026d21d08d42b55c8fe8838279f,
       type: 2}
     hatOnBird: {fileID: 6070265057743412012, guid: 6ea701a9e9f907c4ea1d49c73cdd030d,
@@ -60,7 +61,7 @@ MonoBehaviour:
     isUnlocked: 1
   - characterName: Dracula's parrot
     characterSprite: {fileID: 21300000, guid: 074a95050d1d125458e78437e9cb0a2e, type: 3}
-    riggedCharacterPrefab: {fileID: 0}
+    characterPrefab: {fileID: 0}
     overrideController: {fileID: 22100000, guid: 9e6d8c688dfbeaa488e3820edb683a92,
       type: 2}
     hatOnBird: {fileID: 4409520609492379561, guid: 5a7d4e3432884d94896544f50b6144db,
@@ -70,12 +71,14 @@ MonoBehaviour:
     seedCost: 50
     isUnlocked: 1
   - characterName: Parrot
-    characterSprite: {fileID: 21300000, guid: 074a95050d1d125458e78437e9cb0a2e, type: 3}
-    riggedCharacterPrefab: {fileID: 0}
+    characterSprite: {fileID: 0}
+    characterPrefab: {fileID: 5187558419382373713, guid: 52a6e8218dac8f846bc63a17fe3e318e,
+      type: 3}
     overrideController: {fileID: 22100000, guid: 0dc45089299cf3140b57b64efabc3865,
       type: 2}
     hatOnBird: {fileID: 6748695345789735336, guid: 3acacb13d1493394c819e642280543bf,
       type: 3}
-    birdSize: {fileID: 0}
+    birdSize: {fileID: 4093007763781940140, guid: 5adde8f5302cb3d4daff15c2ab3a7801,
+      type: 3}
     seedCost: 60
     isUnlocked: 1

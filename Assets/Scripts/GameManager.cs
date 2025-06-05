@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public int currentScore = 0;
 
+
+
     public void RestartGame()
     {
         isGameOver = false;
