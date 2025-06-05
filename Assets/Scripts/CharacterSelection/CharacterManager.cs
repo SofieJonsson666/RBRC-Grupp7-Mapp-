@@ -139,62 +139,6 @@ public class CharacterManager : MonoBehaviour
     private void UpdateCharacter(int selectedOption)
     {
         Character character = characterDB.GetCharacter(selectedOption);
-        nameText.text = character.characterName;
-
-        // Disable everything initially
-        //spriteRenderer.gameObject.SetActive(false);
-        emptyImage.SetActive(false);
-        customBird.SetActive(false);
-        thisTransform.gameObject.SetActive(true);
-
-        // Handle normal characters
-        if (selectedOption != 2)
-        {
-            if (character.characterSprite != null)
-            {
-                spriteRenderer.sprite = character.characterSprite;
-                spriteRenderer.gameObject.SetActive(true);
-            }
-            else
-            {
-                Debug.LogWarning($"Character {character.characterName} is missing a sprite!");
-            }
-        }
-        else
-        {
-            emptyImage.SetActive(true);
-            customBird.SetActive(true);
-            thisTransform.gameObject.SetActive(false);
-
-            if (DataSaver.instance.CBSprite != null)
-            {
-                DataSaver.instance.ApplyCBSprite(customBird.GetComponent<SpriteRenderer>());
-            }
-
-            Debug.Log("Custom Bird selected");
-        }
-
-        // Lock/unlock logic
-        if (!character.isUnlocked)
-        {
-            lockIconBird.gameObject.SetActive(true);
-            spriteRenderer.material = greyMaterial;
-
-            int needed = character.seedCost - DataSaver.instance.totalSeedAmount;
-            unlockHintText.text = $"Need {needed} more seeds to unlock";
-        }
-        else
-        {
-            lockIconBird.gameObject.SetActive(false);
-            spriteRenderer.material = normalMaterial;
-            unlockHintText.text = "";
-        }
-    }
-
-    /*
-    private void UpdateCharacter(int selectedOption)
-    {
-        Character character = characterDB.GetCharacter(selectedOption);
         //spriteRenderer.sprite = character.characterSprite;
         customBird.SetActive(false);
         emptyImage.SetActive(false);
@@ -236,8 +180,8 @@ public class CharacterManager : MonoBehaviour
         if (!character.isUnlocked)
         {
             /*int needed = character.seedCost - DataSaver.instance.totalSeedAmount;
-            //needed = Mathf.Max(0, needed);
-            //unlockHintText.text = $"Need {needed} more seeds to unlock.";
+            needed = Mathf.Max(0, needed);
+            unlockHintText.text = $"Need {needed} more seeds to unlock.";*/
 
             nameText.text = character.characterName;
             lockIconBird.gameObject.SetActive(true);
@@ -254,7 +198,6 @@ public class CharacterManager : MonoBehaviour
             unlockHintText.text = "";
         }
     }
-    */
 
     private void SetHatPosition(Image hatOnBird)
     {
