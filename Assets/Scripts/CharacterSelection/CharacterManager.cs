@@ -20,7 +20,6 @@ public class CharacterManager : MonoBehaviour
     public Image spriteRenderer;
     public Image lockIconBird;
     public Image hatPosition;
-    public GameObject emptyImage;
     public TMP_Text unlockHintText;
     public RectTransform thisTransform;
 
@@ -140,8 +139,7 @@ public class CharacterManager : MonoBehaviour
     {
         Character character = characterDB.GetCharacter(selectedOption);
         //spriteRenderer.sprite = character.characterSprite;
-        customBird.SetActive(false);
-        emptyImage.SetActive(false);
+        //customBird.SetActive(false);
         //nameText.text = character.characterName;
 
         spriteRenderer.gameObject.SetActive(false);
@@ -166,7 +164,6 @@ public class CharacterManager : MonoBehaviour
 
         if (selectedOption == 2)
         {
-            emptyImage.SetActive(true);
             customBird.SetActive(true);
             thisTransform.gameObject.SetActive(false);
             if (DataSaver.instance.CBSprite != null)
