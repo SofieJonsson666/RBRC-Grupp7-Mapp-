@@ -143,7 +143,6 @@ public class CharacterManager : MonoBehaviour
         //nameText.text = character.characterName;
 
         spriteRenderer.gameObject.SetActive(false);
-        thisTransform.gameObject.SetActive(true);
 
         if (currentRigInstance != null)
             Destroy(currentRigInstance);
@@ -165,7 +164,6 @@ public class CharacterManager : MonoBehaviour
         if (selectedOption == 2)
         {
             customBird.SetActive(true);
-            thisTransform.gameObject.SetActive(false);
             if (DataSaver.instance.CBSprite != null)
             {      
                 DataSaver.instance.ApplyCBSprite(customBird.GetComponent<SpriteRenderer>());
