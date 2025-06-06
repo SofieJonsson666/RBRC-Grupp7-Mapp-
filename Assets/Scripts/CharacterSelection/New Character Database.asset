@@ -18,9 +18,7 @@ MonoBehaviour:
       type: 3}
     overrideController: {fileID: 22100000, guid: 3a7821d95ae49f44c93090f92841e034,
       type: 2}
-    hatOnBird: {fileID: 3303013745071218660, guid: 19a3907839fcc544fa3a336b9fadd1a1,
-      type: 3}
-    birdSize: {fileID: 6538422676544864929, guid: ff214f8a725968d4385230f528f7212f,
+    hatOnBird: {fileID: 4814793246124897115, guid: d917adb96b311554cb6e7bdf5e5a488c,
       type: 3}
     seedCost: 0
     isUnlocked: 1
@@ -29,9 +27,7 @@ MonoBehaviour:
       type: 3}
     overrideController: {fileID: 22100000, guid: c504af99d0422ae4e830d96ccecfab49,
       type: 2}
-    hatOnBird: {fileID: 7230462815260132461, guid: b0280f536f9c6074f90d902976934ef9,
-      type: 3}
-    birdSize: {fileID: 5418937826911595621, guid: 8887c6a4538278c41becf6b87dc9d328,
+    hatOnBird: {fileID: 6501522060599902417, guid: efd5c86319cb04e45aa2e62cad6619bb,
       type: 3}
     seedCost: 10
     isUnlocked: 1
@@ -40,7 +36,6 @@ MonoBehaviour:
     overrideController: {fileID: 0}
     hatOnBird: {fileID: 7401639550634223147, guid: 9ec8e1a18b2ac3540975e9e63ba3a41f,
       type: 3}
-    birdSize: {fileID: 0}
     seedCost: 20
     isUnlocked: 1
   - characterName: Magpie
@@ -48,9 +43,7 @@ MonoBehaviour:
       type: 3}
     overrideController: {fileID: 22100000, guid: 6bf19026d21d08d42b55c8fe8838279f,
       type: 2}
-    hatOnBird: {fileID: 6070265057743412012, guid: 6ea701a9e9f907c4ea1d49c73cdd030d,
-      type: 3}
-    birdSize: {fileID: 3930316631220439326, guid: 9eb1a42a78f28ea4890ddcb418ef0fc7,
+    hatOnBird: {fileID: 1455328713511362880, guid: 314fada9d75422d40ad9ecdb5d3e4d25,
       type: 3}
     seedCost: 40
     isUnlocked: 1
@@ -58,9 +51,7 @@ MonoBehaviour:
     characterSprite: {fileID: 21300000, guid: 074a95050d1d125458e78437e9cb0a2e, type: 3}
     overrideController: {fileID: 22100000, guid: 9e6d8c688dfbeaa488e3820edb683a92,
       type: 2}
-    hatOnBird: {fileID: 4409520609492379561, guid: 5a7d4e3432884d94896544f50b6144db,
-      type: 3}
-    birdSize: {fileID: 4093007763781940140, guid: 5adde8f5302cb3d4daff15c2ab3a7801,
+    hatOnBird: {fileID: 6748695345789735336, guid: 3acacb13d1493394c819e642280543bf,
       type: 3}
     seedCost: 50
     isUnlocked: 1
@@ -70,6 +61,5 @@ MonoBehaviour:
       type: 2}
     hatOnBird: {fileID: 6748695345789735336, guid: 3acacb13d1493394c819e642280543bf,
       type: 3}
-    birdSize: {fileID: 0}
     seedCost: 60
     isUnlocked: 1
